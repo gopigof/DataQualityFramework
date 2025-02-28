@@ -1,0 +1,183 @@
+/****** Object:  Table [dbo].[FW_Column_Error]    Script Date: 1/25/2025 4:24:26 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[FW_Column_Error](
+[Record_ID] [int] IDENTITY(1,1) NOT NULL,
+[Error_Id] [int] NOT NULL,
+[Column_Name] [varchar](255) NOT NULL,
+[Error_Code] [int] NOT NULL,
+ CONSTRAINT [PK__FW_Colum__7A235C2A77128DE6] PRIMARY KEY CLUSTERED
+(
+[Record_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED
+(
+[Record_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[FW_Error_Message_Reference]    Script Date: 1/25/2025 4:24:26
+PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[FW_Error_Message_Reference](
+[Error_Id] [int] NOT NULL,
+[Error_Message] [varchar](255) NOT NULL,
+PRIMARY KEY CLUSTERED
+(
+[Error_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED
+(
+[Error_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[FW_File_Category]    Script Date: 1/25/2025 4:24:26 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[FW_File_Category](
+[File_Category_Id] [int] IDENTITY(1,1) NOT NULL,
+[File_Category_Name] [varchar](255) NOT NULL,
+[Schema_Text] [varbinary](max) NOT NULL,
+PRIMARY KEY CLUSTERED
+(
+[File_Category_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED
+(
+[File_Category_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[FW_File_Name]    Script Date: 1/25/2025 4:24:26 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[FW_File_Name](
+[File_Id] [int] IDENTITY(1,1) NOT NULL,
+[File_Category_Id] [int] NOT NULL,
+[File_Name] [varchar](255) NOT NULL,
+PRIMARY KEY CLUSTERED
+(
+[File_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED
+(
+[File_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[FW_File_Record_Error]    Script Date: 1/25/2025 4:24:26 PM
+******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[FW_File_Record_Error](
+[Record_ID] [int] IDENTITY(1,1) NOT NULL,
+[Processing_File_Id] [int] NOT NULL,
+[Record_Text] [varbinary](max) NOT NULL,
+PRIMARY KEY CLUSTERED
+(
+[Record_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED
+(
+[Record_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[FW_Pipeline_Observability]    Script Date: 1/25/2025 4:24:26 PM
+******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[FW_Pipeline_Observability](
+[Processing_File_Id] [int] IDENTITY(1,1) NOT NULL,
+[File_Id] [int] NOT NULL,
+[Time_Of_Arrival] [datetime] NOT NULL,
+[Process_StartTime] [datetime] NOT NULL,
+[Process_End_Time] [datetime] NOT NULL,
+[Input_File_Size] [varchar](255) NOT NULL,
+[Initial_Count_Of_Records] [int] NOT NULL,
+[Count_Of_Processed_Records] [int] NOT NULL,
+[Count_Of_Error_Records] [int] NOT NULL,
+[Count_of_Distinct_Errors] [int] NOT NULL,
+PRIMARY KEY CLUSTERED
+(
+[Processing_File_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED
+(
+[Processing_File_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY =
+OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[FW_Column_Error]  WITH CHECK ADD  CONSTRAINT
+[FK_FW_Column_Error_FW_Error_Message_Reference] FOREIGN KEY([Error_Id])
+REFERENCES [dbo].[FW_Error_Message_Reference] ([Error_Id])
+GO
+ALTER TABLE [dbo].[FW_Column_Error] CHECK CONSTRAINT
+[FK_FW_Column_Error_FW_Error_Message_Reference]
+GO
+ALTER TABLE [dbo].[FW_Column_Error]  WITH CHECK ADD  CONSTRAINT
+[FK_FW_Column_Error_FW_File_Record_Error] FOREIGN KEY([Record_ID])
+REFERENCES [dbo].[FW_File_Record_Error] ([Record_ID])
+GO
+ALTER TABLE [dbo].[FW_Column_Error] CHECK CONSTRAINT
+[FK_FW_Column_Error_FW_File_Record_Error]
+GO
+ALTER TABLE [dbo].[FW_File_Name]  WITH CHECK ADD  CONSTRAINT
+[FK_FW_File_Name_FW_File_Category] FOREIGN KEY([File_Category_Id])
+REFERENCES [dbo].[FW_File_Category] ([File_Category_Id])
+GO
+ALTER TABLE [dbo].[FW_File_Name] CHECK CONSTRAINT
+[FK_FW_File_Name_FW_File_Category]
+GO
+ALTER TABLE [dbo].[FW_File_Record_Error]  WITH CHECK ADD  CONSTRAINT
+[FK_FW_File_Record_Error_FW_Pipeline_Observability] FOREIGN KEY([Processing_File_Id])
+REFERENCES [dbo].[FW_Pipeline_Observability] ([Processing_File_Id])
+GO
+ALTER TABLE [dbo].[FW_File_Record_Error] CHECK CONSTRAINT
+[FK_FW_File_Record_Error_FW_Pipeline_Observability]
+GO
+ALTER TABLE [dbo].[FW_Pipeline_Observability]  WITH CHECK ADD  CONSTRAINT
+[FK_FW_Pipeline_Observability_FW_File_Name] FOREIGN KEY([File_Id])
+REFERENCES [dbo].[FW_File_Name] ([File_Id])
+GO
+ALTER TABLE [dbo].[FW_Pipeline_Observability] CHECK CONSTRAINT
+[FK_FW_Pipeline_Observability_FW_File_Name]
+GO
