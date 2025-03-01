@@ -53,7 +53,7 @@ GO
 CREATE TABLE [dbo].[FW_File_Category](
 [File_Category_Id] [int] IDENTITY(1,1) NOT NULL,
 [File_Category_Name] [varchar](255) NOT NULL,
-[Schema_Text] [varbinary](max) NOT NULL,
+[Schema_Text] [varbinary](max) NULL,
 PRIMARY KEY CLUSTERED
 (
 [File_Category_Id] ASC
@@ -100,7 +100,7 @@ GO
 CREATE TABLE [dbo].[FW_File_Record_Error](
 [Record_ID] [int] IDENTITY(1,1) NOT NULL,
 [Processing_File_Id] [int] NOT NULL,
-[Record_Text] [varbinary](max) NOT NULL,
+[Record_Text] [varbinary](max) NULL,
 PRIMARY KEY CLUSTERED
 (
 [Record_ID] ASC

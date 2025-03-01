@@ -4,6 +4,7 @@ from pandas import DataFrame
 
 from base_etl import BaseETLPipeline
 
+
 class ParkingMetersETL(BaseETLPipeline):
     def transform(self, records_df: DataFrame):
         # Data Cleansing
@@ -29,6 +30,21 @@ class ParkingMetersETL(BaseETLPipeline):
         records_df.drop(columns=columns_to_drop, inplace=True)
 
         # Data Transformation
+        ref_column_on_off_street = {
+            "ON": "ON_STREET",
+            "OFF": "OFF_STREET"
+        }
+        records_df["ON_OFFSTREET_TYPE_DESC"] = records_df["ON_OFFSTREET_TYPE"].map(ref_column_on_off_street)
+
+        ref_column_active_meter_flag = {
+            "M": "Active",
+            "T": "Temporarily Inactive",
+            "P": "pay-by-license plate Pay-station",
+            "L": "Legislated for future meter install",
+            "U": "Unmetered",
+        }
+        records_df["ACTIVE_METER_FLAG_DESC"] = records_df["ACTIVE_METER_FLAG"].map(ref_column_active_meter_flag)
+
         return records_df
 
 
