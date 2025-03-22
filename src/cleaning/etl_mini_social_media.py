@@ -25,6 +25,10 @@ class MiniSocialMediaETL(BaseETLPipeline):
             "Other": "O"
         })
 
+        # Validate the gender column: check if all values are M, F, or O
+        gender_values = records_df["GenderCode"].unique()
+        assert set(gender_values) == {"M", "F", "O"}, f"Invalid gender codes: {gender_values}"
+
         return records_df
 
 
