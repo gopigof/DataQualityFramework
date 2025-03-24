@@ -1,9 +1,9 @@
-# ETL Parking Meters Repository
+# Data Quality Framework - ETL
 
 ## Overview
 
-This repository contains a set of scripts designed to perform ETL (Extract, Transform, Load) operations specifically for
-parking meters data. The primary entrypoint for this project is located in `etl_parking_meters.py`.
+This repository contains the skeleton code for implementing custom ETL  (Extract, Transform, Load) pipelines with auditing and logging in place. Alongside the skeleton pipeline logic, a couple of datasets are processed using the framework. 
+
 
 ### Setup & Installation
 
