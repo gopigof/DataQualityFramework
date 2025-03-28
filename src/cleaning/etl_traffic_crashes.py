@@ -302,8 +302,11 @@ class TrafficCrashesETL(BaseETLPipeline):
 
 
 if __name__ == "__main__":
+    current_dir = Path(__file__).parent
+    raw_file_path = current_dir.parent / "resources" / "raw" / "TrafficCrashes.csv"
+
     etl_job = TrafficCrashesETL(
-        file_path=Path("../resources/raw/TrafficCrashes.csv"),
+        file_path=raw_file_path,
         file_category="SanFrancisco",
     )
     etl_job.run()

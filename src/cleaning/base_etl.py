@@ -7,9 +7,8 @@ from pathlib import Path
 import pandas
 from pandas import DataFrame
 
-from db_utils import get_or_create_file_category_id, insert_file_name_record, insert_pipeline_observability_record, \
-    insert_file_record_error, insert_column_error
-from src.cleaning.db_utils import get_existing_errors, get_or_create_error_record, \
+from src.cleaning.db_utils import get_or_create_file_category_id, insert_file_name_record, insert_pipeline_observability_record, \
+    insert_file_record_error, insert_column_error, get_existing_errors, get_or_create_error_record, \
     get_current_processing_file_id
 
 logging.basicConfig(

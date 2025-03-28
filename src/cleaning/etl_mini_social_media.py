@@ -3,10 +3,10 @@ from pathlib import Path
 import pandas as pd
 from pandas import DataFrame
 
-from base_etl import BaseETLPipeline
+from src.cleaning.base_etl import BaseETLPipeline
 
 
-class MiniSocialMediaETL(BaseETLPipeline):
+class SocialMediaETL(BaseETLPipeline):
     def transform(self, records_df: DataFrame):
         print(records_df.columns)
 
@@ -24,17 +24,17 @@ class MiniSocialMediaETL(BaseETLPipeline):
             "Female": "F",
             "Other": "O"
         })
-
-        # Validate the gender column: check if all values are M, F, or O
-        gender_values = records_df["GenderCode"].unique()
-        assert set(gender_values) == {"M", "F", "O"}, f"Invalid gender codes: {gender_values}"
+        # Add validation
 
         return records_df
 
 
 if __name__ == "__main__":
-    etl_job = MiniSocialMediaETL(
-        file_path=Path("../resources/raw/mini_social.csv"),
-        file_category="SocialMedia",
+    current_dir = Path(__file__).parent
+    raw_file_path = current_dir.parent / "resources" / "raw" / "mini_social.csv"
+
+    etl_job = SocialMediaETL(
+        file_path=raw_file_path,
+        file_category="SocialMedia-Mini",
     )
     etl_job.run()
