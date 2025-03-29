@@ -4,7 +4,7 @@ from pathlib import Path
 import pandas as pd
 from pandas import DataFrame
 
-from src.cleaning.base_etl import BaseETLPipeline
+from src.core.base_etl import BaseETLPipeline
 
 logger = logging.getLogger(__name__)
 

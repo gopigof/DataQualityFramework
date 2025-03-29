@@ -49,9 +49,9 @@ This repository contains the skeleton code for implementing custom ETL  (Extract
 
 ```
 
-### Quickstart Instructions
+## Instructions to run programs
 
-1. A minified version of the "Social Media Entertainment" dataset was created and is available at
-   `src/resources/raw/mini_social.csv`
-2. The cleaning and validation for the minified social media dataset is at `src/cleaning/etl_mini_social_media.py`
-3. Run the python file using the IDE runner or the command `python3 etl_mini_social_media.py`
+1. To run the ETL pipeline for any of the datasets, choose a dataset from the available ones in `src/resources/raw`
+2. The corresponding ETL pipeline is created in `src/cleaning/`, and run the file using the command `python3 -m src.cleaning.etl_social_media` (for running the ETL for `social_media_entertainment_data.csv`)
+3. The same command can be used for other datasets and corresponding ETL pipelines
+4. The output of the ETL pipeline will be stored in `src/resources/clean` folder with the format `processed_<dataset_name>` in CSV file format

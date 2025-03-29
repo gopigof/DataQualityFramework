@@ -164,3 +164,4 @@ cython_debug/
 
 # Too large datasets
 CrimeIncidents.csv
+src/resources/clean/*.csv
