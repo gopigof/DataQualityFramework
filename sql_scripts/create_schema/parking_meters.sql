@@ -1,91 +1,134 @@
-CREATE DATABASE ParkingMeterDB;
+USE master;
 GO
 
-USE ParkingMeterDB;
+-- Drop database if it exists
+IF EXISTS (SELECT name FROM sys.databases WHERE name = 'SFParkingMeters')
+BEGIN
+    ALTER DATABASE SFParkingMeters SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE SFParkingMeters;
+END
 GO
 
--- Parking_Management_District Table
-CREATE TABLE Parking_Management_District
-(
-    PM_DISTRICT_ID INT PRIMARY KEY,
-    District_Name  NVARCHAR(255) NULL
-);
-
--- Parking_Space Table
-CREATE TABLE Parking_Space
-(
-    PARKING_SPACE_ID     INT PRIMARY KEY,
-    Location_Description NVARCHAR(255) NULL,
-    Space_Type           NVARCHAR(50)  NULL
-);
-
--- Street Table
-CREATE TABLE Street
-(
-    STREET_ID           INT PRIMARY KEY,
-    STREET_NAME         NVARCHAR(255) NOT NULL,
-    STREET_SEG_CTRLN_ID INT           NULL,
-    ORIENTATION         NVARCHAR(50)  NULL
-);
-
--- Off_Street_Parking Table
-CREATE TABLE Off_Street_Parking
-(
-    OSP_ID   INT PRIMARY KEY,
-    Name     NVARCHAR(255) NULL,
-    Location NVARCHAR(255) NULL
-);
-
--- Parking_Meter Table
-CREATE TABLE Parking_Meter
-(
-    OBJECTID                 INT PRIMARY KEY,
-    PM_DISTRICT_ID           INT           NULL,
-    BLOCKFACE_ID             INT           NULL,
-    ACTIVE_METER_FLAG        CHAR(1)       NULL,
-    REASON_CODE              NVARCHAR(50)  NULL,
-    SMART_METER_FLAG         NVARCHAR(50)  NULL,
-    METER_TYPE               NVARCHAR(10)  NULL,
-    METER_VENDOR             NVARCHAR(255) NULL,
-    METER_MODEL              NVARCHAR(255) NULL,
-    CAP_COLOR                NVARCHAR(50)  NULL,
-    PCO_BEAT                 NVARCHAR(50)  NULL,
-    PARKING_SPACE_ID         INT           NULL,
-    OLD_RATE_AREA            NVARCHAR(50)  NULL,
-    STREET_ID                INT           NULL,
-    STREET_NAME              NVARCHAR(255) NOT NULL,
-    STREET_NUM               INT           NULL,
-    PARITY_DIGIT_POSITION    NVARCHAR(50)  NULL,
-    STREET_SEG_CTRLN_ID      INT           NULL,
-    ORIENTATION              NVARCHAR(50)  NULL,
-    LONGITUDE                FLOAT         NULL,
-    LATITUDE                 FLOAT         NULL,
-    LEGISLATION_REF          NVARCHAR(255) NULL,
-    POST_ID                  NVARCHAR(255) NULL,
-    LEGISLATION_DT           NVARCHAR(50)  NULL,
-    WORK_ORDER               NVARCHAR(50)  NULL,
-    COMMENTS                 NVARCHAR(MAX) NULL,
-    COLLECTION_ROUTE         NVARCHAR(50)  NULL,
-    COLLECTION_SUBROUTE      NVARCHAR(50)  NULL,
-    PMR_ROUTE                NVARCHAR(50)  NULL,
-    MS_PAY_STATION_ID        NVARCHAR(50)  NULL,
-    NFC_KEY                  NVARCHAR(50)  NULL,
-    SPT_CODE                 NVARCHAR(50)  NULL,
-    COLLECTION_ROUTE_DESC    NVARCHAR(255) NULL,
-    COLLECTION_SUBROUTE_DESC NVARCHAR(255) NULL,
-    SHAPE                    NVARCHAR(255) NULL,
-    DATA_AS_OF               DATETIME      NULL,
-    MS_SPACE_NUM             INT           NULL,
-    DATA_LOADED_AT           DATETIME      NULL,
-    ANALYSIS_NEIGHBORHOOD    NVARCHAR(255) NULL,
-    SUPERVISOR_DISTRICT      NVARCHAR(50)  NULL,
-    SENSOR_FLAG              NVARCHAR(10)  NULL,
-    ON_OFFSTREET_TYPE        NVARCHAR(50)  NULL,
-    OSP_ID                   INT           NULL,
-    JURISDICTION             NVARCHAR(255) NULL,
-    CONSTRAINT FK_PM_DISTRICT FOREIGN KEY (PM_DISTRICT_ID) REFERENCES Parking_Management_District (PM_DISTRICT_ID),
-    CONSTRAINT FK_PARKING_SPACE FOREIGN KEY (PARKING_SPACE_ID) REFERENCES Parking_Space (PARKING_SPACE_ID),
-    CONSTRAINT FK_STREET FOREIGN KEY (STREET_ID) REFERENCES Street (STREET_ID),
-    CONSTRAINT FK_OFF_STREET_PARKING FOREIGN KEY (OSP_ID) REFERENCES Off_Street_Parking (OSP_ID)
-);
+CREATE DATABASE SFParkingMeters;
 GO
+
+USE SFParkingMeters;
+GO
+
+-- Geographic Locations
+CREATE TABLE Locations (
+    location_id INT IDENTITY(1,1) PRIMARY KEY,
+    longitude FLOAT NOT NULL,
+    latitude FLOAT NOT NULL,
+    geo_point NVARCHAR(255) NULL,
+    location_grid NVARCHAR(255) NULL
+);
+
+-- Administrative Districts
+CREATE TABLE Districts (
+    district_id INT IDENTITY(1,1) PRIMARY KEY,
+    pm_district_id FLOAT NULL,
+    analysis_neighborhood NVARCHAR(255) NULL,
+    supervisor_district INT NULL,
+    analysis_neighborhoods_id INT NULL,
+    neighborhoods_id INT NULL,
+    sf_find_neighborhoods_id INT NULL,
+    current_police_districts_id INT NULL,
+    current_supervisor_districts_id INT NULL
+);
+
+-- Streets
+CREATE TABLE Streets (
+    street_id FLOAT PRIMARY KEY,
+    street_name NVARCHAR(255) NOT NULL,
+    street_num FLOAT NULL,
+    street_seg_ctrln_id FLOAT NULL,
+    blockface_id INT NULL
+);
+
+-- Meter Types Reference
+CREATE TABLE MeterTypes (
+    meter_type_id NVARCHAR(50) PRIMARY KEY,
+    meter_type_desc NVARCHAR(255) NOT NULL
+);
+
+-- On/Off Street Types Reference
+CREATE TABLE StreetTypes (
+    street_type_id NVARCHAR(50) PRIMARY KEY,
+    street_type_desc NVARCHAR(255) NOT NULL
+);
+
+-- Collection Routes
+CREATE TABLE CollectionRoutes (
+    route_id NVARCHAR(50) PRIMARY KEY,
+    collection_route_desc NVARCHAR(255) NULL,
+    collection_subroute NVARCHAR(50) NULL,
+    collection_subroute_desc NVARCHAR(255) NULL,
+    pmr_route NVARCHAR(50) NULL
+);
+
+-- Vendors
+CREATE TABLE Vendors (
+    vendor_id INT IDENTITY(1,1) PRIMARY KEY,
+    meter_vendor NVARCHAR(100) NOT NULL,
+    meter_model NVARCHAR(100) NULL
+);
+
+-- Parking Zones
+CREATE TABLE ParkingZones (
+    zone_id NVARCHAR(50) PRIMARY KEY,
+    jurisdiction NVARCHAR(100) NOT NULL
+);
+
+-- Main Parking Meters Table
+CREATE TABLE ParkingMeters (
+    object_id INT PRIMARY KEY,
+    post_id NVARCHAR(50) NOT NULL,
+    ms_space_num INT NULL,
+    active_meter_flag NVARCHAR(10) NULL,
+    reason_code NVARCHAR(50) NULL,
+    cap_color NVARCHAR(50) NULL,
+    work_order NVARCHAR(100) NULL,
+    meter_status NVARCHAR(50) NULL,
+    is_active BIT NULL,
+    is_temporary BIT NULL,
+    shape NVARCHAR(MAX) NULL,
+    
+    -- Foreign Keys
+    meter_type_id NVARCHAR(50) NULL,
+    street_type_id NVARCHAR(50) NULL,
+    location_id INT NULL,
+    district_id INT NULL,
+    street_id FLOAT NULL,
+    route_id NVARCHAR(50) NULL,
+    vendor_id INT NULL,
+    zone_id NVARCHAR(50) NULL,
+    
+    CONSTRAINT FK_ParkingMeters_MeterTypes FOREIGN KEY (meter_type_id) 
+        REFERENCES MeterTypes(meter_type_id),
+    CONSTRAINT FK_ParkingMeters_StreetTypes FOREIGN KEY (street_type_id) 
+        REFERENCES StreetTypes(street_type_id),
+    CONSTRAINT FK_ParkingMeters_Locations FOREIGN KEY (location_id) 
+        REFERENCES Locations(location_id),
+    CONSTRAINT FK_ParkingMeters_Districts FOREIGN KEY (district_id) 
+        REFERENCES Districts(district_id),
+    CONSTRAINT FK_ParkingMeters_Streets FOREIGN KEY (street_id) 
+        REFERENCES Streets(street_id),
+    CONSTRAINT FK_ParkingMeters_CollectionRoutes FOREIGN KEY (route_id) 
+        REFERENCES CollectionRoutes(route_id),
+    CONSTRAINT FK_ParkingMeters_Vendors FOREIGN KEY (vendor_id) 
+        REFERENCES Vendors(vendor_id),
+    CONSTRAINT FK_ParkingMeters_ParkingZones FOREIGN KEY (zone_id) 
+        REFERENCES ParkingZones(zone_id)
+);
+
+CREATE INDEX IX_ParkingMeters_LocationId ON ParkingMeters(location_id);
+CREATE INDEX IX_ParkingMeters_DistrictId ON ParkingMeters(district_id);
+CREATE INDEX IX_ParkingMeters_StreetId ON ParkingMeters(street_id);
+CREATE INDEX IX_ParkingMeters_MeterTypeId ON ParkingMeters(meter_type_id);
+CREATE INDEX IX_ParkingMeters_StreetTypeId ON ParkingMeters(street_type_id);
+CREATE INDEX IX_ParkingMeters_RouteId ON ParkingMeters(route_id);
+CREATE INDEX IX_ParkingMeters_VendorId ON ParkingMeters(vendor_id);
+CREATE INDEX IX_ParkingMeters_ZoneId ON ParkingMeters(zone_id);
+
+CREATE INDEX IX_ParkingMeters_IsActive ON ParkingMeters(is_active);
