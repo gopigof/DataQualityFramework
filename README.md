@@ -55,3 +55,11 @@ This repository contains the skeleton code for implementing custom ETL  (Extract
 2. The corresponding ETL pipeline is created in `src/cleaning/`, and run the file using the command `python3 -m src.cleaning.etl_social_media` (for running the ETL for `social_media_entertainment_data.csv`)
 3. The same command can be used for other datasets and corresponding ETL pipelines
 4. The output of the ETL pipeline will be stored in `src/resources/clean` folder with the format `processed_<dataset_name>` in CSV file format
+
+## MS SQL Server Backup Commands
+- If the SQL Server is running on Docker, use the following to backup the database and copy it on to host filesystem
+- ```shell
+   docker ps # To find container ID
+   docker exec -it 3fa85b3065b1 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'password123!' -Q "BACKUP DATABASE framework TO DISK = N'/var/opt/mssql/backup/framework.bak' WITH NOFORMAT, NOINIT, NAME = 'framework', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
+   docker cp 3fa85b3065b1:/var/opt/mssql/backup/framework.bak ./framework.bak
+```
