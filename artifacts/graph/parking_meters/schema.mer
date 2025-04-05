@@ -1,0 +1,72 @@
+graph TD
+    %% Nodes
+    PM[ParkingMeter]
+    ST[Street]
+    LOC[Location]
+    MT[MeterType]
+    MV[MeterVendor]
+    PZ[ParkingZone]
+
+    %% Node Properties
+    subgraph ParkingMeter
+        PM1[post_id]
+        PM2[ms_space_num]
+        PM3[active_meter_flag]
+        PM4[cap_color]
+        PM5[latitude/longitude]
+        PM6[is_active]
+        PM7[is_temporary]
+        PM8[meter_status]
+        PM9[collection_route]
+        PM10[on_offstreet_type]
+    end
+
+    subgraph Street
+        ST1[street_id]
+        ST2[street_name]
+        ST3[street_seg_ctrln_id]
+    end
+
+    subgraph Location
+        LOC1[name]
+        LOC2[type]
+        LOC3[supervisor_district_id]
+    end
+
+    subgraph MeterType
+        MT1[type_code]
+        MT2[description]
+    end
+
+    subgraph MeterVendor
+        MV1[name]
+        MV2[model]
+    end
+
+    subgraph ParkingZone
+        PZ1[zone_id]
+        PZ2[description]
+    end
+
+    %% Relationships
+    PM -->|LOCATED_ON| ST
+    PM -->|BELONGS_TO| LOC
+    PM -->|IS_TYPE| MT
+    PM -->|MANUFACTURED_BY| MV
+    PM -->|WITHIN| PZ
+    ST -->|WITHIN| LOC
+
+    %% Styling
+    classDef primary fill:#4285f4,stroke:#333,stroke-width:1px,color:white
+    classDef street fill:#34a853,stroke:#333,stroke-width:1px,color:white
+    classDef location fill:#fbbc05,stroke:#333,stroke-width:1px,color:white
+    classDef metertype fill:#ea4335,stroke:#333,stroke-width:1px,color:white
+    classDef vendor fill:#ab47bc,stroke:#333,stroke-width:1px,color:white
+    classDef zone fill:#0097a7,stroke:#333,stroke-width:1px,color:white
+
+    class PM primary
+    class ST street
+    class LOC location
+    class MT metertype
+    class MV vendor
+    class PZ zone

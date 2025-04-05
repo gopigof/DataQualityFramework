@@ -1,0 +1,80 @@
+graph TD
+    %% Node definitions with properties
+    Crash["Crash
+    ---
+    unique_id: Integer
+    case_id: String
+    collision_datetime: DateTime
+    collision_severity: String
+    type_of_collision: String
+    number_killed: Integer
+    number_injured: Integer
+    total_casualties: Integer
+    has_fatality: Boolean
+    has_injury: Boolean
+    severity_score: Integer
+    involves_pedestrian: Boolean
+    involves_bicycle: Boolean
+    involves_motorcycle: Boolean
+    involves_vehicle: Boolean
+    "]
+
+    Location["Location
+    ---
+    location_grid: String
+    latitude: Float
+    longitude: Float
+    primary_road: String
+    secondary_road: String
+    police_district: String
+    supervisor_district: String
+    analysis_neighborhood: String
+    "]
+
+    TimeFrame["TimeFrame
+    ---
+    time_id: String
+    year: Integer
+    month: String
+    day_of_week: String
+    time_category: String
+    hour_of_day: Integer
+    is_weekend: Boolean
+    time_of_day: String
+    season: String
+    "]
+
+    Party["Party
+    ---
+    party_id: String
+    party_type: String
+    direction_of_travel: String
+    movement_preceding_accident: String
+    "]
+
+    Vehicle["Vehicle
+    ---
+    vehicle_id: String
+    "]
+
+    %% Relationship definitions
+    Crash -->|OCCURRED_AT
+    distance: Float
+    direction: String
+    is_intersection: Boolean| Location
+
+    Crash -->|HAPPENED_DURING| TimeFrame
+
+    Crash -->|INVOLVES
+    party_number: Integer
+    party_at_fault: Boolean| Party
+
+    Party -->|DRIVING| Vehicle
+
+    Party -->|COLLIDED_WITH| Party
+
+    %% Style definitions
+    classDef node fill:#34a853,stroke:#333,stroke-width:1px,color:white
+    classDef relationship fill:#bbf,stroke:#333,stroke-width:1px;
+
+    class Crash,Location,TimeFrame,Party,Vehicle node;
