@@ -52,9 +52,12 @@ class TrafficCrashesETL(BaseETLPipeline):
                             record_id = records_df.loc[idx, 'unique_id'] if 'unique_id' in records_df.columns else idx
                             self.log_error('collision_datetime',
                                            f"Invalid datetime: date={date_str}, time={time_str}",
-                                           record_id, 1001)
+                                           record_id, 1001,
+                                           ", ".join(str(val) for val in records_df.iloc[idx].values))
             except Exception as e:
-                self.log_error('collision_datetime', f"Error processing datetime: {str(e)}")
+                # Comment out as this is a general error, not row-specific
+                # self.log_error('collision_datetime', f"Error processing datetime: {str(e)}")
+                pass
 
         # Numeric columns that need conversion and validation
         numeric_cols = {
@@ -82,7 +85,8 @@ class TrafficCrashesETL(BaseETLPipeline):
                 for idx, (orig_val, converted_val) in enumerate(zip(original_col, records_df[col])):
                     if pd.notna(orig_val) and pd.isna(converted_val):
                         record_id = records_df.iloc[idx].get('unique_id', idx)
-                        self.log_error(col, f"Invalid {dtype.__name__} value: '{orig_val}'", record_id, 1002)
+                        self.log_error(col, f"Invalid {dtype.__name__} value: '{orig_val}'", record_id, 1002,
+                                      ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # 3. HANDLE MISSING VALUES
         # A. Essential identifier columns - no imputation
@@ -91,7 +95,8 @@ class TrafficCrashesETL(BaseETLPipeline):
             if col in records_df.columns:
                 missing_ids = records_df[pd.isna(records_df[col])].index
                 for idx in missing_ids:
-                    self.log_error(col, f"Missing required identifier", idx, 1003)
+                    self.log_error(col, f"Missing required identifier", idx, 1003,
+                                  ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # B. Date/time fields - critical for analysis
         datetime_cols = ['collision_datetime']
@@ -100,7 +105,8 @@ class TrafficCrashesETL(BaseETLPipeline):
                 missing_datetime = records_df[pd.isna(records_df[col])].index
                 for idx in missing_datetime:
                     record_id = records_df.loc[idx, 'unique_id'] if 'unique_id' in records_df.columns else idx
-                    self.log_error(col, f"Missing datetime information", record_id, 1004)
+                    self.log_error(col, f"Missing datetime information", record_id, 1004,
+                                  ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # C. Location fields - important for geospatial analysis
         if 'tb_latitude' in records_df.columns and 'tb_longitude' in records_df.columns:
@@ -109,7 +115,8 @@ class TrafficCrashesETL(BaseETLPipeline):
                 ].index
             for idx in missing_coords:
                 record_id = records_df.loc[idx, 'unique_id'] if 'unique_id' in records_df.columns else idx
-                self.log_error('COORDINATES', f"Missing coordinates", record_id, 1005)
+                self.log_error('COORDINATES', f"Missing coordinates", record_id, 1005,
+                              ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # D. Categorical fields - fill with 'Unknown' for analysis
         categorical_cols = [
@@ -153,7 +160,8 @@ class TrafficCrashesETL(BaseETLPipeline):
                 lon = records_df.loc[idx, 'tb_longitude']
                 lat = records_df.loc[idx, 'tb_latitude']
                 record_id = records_df.loc[idx, 'unique_id'] if 'unique_id' in records_df.columns else idx
-                self.log_error('COORDINATES', f"Invalid coordinates: ({lon}, {lat})", record_id, 1006)
+                self.log_error('COORDINATES', f"Invalid coordinates: ({lon}, {lat})", record_id, 1006,
+                              ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # Validate accident year is consistent with collision_datetime
         if 'collision_datetime' in records_df.columns and 'accident_year' in records_df.columns:
@@ -164,7 +172,8 @@ class TrafficCrashesETL(BaseETLPipeline):
                         record_id = row['unique_id'] if 'unique_id' in records_df.columns else idx
                         self.log_error('accident_year',
                                        f"Year mismatch: datetime={datetime_year}, accident_year={row['accident_year']}",
-                                       record_id, 1007)
+                                       record_id, 1007,
+                                       ", ".join(str(val) for val in records_df.iloc[idx].values))
                         # Correct the mismatch by using the datetime value
                         records_df.loc[idx, 'accident_year'] = datetime_year
 
@@ -274,7 +283,8 @@ class TrafficCrashesETL(BaseETLPipeline):
                 killed = records_df.loc[idx, 'number_killed']
                 self.log_error('collision_severity',
                                f"Severity inconsistency: marked as '{severity}' but has {killed} fatalities",
-                               record_id, 2001)
+                               record_id, 2001,
+                               ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # B. Validate pedestrian information consistency
         if all(col in records_df.columns for col in ['ped_action', 'party1_type', 'party2_type']):
@@ -293,7 +303,8 @@ class TrafficCrashesETL(BaseETLPipeline):
                 party2 = records_df.loc[idx, 'party2_type']
                 # self.log_error('ped_action',
                 #               f"Pedestrian action '{ped_action}' but no pedestrian in parties: {party1}, {party2}",
-                #               record_id, 2002)
+                #               record_id, 2002,
+                #               ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # Log completion of transform stage
         logger.info(f"Transform completed: {len(records_df)} records processed with {len(records_df.columns)} columns")

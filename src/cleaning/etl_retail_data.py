@@ -33,7 +33,8 @@ class RetailDataETL(BaseETLPipeline):
             missing_count = records_df[column].isna().sum()
             if missing_count > 0:
                 missing_pct = missing_count / len(records_df) * 100
-                self.log_error(column, f"Missing values: {missing_count} ({missing_pct:.2f}%)", None, 1001)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error(column, f"Missing values: {missing_count} ({missing_pct:.2f}%)", None, 1001)
 
         # B. Handle missing values in date/time columns
         date_cols = ['Year', 'Month', 'Day', 'Hour']
@@ -43,7 +44,7 @@ class RetailDataETL(BaseETLPipeline):
                 missing_dates = records_df[records_df[col].isna()].index
                 for idx in missing_dates:
                     record_id = idx
-                    self.log_error(col, f"Missing {col} value", record_id, 1002)
+                    self.log_error(col, f"Missing {col} value", record_id, 1002, ", ".join(str(val) for val in records_df.iloc[idx].values))
 
                 # Fill with reasonable defaults for processing
                 records_df[col] = records_df[col].fillna(0).astype(int)
@@ -54,11 +55,10 @@ class RetailDataETL(BaseETLPipeline):
             imputer = SimpleImputer(strategy='median')
             records_df[numeric_cols] = imputer.fit_transform(records_df[numeric_cols])
 
-            # Log which columns were imputed
-            for col in numeric_cols:
-                if original_df[col].isna().sum() > 0:
-                    self.log_error(col, f"Imputed {original_df[col].isna().sum()} missing values with median", None,
-                                   1003)
+            # Comment out as this is a summary log, not row-specific
+            # for col in numeric_cols:
+            #     if original_df[col].isna().sum() > 0:
+            #         self.log_error(col, f"Imputed {original_df[col].isna().sum()} missing values with median", None, 1003)
 
         # D. Handle missing values in categorical columns
         categorical_cols = records_df.select_dtypes(include=['object']).columns.tolist()
@@ -66,7 +66,8 @@ class RetailDataETL(BaseETLPipeline):
             if records_df[col].isna().any():
                 # Fill with 'Unknown'
                 records_df[col] = records_df[col].fillna('Unknown')
-                self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with 'Unknown'", None, 1004)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with 'Unknown'", None, 1004)
 
         # 2. DATA TYPE CONVERSION
         # A. Convert date fields to correct types
@@ -93,9 +94,11 @@ class RetailDataETL(BaseETLPipeline):
                     hour = records_df.loc[idx, 'Hour']
                     self.log_error('Datetime',
                                    f"Invalid datetime components: year={year}, month={month}, day={day}, hour={hour}",
-                                   record_id, 1005)
+                                   record_id, 1005, ", ".join(str(val) for val in records_df.iloc[idx].values))
             except Exception as e:
-                self.log_error('Datetime', f"Error creating datetime field: {str(e)}", None, 1006)
+                # Comment out as this is a general error, not row-specific
+                # self.log_error('Datetime', f"Error creating datetime field: {str(e)}", None, 1006)
+                pass
 
         # B. Convert other fields to appropriate types
         type_conversions = {
@@ -118,7 +121,9 @@ class RetailDataETL(BaseETLPipeline):
                     elif data_type == 'str':
                         records_df[col] = records_df[col].fillna('').astype(str)
                 except Exception as e:
-                    self.log_error(col, f"Error converting to {data_type}: {str(e)}", None, 1007)
+                    # Comment out as this is a general error, not row-specific
+                    # self.log_error(col, f"Error converting to {data_type}: {str(e)}", None, 1007)
+                    pass
 
         # 3. OUTLIER MANAGEMENT
         # Handle outliers in Cost using IQR method
@@ -133,7 +138,8 @@ class RetailDataETL(BaseETLPipeline):
             for idx in outliers.index:
                 record_id = idx
                 cost_value = records_df.loc[idx, 'Cost']
-                self.log_error('Cost', f"Outlier detected: {cost_value} > {upper_bound}", record_id, 1008)
+                self.log_error('Cost', f"Outlier detected: {cost_value} > {upper_bound}", record_id, 1008,
+                              ", ".join(str(val) for val in records_df.iloc[idx].values))
 
             # Cap outliers
             records_df['Cost_Capped'] = np.where(
@@ -143,7 +149,9 @@ class RetailDataETL(BaseETLPipeline):
             )
 
             if len(outliers) > 0:
-                self.log_error('Cost', f"Capped {len(outliers)} outliers above {upper_bound}", None, 1009)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error('Cost', f"Capped {len(outliers)} outliers above {upper_bound}", None, 1009)
+                pass
 
         # Handle outliers in Price using similar method
         if 'Price' in records_df.columns:
@@ -157,7 +165,8 @@ class RetailDataETL(BaseETLPipeline):
             for idx in outliers.index:
                 record_id = idx
                 price_value = records_df.loc[idx, 'Price']
-                self.log_error('Price', f"Outlier detected: {price_value} > {upper_bound}", record_id, 1010)
+                self.log_error('Price', f"Outlier detected: {price_value} > {upper_bound}", record_id, 1010,
+                              ", ".join(str(val) for val in records_df.iloc[idx].values))
 
             # Cap outliers
             records_df['Price_Capped'] = np.where(
@@ -167,7 +176,9 @@ class RetailDataETL(BaseETLPipeline):
             )
 
             if len(outliers) > 0:
-                self.log_error('Price', f"Capped {len(outliers)} outliers above {upper_bound}", None, 1011)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error('Price', f"Capped {len(outliers)} outliers above {upper_bound}", None, 1011)
+                pass
 
         # 4. DUPLICATE DETECTION
         # Check for duplicate transactions
@@ -176,7 +187,8 @@ class RetailDataETL(BaseETLPipeline):
             for idx in duplicate_transactions.index:
                 record_id = idx
                 transaction_id = records_df.loc[idx, 'Transaction_ID']
-                self.log_error('Transaction_ID', f"Duplicate transaction: {transaction_id}", record_id, 1012)
+                self.log_error('Transaction_ID', f"Duplicate transaction: {transaction_id}", record_id, 1012,
+                              ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # 5. FEATURE ENGINEERING
         # A. Create time-based features if datetime is available
@@ -257,8 +269,8 @@ class RetailDataETL(BaseETLPipeline):
                               zip(pd.Categorical(records_df['Customer_Region']).codes,
                                   pd.Categorical(records_df['Customer_Region']).categories)}
 
-            # Log the mapping for reference
-            self.log_error('Customer_Region', f"Region mapping created: {region_mapping}", None, 2001)
+            # Comment out as this is a general mapping, not row-specific
+            # self.log_error('Customer_Region', f"Region mapping created: {region_mapping}", None, 2001)
 
         # B. Encode Product Category
         if 'Product_Category' in records_df.columns:
@@ -269,8 +281,8 @@ class RetailDataETL(BaseETLPipeline):
                                 zip(pd.Categorical(records_df['Product_Category']).codes,
                                     pd.Categorical(records_df['Product_Category']).categories)}
 
-            # Log the mapping for reference
-            self.log_error('Product_Category', f"Category mapping created: {category_mapping}", None, 2002)
+            # Comment out as this is a general mapping, not row-specific
+            # self.log_error('Product_Category', f"Category mapping created: {category_mapping}", None, 2002)
 
         # 8. Create ETL processing metadata
         current_time = datetime.now()

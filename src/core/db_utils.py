@@ -1,3 +1,4 @@
+# db_utils.py
 import logging
 import os
 from contextlib import contextmanager
@@ -50,13 +51,23 @@ def get_or_create_file_category_id(file_category_name: str) -> int:
         return get_or_create_file_category_id(file_category_name)
 
 
+def get_file_name_record(file_name: str, file_category_id: int) -> int | None:
+    with get_cursor() as cursor:
+        cursor.execute("SELECT File_Id FROM FW_File_Name WHERE File_Name = ? AND File_Category_Id = ?", file_name, file_category_id)
+        result = cursor.fetchone()
+    return result[0] if result is not None else None
+
+
 def insert_file_name_record(file_name: Path, file_category_id: int) -> int:
-    with get_cursor() as cursor:
-        cursor.execute("INSERT INTO FW_File_Name VALUES (?, ?)", file_category_id, file_name.name)
-    with get_cursor() as cursor:
-        cursor.execute("SELECT MAX(File_Id) FROM FW_File_Name")
-        results = cursor.fetchone()
-    return results[0]
+    file_name = file_name.name
+    file_name_record_id = get_file_name_record(file_name=file_name, file_category_id=file_category_id)
+
+    if file_name_record_id is None:
+        with get_cursor() as cursor:
+            cursor.execute("INSERT INTO FW_File_Name VALUES (?, ?)", file_category_id, file_name)
+        return get_file_name_record(file_category_id=file_category_id, file_name=file_name)
+    else:
+        return file_name_record_id
 
 
 def insert_pipeline_observability_record(file_id: int, metadata: dict) -> int:
@@ -65,7 +76,7 @@ def insert_pipeline_observability_record(file_id: int, metadata: dict) -> int:
                        metadata["time_of_arrival"], metadata["process_start_time"], metadata["process_end_time"],
                        metadata["input_file_size"], metadata["initial_count_of_records"],
                        metadata["count_of_processed_records"],
-                       metadata["count_of_error_records"], metadata["count_of_distinct_records"])
+                       metadata["count_of_error_records"], metadata["count_of_distinct_errors"])
     with get_cursor() as cursor:
         cursor.execute("SELECT MAX(Processing_File_Id) FROM FW_Pipeline_Observability")
         results = cursor.fetchone()
@@ -98,22 +109,25 @@ def get_or_create_error_record(error_message: str) -> tuple[str] | None:
     return get_error_message_reference(error_message=error_message)
 
 
-def insert_file_record_error(processing_file_id: int, record_text: str) -> int:
+def insert_file_record_error(record_id: int, processing_file_id: int, record_text: str) -> int:
     with get_cursor() as cursor:
-        cursor.execute("INSERT INTO FW_File_Record_Error (Processing_File_Id) VALUES (?)", processing_file_id)
+        cursor.execute(
+            "INSERT INTO FW_File_Record_Error (Record_ID, Processing_File_Id, Record_Text) VALUES (?, ?, ?)",
+            record_id, processing_file_id, record_text
+       )
     with get_cursor() as cursor:
-        cursor.execute("SELECT MAX(Record_ID) FROM FW_File_Record_Error")
+        cursor.execute("SELECT MAX(File_Record_ID) FROM FW_File_Record_Error")
         results = cursor.fetchone()
     return results[0]
 
 
-def insert_column_error(error_id: int, column_name: str, error_code: int, record_id: int) -> None:
+def insert_column_error(file_record_id: int, column_name: str, error_id: int, error_code: int) -> None:
     with get_cursor() as cursor:
-        cursor.execute("INSERT INTO FW_Column_Error (Error_Id, Column_Name, Error_Code, Record_ID) VALUES (?, ?, ?, ?)",
-                       error_id, column_name, error_code, record_id)
+        cursor.execute("INSERT INTO FW_Column_Error (File_Record_ID, Column_Name, Error_Id, Error_Code) VALUES (?, ?, ?, ?)",
+                       file_record_id, column_name, error_id, error_code)
 
 
 def get_current_processing_file_id() -> int:
     with get_cursor() as cursor:
-        cursor.execute("SELECT COALESCE(MAX(File_Id), 1) AS Current_ID FROM FW_Pipeline_Observability")
+        cursor.execute("SELECT COALESCE(MAX(Processing_File_Id), 0) + 1 AS Current_ID FROM FW_Pipeline_Observability")
         return cursor.fetchone()[0]

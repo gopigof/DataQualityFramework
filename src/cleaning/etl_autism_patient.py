@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from src.core.base_etl import BaseETLPipeline, logger
 
 
-class AutismPatientDataETL(BaseETLPipeline):
+class AutismPatientETL(BaseETLPipeline):
     def transform(self, records_df: DataFrame):
         """
         Clean and transform the Autism Patient dataset.
@@ -33,13 +33,15 @@ class AutismPatientDataETL(BaseETLPipeline):
             missing_count = records_df[column].isna().sum()
             if missing_count > 0:
                 missing_pct = missing_count / len(records_df) * 100
-                self.log_error(column, f"Missing values: {missing_count} ({missing_pct:.2f}%)", None, 1001)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error(column, f"Missing values: {missing_count} ({missing_pct:.2f}%)", None, 1001)
 
         # B. Handle missing values in critical identifier columns
         if 'ID' in records_df.columns and records_df['ID'].isna().any():
             missing_ids = records_df[records_df['ID'].isna()].index
             for idx in missing_ids:
-                self.log_error('ID', f"Missing required identifier", idx, 1002)
+                self.log_error('ID', f"Missing required identifier", idx, 1002,
+                               ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # C. Handle missing values in demographic data
         demographic_cols = ['Age', 'Gender', 'Ethnicity', 'Country', 'Diagnosis Age']
@@ -49,14 +51,13 @@ class AutismPatientDataETL(BaseETLPipeline):
                     # For age columns, use median imputation
                     median_value = records_df[col].median()
                     records_df[col] = records_df[col].fillna(median_value)
-                    self.log_error(col,
-                                   f"Filled {original_df[col].isna().sum()} missing values with median: {median_value}",
-                                   None, 1003)
+                    # Comment out as this is a summary log, not row-specific
+                    # self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with median: {median_value}", None, 1003)
                 else:
                     # For categorical demographics, use 'Unknown'
                     records_df[col] = records_df[col].fillna('Unknown')
-                    self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with 'Unknown'", None,
-                                   1004)
+                    # Comment out as this is a summary log, not row-specific
+                    # self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with 'Unknown'", None, 1004)
 
         # D. Handle missing values in clinical assessment scores
         score_cols = ['IQ Score', 'Social Skills Score', 'Adaptive Behavior Score']
@@ -75,17 +76,20 @@ class AutismPatientDataETL(BaseETLPipeline):
                     for col in score_cols_present:
                         imputed_count = original_scores[col].isna().sum()
                         if imputed_count > 0:
-                            self.log_error(col, f"KNN imputed {imputed_count} missing values", None, 1005)
+                            # Comment out as this is a summary log, not row-specific
+                            # self.log_error(col, f"KNN imputed {imputed_count} missing values", None, 1005)
+                            pass
                 except Exception as e:
-                    self.log_error('Score Imputation', f"Error during KNN imputation: {str(e)}", None, 1006)
+                    # Comment out as this is a general error, not row-specific
+                    # self.log_error('Score Imputation', f"Error during KNN imputation: {str(e)}", None, 1006)
+
                     # Fallback to median imputation if KNN fails
                     for col in score_cols_present:
                         if records_df[col].isna().any():
                             median_value = original_scores[col].median()
                             records_df[col] = records_df[col].fillna(median_value)
-                            self.log_error(col,
-                                           f"Fallback: Filled {original_scores[col].isna().sum()} missing values with median",
-                                           None, 1007)
+                            # Comment out as this is a summary log, not row-specific
+                            # self.log_error(col, f"Fallback: Filled {original_scores[col].isna().sum()} missing values with median", None, 1007)
 
         # E. Handle missing values in symptom indicators
         symptom_cols = [
@@ -101,8 +105,8 @@ class AutismPatientDataETL(BaseETLPipeline):
                 # Use mode (most common value) for symptom columns
                 mode_value = records_df[col].mode()[0]
                 records_df[col] = records_df[col].fillna(mode_value)
-                self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with mode: {mode_value}",
-                               None, 1008)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with mode: {mode_value}", None, 1008)
 
         # F. Handle missing values in other categorical columns
         categorical_cols = [
@@ -122,7 +126,8 @@ class AutismPatientDataETL(BaseETLPipeline):
             if col in records_df.columns and records_df[col].isna().any():
                 # Use 'Unknown' for missing categorical data
                 records_df[col] = records_df[col].fillna('Unknown')
-                self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with 'Unknown'", None, 1009)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with 'Unknown'", None, 1009)
 
         # 2. DATA TYPE CONVERSION
         # A. Ensure numeric columns have correct types
@@ -141,7 +146,9 @@ class AutismPatientDataETL(BaseETLPipeline):
                     if data_type == 'int':
                         records_df[col] = records_df[col].round().astype(int)
                 except Exception as e:
-                    self.log_error(col, f"Error converting to {data_type}: {str(e)}", None, 1010)
+                    # Comment out as this is a general error, not row-specific
+                    # self.log_error(col, f"Error converting to {data_type}: {str(e)}", None, 1010)
+                    pass
 
         # B. Validate and correct age-related fields
         if 'Age' in records_df.columns and 'Diagnosis Age' in records_df.columns:
@@ -150,7 +157,8 @@ class AutismPatientDataETL(BaseETLPipeline):
             for idx in invalid_ages:
                 age = records_df.loc[idx, 'Age']
                 diag_age = records_df.loc[idx, 'Diagnosis Age']
-                self.log_error('Diagnosis Age', f"Diagnosis age ({diag_age}) > current age ({age})", idx, 1011)
+                self.log_error('Diagnosis Age', f"Diagnosis age ({diag_age}) > current age ({age})", idx, 1011,
+                               ", ".join(str(val) for val in records_df.iloc[idx].values))
                 # Correct by setting diagnosis age equal to current age
                 records_df.loc[idx, 'Diagnosis Age'] = records_df.loc[idx, 'Age']
 
@@ -166,18 +174,22 @@ class AutismPatientDataETL(BaseETLPipeline):
 
             for idx in low_outliers:
                 iq_value = records_df.loc[idx, 'IQ Score']
-                self.log_error('IQ Score', f"Low outlier detected: {iq_value} < {iq_min}", idx, 1012)
+                self.log_error('IQ Score', f"Low outlier detected: {iq_value} < {iq_min}", idx, 1012,
+                               ", ".join(str(val) for val in records_df.iloc[idx].values))
 
             for idx in high_outliers:
                 iq_value = records_df.loc[idx, 'IQ Score']
-                self.log_error('IQ Score', f"High outlier detected: {iq_value} > {iq_max}", idx, 1013)
+                self.log_error('IQ Score', f"High outlier detected: {iq_value} > {iq_max}", idx, 1013,
+                               ", ".join(str(val) for val in records_df.iloc[idx].values))
 
             # Cap outliers
             records_df['IQ_Score_Capped'] = np.clip(records_df['IQ Score'], iq_min, iq_max)
 
             outlier_count = len(low_outliers) + len(high_outliers)
             if outlier_count > 0:
-                self.log_error('IQ Score', f"Capped {outlier_count} outliers to range [{iq_min}, {iq_max}]", None, 1014)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error('IQ Score', f"Capped {outlier_count} outliers to range [{iq_min}, {iq_max}]", None, 1014)
+                pass
 
         # B. Handle outliers in Adaptive Behavior Score
         if 'Adaptive Behavior Score' in records_df.columns:
@@ -195,12 +207,14 @@ class AutismPatientDataETL(BaseETLPipeline):
             for idx in low_outliers:
                 score_value = records_df.loc[idx, 'Adaptive Behavior Score']
                 self.log_error('Adaptive Behavior Score', f"Low outlier detected: {score_value} < {lower_bound}", idx,
-                               1015)
+                               1015,
+                               ", ".join(str(val) for val in records_df.iloc[idx].values))
 
             for idx in high_outliers:
                 score_value = records_df.loc[idx, 'Adaptive Behavior Score']
                 self.log_error('Adaptive Behavior Score', f"High outlier detected: {score_value} > {upper_bound}", idx,
-                               1016)
+                               1016,
+                               ", ".join(str(val) for val in records_df.iloc[idx].values))
 
             # Cap outliers
             records_df['Adaptive_Behavior_Score_Capped'] = np.clip(
@@ -211,9 +225,9 @@ class AutismPatientDataETL(BaseETLPipeline):
 
             outlier_count = len(low_outliers) + len(high_outliers)
             if outlier_count > 0:
-                self.log_error('Adaptive Behavior Score',
-                               f"Capped {outlier_count} outliers to range [{lower_bound:.1f}, {upper_bound:.1f}]",
-                               None, 1017)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error('Adaptive Behavior Score', f"Capped {outlier_count} outliers to range [{lower_bound:.1f}, {upper_bound:.1f}]", None, 1017)
+                pass
 
         # 4. DUPLICATE DETECTION
         # Check for duplicate patient records
@@ -223,12 +237,16 @@ class AutismPatientDataETL(BaseETLPipeline):
 
             if not duplicate_ids.empty:
                 for dup_id in duplicate_ids:
-                    self.log_error('ID', f"Duplicate patient ID: {dup_id}", None, 1018)
+                    # Find the rows with this duplicate ID (excluding the first one)
+                    dup_rows = records_df[records_df['ID'] == dup_id].iloc[1:]
+                    for idx in dup_rows.index:
+                        self.log_error('ID', f"Duplicate patient ID: {dup_id}", idx, 1018,
+                                       ", ".join(str(val) for val in records_df.iloc[idx].values))
 
                 # Keep only first occurrence of each ID
                 records_df.drop_duplicates(subset=['ID'], keep='first', inplace=True)
-                self.log_error('Duplicate Records', f"Removed {len(duplicate_ids)} duplicate patient records", None,
-                               1019)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error('Duplicate Records', f"Removed {len(duplicate_ids)} duplicate patient records", None, 1019)
 
         # 5. FEATURE ENGINEERING
         # A. Map Autism Severity to numeric scale
@@ -239,7 +257,9 @@ class AutismPatientDataETL(BaseETLPipeline):
             # Handle any unmapped values
             unmapped = records_df[~records_df['Autism Severity'].isin(severity_map.keys())]['Autism Severity'].unique()
             if len(unmapped) > 0:
-                self.log_error('Autism Severity', f"Unmapped severity values: {unmapped}", None, 1020)
+                # Comment out as this is a general mapping, not row-specific
+                # self.log_error('Autism Severity', f"Unmapped severity values: {unmapped}", None, 1020)
+
                 # Set unmapped values to 0 (Unknown)
                 records_df.loc[~records_df['Autism Severity'].isin(severity_map.keys()), 'Severity_of_Symptoms'] = 0
 
@@ -316,7 +336,9 @@ class AutismPatientDataETL(BaseETLPipeline):
             unmapped = records_df[~records_df['Support Needs'].isin(risk_level_mapping.keys())][
                 'Support Needs'].unique()
             if len(unmapped) > 0:
-                self.log_error('Support Needs', f"Unmapped support need values: {unmapped}", None, 1021)
+                # Comment out as this is a general mapping, not row-specific
+                # self.log_error('Support Needs', f"Unmapped support need values: {unmapped}", None, 1021)
+
                 # Set unmapped values to 'UN' (Unknown)
                 records_df.loc[
                     ~records_df['Support Needs'].isin(risk_level_mapping.keys()), 'Risk_Level_Transformed'] = 'UN'
@@ -330,7 +352,9 @@ class AutismPatientDataETL(BaseETLPipeline):
             unmapped = records_df[~records_df['Family History of Autism'].isin(family_history_map.keys())][
                 'Family History of Autism'].unique()
             if len(unmapped) > 0:
-                self.log_error('Family History of Autism', f"Unmapped family history values: {unmapped}", None, 1022)
+                # Comment out as this is a general mapping, not row-specific
+                # self.log_error('Family History of Autism', f"Unmapped family history values: {unmapped}", None, 1022)
+
                 # Set unmapped values to -1 (Unknown)
                 records_df.loc[~records_df['Family History of Autism'].isin(
                     family_history_map.keys()), 'Family_History_Encoded'] = -1
@@ -351,7 +375,9 @@ class AutismPatientDataETL(BaseETLPipeline):
             unmapped = records_df[~records_df['Parental Education Level'].isin(education_map.keys())][
                 'Parental Education Level'].unique()
             if len(unmapped) > 0:
-                self.log_error('Parental Education Level', f"Unmapped education values: {unmapped}", None, 1023)
+                # Comment out as this is a general mapping, not row-specific
+                # self.log_error('Parental Education Level', f"Unmapped education values: {unmapped}", None, 1023)
+
                 # Set unmapped values to 0 (Unknown)
                 records_df.loc[
                     ~records_df['Parental Education Level'].isin(education_map.keys()), 'Education_Level_Encoded'] = 0
@@ -402,7 +428,7 @@ if __name__ == "__main__":
     current_dir = Path(__file__).parent
     raw_file_path = current_dir.parent / "resources" / "raw" / "autism_patient.csv"
 
-    etl_job = AutismPatientDataETL(
+    etl_job = AutismPatientETL(
         file_path=raw_file_path,
         file_category="AutismPatientData",
     )

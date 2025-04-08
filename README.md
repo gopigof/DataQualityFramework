@@ -19,37 +19,31 @@ This repository contains the skeleton code for implementing custom ETL  (Extract
 ### Directory Structure
 
 ```
-├── README.md
+.
+├── artifacts
+│   ├── graph
+│   │   ├── parking_meters
+│   │   └── traffic_crashes
+│   └── relational
+│       └── create_schema
 ├── docker
-│   ├── Dockerfile
-│   ├── create-db.sql
-│   ├── entrypoint.sh
-│   ├── run-init.sh
-│   └── sqlserver_data
-├── docker-compose.yml
-├── requirements.txt
-├── sql_scripts
-│   └── create_schema
-│       ├── crime_incidents.sql
-│       ├── parking_meters.sql
-│       └── traffic_crashes.sql
 └── src
-    ├── cleaning_and_validation
-    │   ├── base_etl.py
-    │   ├── db_utils.py     -- Utility code required to interact with DB
-    │   ├── etl_mini_social_media.py
-    │   ├── etl_parking_meters.py
-    │   └── etl_social_media.py
+    ├── cleaning         -- The data cleansing, transformation decisions for each dataset
+    ├── core             -- The core ETL logic
     ├── normalization
-    │   └── normalization_social_media.py
-    └── resources
+    └── resources        -- Contains all the datasets
         ├── clean
         ├── normalized
         └── raw
 
 ```
 
-## Instructions to run programs
+## Instructions to run all the ETLs
+
+1. Run the `runner.py` in the root directory which can invoke and run all the ETL programs using `py runner.py`
+
+
+## Instructions to run specific dataset ETL
 
 1. To run the ETL pipeline for any of the datasets, choose a dataset from the available ones in `src/resources/raw`
 2. The corresponding ETL pipeline is created in `src/cleaning/`, and run the file using the command `python3 -m src.cleaning.etl_social_media` (for running the ETL for `social_media_entertainment_data.csv`)
@@ -57,9 +51,8 @@ This repository contains the skeleton code for implementing custom ETL  (Extract
 4. The output of the ETL pipeline will be stored in `src/resources/clean` folder with the format `processed_<dataset_name>` in CSV file format
 
 ## MS SQL Server Backup Commands
-- If the SQL Server is running on Docker, use the following to backup the database and copy it on to host filesystem
+- If the SQL Server is running on Docker, use the following to back up the database and copy it on to host filesystem
 - ```shell
-   docker ps # To find container ID
-   docker exec -it 3fa85b3065b1 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'password123!' -Q "BACKUP DATABASE framework TO DISK = N'/var/opt/mssql/backup/framework.bak' WITH NOFORMAT, NOINIT, NAME = 'framework', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
-   docker cp 3fa85b3065b1:/var/opt/mssql/backup/framework.bak ./framework.bak
+   docker ps # To find container ID if done manually
+   docker exec -it $(docker ps -aqf "name=dataqualityframework-db") /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'password123!' -Q "BACKUP DATABASE framework TO DISK = N'/var/opt/mssql/backup/framework.bak' WITH NOFORMAT, NOINIT, NAME = 'framework', SKIP, NOREWIND, NOUNLOAD, STATS = 10" && docker cp $(docker ps -aqf "name=dataqualityframework-db"):/var/opt/mssql/backup/framework.bak ./framework.bak
 ```

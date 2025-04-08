@@ -35,20 +35,23 @@ class SportsBettingETL(BaseETLPipeline):
             missing_count = records_df[column].isna().sum()
             if missing_count > 0:
                 missing_pct = missing_count / len(records_df) * 100
-                self.log_error(column, f"Missing values: {missing_count} ({missing_pct:.2f}%)", None, 1001)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error(column, f"Missing values: {missing_count} ({missing_pct:.2f}%)", None, 1001)
 
         # B. Fill missing values in critical columns
         # Essential identifiers - cannot be null
         if 'User ID' in records_df.columns and records_df['User ID'].isna().any():
             missing_ids = records_df[records_df['User ID'].isna()].index
             for idx in missing_ids:
-                self.log_error('User ID', f"Missing required identifier", idx, 1002)
+                self.log_error('User ID', f"Missing required identifier", idx, 1002,
+                              ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # Handle timestamp nulls
         if 'Timestamp' in records_df.columns and records_df['Timestamp'].isna().any():
             missing_timestamps = records_df[records_df['Timestamp'].isna()].index
             for idx in missing_timestamps:
-                self.log_error('Timestamp', f"Missing timestamp", idx, 1003)
+                self.log_error('Timestamp', f"Missing timestamp", idx, 1003,
+                              ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # Handle missing numeric values
         numeric_cols = ['Session Duration', 'Amount Spent', 'Active Time', 'Bet Amount', 'Odds']
@@ -59,20 +62,19 @@ class SportsBettingETL(BaseETLPipeline):
                     # Use median for time-related fields
                     median_value = records_df[col].median()
                     records_df[col] = records_df[col].fillna(median_value)
-                    self.log_error(col,
-                                   f"Filled {original_df[col].isna().sum()} missing values with median: {median_value}",
-                                   None, 1004)
+                    # Comment out as this is a summary log, not row-specific
+                    # self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with median: {median_value}", None, 1004)
                 elif col in ['Amount Spent', 'Bet Amount']:
                     # Use 0 for financial fields (assuming no bet was placed)
                     records_df[col] = records_df[col].fillna(0)
-                    self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with 0", None, 1005)
+                    # Comment out as this is a summary log, not row-specific
+                    # self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with 0", None, 1005)
                 elif col == 'Odds':
                     # Use median for odds
                     median_value = records_df[col].median()
                     records_df[col] = records_df[col].fillna(median_value)
-                    self.log_error(col,
-                                   f"Filled {original_df[col].isna().sum()} missing values with median: {median_value}",
-                                   None, 1006)
+                    # Comment out as this is a summary log, not row-specific
+                    # self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with median: {median_value}", None, 1006)
 
         # Handle missing categorical values
         categorical_cols = ['Device Type', 'Page Name', 'Actions Taken', 'Betting History',
@@ -84,7 +86,8 @@ class SportsBettingETL(BaseETLPipeline):
             if col in records_df.columns and records_df[col].isna().any():
                 # Fill with 'Unknown'
                 records_df[col] = records_df[col].fillna('Unknown')
-                self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with 'Unknown'", None, 1007)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with 'Unknown'", None, 1007)
 
         # Handle missing boolean values
         boolean_cols = ['Push Notifications', 'User Engagement', 'Coupon Usage',
@@ -94,7 +97,8 @@ class SportsBettingETL(BaseETLPipeline):
             if col in records_df.columns and records_df[col].isna().any():
                 # Fill with False (assuming no action was taken)
                 records_df[col] = records_df[col].fillna(False)
-                self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with False", None, 1008)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error(col, f"Filled {original_df[col].isna().sum()} missing values with False", None, 1008)
 
         # 2. DATA TYPE CONVERSION
         # A. Convert timestamp to datetime
@@ -106,9 +110,12 @@ class SportsBettingETL(BaseETLPipeline):
                 invalid_timestamps = records_df[records_df['Timestamp'].isna()].index
                 for idx in invalid_timestamps:
                     original_value = original_df.loc[idx, 'Timestamp']
-                    self.log_error('Timestamp', f"Invalid timestamp: {original_value}", idx, 1009)
+                    self.log_error('Timestamp', f"Invalid timestamp: {original_value}", idx, 1009,
+                                  ", ".join(str(val) for val in records_df.iloc[idx].values))
             except Exception as e:
-                self.log_error('Timestamp', f"Error converting timestamps: {str(e)}", None, 1010)
+                # Comment out as this is a general error, not row-specific
+                # self.log_error('Timestamp', f"Error converting timestamps: {str(e)}", None, 1010)
+                pass
 
         # B. Ensure numeric columns have correct types
         numeric_type_conversions = {
@@ -129,7 +136,9 @@ class SportsBettingETL(BaseETLPipeline):
                     elif data_type == 'float':
                         records_df[col] = records_df[col].fillna(0).astype(float)
                 except Exception as e:
-                    self.log_error(col, f"Error converting to {data_type}: {str(e)}", None, 1011)
+                    # Comment out as this is a general error, not row-specific
+                    # self.log_error(col, f"Error converting to {data_type}: {str(e)}", None, 1011)
+                    pass
 
         # C. Ensure boolean columns have correct types
         for col in boolean_cols:
@@ -152,7 +161,9 @@ class SportsBettingETL(BaseETLPipeline):
                         # Final conversion to bool
                         records_df[col] = records_df[col].astype(bool)
                 except Exception as e:
-                    self.log_error(col, f"Error converting to boolean: {str(e)}", None, 1012)
+                    # Comment out as this is a general error, not row-specific
+                    # self.log_error(col, f"Error converting to boolean: {str(e)}", None, 1012)
+                    pass
 
         # 3. OUTLIER MANAGEMENT
         # A. Handle outliers in Session Duration
@@ -166,7 +177,8 @@ class SportsBettingETL(BaseETLPipeline):
             outliers = records_df[records_df['Session Duration'] > upper_bound]
             for idx in outliers.index:
                 duration_value = records_df.loc[idx, 'Session Duration']
-                self.log_error('Session Duration', f"Outlier detected: {duration_value} > {upper_bound}", idx, 1013)
+                self.log_error('Session Duration', f"Outlier detected: {duration_value} > {upper_bound}", idx, 1013,
+                              ", ".join(str(val) for val in records_df.iloc[idx].values))
 
             # Cap outliers
             records_df['Session_Duration_Capped'] = np.where(
@@ -176,7 +188,9 @@ class SportsBettingETL(BaseETLPipeline):
             )
 
             if len(outliers) > 0:
-                self.log_error('Session Duration', f"Capped {len(outliers)} outliers above {upper_bound}", None, 1014)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error('Session Duration', f"Capped {len(outliers)} outliers above {upper_bound}", None, 1014)
+                pass
 
         # B. Handle outliers in Bet Amount
         if 'Bet Amount' in records_df.columns:
@@ -189,7 +203,8 @@ class SportsBettingETL(BaseETLPipeline):
             outliers = records_df[records_df['Bet Amount'] > upper_bound]
             for idx in outliers.index:
                 bet_value = records_df.loc[idx, 'Bet Amount']
-                self.log_error('Bet Amount', f"Outlier detected: {bet_value} > {upper_bound}", idx, 1015)
+                self.log_error('Bet Amount', f"Outlier detected: {bet_value} > {upper_bound}", idx, 1015,
+                              ", ".join(str(val) for val in records_df.iloc[idx].values))
 
             # Cap outliers
             records_df['Bet_Amount_Capped'] = np.where(
@@ -199,7 +214,9 @@ class SportsBettingETL(BaseETLPipeline):
             )
 
             if len(outliers) > 0:
-                self.log_error('Bet Amount', f"Capped {len(outliers)} outliers above {upper_bound}", None, 1016)
+                # Comment out as this is a summary log, not row-specific
+                # self.log_error('Bet Amount', f"Capped {len(outliers)} outliers above {upper_bound}", None, 1016)
+                pass
 
         # 4. DUPLICATE DETECTION
         # Check for duplicate user sessions (same User ID and Timestamp)
@@ -211,7 +228,8 @@ class SportsBettingETL(BaseETLPipeline):
             for idx in duplicate_rows.index:
                 user_id = records_df.loc[idx, 'User ID']
                 timestamp = records_df.loc[idx, 'Timestamp']
-                self.log_error('User Session', f"Duplicate session: User ID {user_id} at {timestamp}", idx, 1017)
+                self.log_error('User Session', f"Duplicate session: User ID {user_id} at {timestamp}", idx, 1017,
+                              ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # 5. FEATURE ENGINEERING
         # A. Timestamp transformations
@@ -323,7 +341,9 @@ class SportsBettingETL(BaseETLPipeline):
                         lambda x: max(len(streak) for streak in x.split('L') if streak) if isinstance(x, str) else 0
                     )
             except Exception as e:
-                self.log_error('Betting History', f"Error parsing betting patterns: {str(e)}", None, 1018)
+                # Comment out as this is a general error, not row-specific
+                # self.log_error('Betting History', f"Error parsing betting patterns: {str(e)}", None, 1018)
+                pass
 
         # 6. CATEGORICAL ENCODING
         # A. Create mappings for categorical variables
@@ -342,7 +362,8 @@ class SportsBettingETL(BaseETLPipeline):
                 # Fill any unmapped values
                 if records_df[transformed_col].isna().any():
                     unmapped_values = records_df[records_df[transformed_col].isna()][column].unique()
-                    self.log_error(column, f"Unmapped values found: {unmapped_values}", None, 1019)
+                    # Comment out as this is a general mapping issue, not row-specific
+                    # self.log_error(column, f"Unmapped values found: {unmapped_values}", None, 1019)
                     records_df[transformed_col] = records_df[transformed_col].fillna('OT')  # Other
 
         # B. Create one-hot encoding for sport type

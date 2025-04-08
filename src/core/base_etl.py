@@ -1,3 +1,4 @@
+# base_etl.py
 import logging
 import os
 import pprint
@@ -34,10 +35,10 @@ class BaseETLPipeline:
             "input_file_size": 0,
             "initial_count_of_records": 0,
             "count_of_processed_records": 0,
-            "count_of_distinct_records": 0,  # TODO: Replace with distinct errors
+            "count_of_distinct_errors": 0,  # TODO: Replace with distinct errors
             "count_of_error_records": 0
         }
-        self.errors = None
+        self.errors = {}
         self.existing_errors: dict[int, str] = get_existing_errors()
 
         # DB Identifiers
@@ -52,7 +53,7 @@ class BaseETLPipeline:
             self.metadata["input_file_size"] = os.path.getsize(self.file_path)
             records_df = pandas.read_csv(self.file_path)
             self.metadata["initial_count_of_records"] = len(records_df.index)
-            # self.metadata["count_of_distinct_records"] = int(records_df.duplicated().value_counts().loc[False])
+            # self.metadata["count_of_distinct_errors"] = int(records_df.duplicated().value_counts().loc[False])
             return records_df
         except Exception as e:
             logger.error(f"Error encountered creating dataframe from file: {self.file_path}")
@@ -76,11 +77,8 @@ class BaseETLPipeline:
             self.metadata["process_end_time"] = datetime.now()
             self.log_metadata()
 
-    def log_error(self, column_name, error_message, record_id=None, error_code=None):
+    def log_error(self, column_name, error_message, record_id=None, error_code=None, record_text=None):
         """Log errors to database"""
-        if self.errors is None:
-            self.errors = {}
-
         # Track distinct errors for reporting
         error_key = f"{column_name}:{error_message}"
         if error_key not in self.errors:
@@ -88,22 +86,19 @@ class BaseETLPipeline:
         self.errors[error_key] += 1
 
         # Get or create error message reference
-        error_id = get_or_create_error_record(error_message)[0]
+        error_msg_ref_id = get_or_create_error_record(error_message)[0]
 
         # If this is a record-specific error, track in FW_File_Record_Error and FW_Column_Error
         if self.processing_file_id is not None:
-            # Create a string representation of the record
-            record_text = f"Column: {column_name}, Error: {error_message[:100]}"
-
             # Insert into FW_File_Record_Error
-            db_record_id = insert_file_record_error(self.processing_file_id, record_text)
+            file_record_id = insert_file_record_error(int(record_id), self.processing_file_id, record_text)
 
             # Insert into FW_Column_Error
-            insert_column_error(int(error_id), column_name, error_code or 0, db_record_id)
+            insert_column_error(file_record_id, column_name, int(error_msg_ref_id), error_code)
 
         # Update error counts
         self.metadata["count_of_error_records"] += 1
-        self.metadata["count_of_distinct_records"] = len(self.errors)
+        self.metadata["count_of_distinct_errors"] = len(self.errors)
 
         logger.warning(f"Error in column '{column_name}': {error_message} (Record ID: {record_id})")
 
@@ -113,7 +108,7 @@ class BaseETLPipeline:
 
         # Update count of distinct errors
         if self.errors:
-            self.metadata["count_of_distinct_records"] = len(self.errors)
+            self.metadata["count_of_distinct_errors"] = len(self.errors)
 
         # Get File_Category_Id from FW_File_Category
         self.file_category_id = get_or_create_file_category_id(self.file_category)
@@ -142,4 +137,4 @@ class BaseETLPipeline:
         logger.info(f"ETL Process completed in {processing_time:.2f} seconds")
         logger.info(f"Processed {self.metadata['count_of_processed_records']} records")
         logger.info(
-            f"Encountered {self.metadata['count_of_error_records']} errors of {self.metadata['count_of_distinct_records']} distinct types")
+            f"Encountered {self.metadata['count_of_error_records']} errors of {self.metadata['count_of_distinct_errors']} distinct types")

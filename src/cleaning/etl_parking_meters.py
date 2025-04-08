@@ -69,7 +69,7 @@ class ParkingMetersETL(BaseETLPipeline):
                 for idx, (orig_val, converted_val) in enumerate(zip(original_col, records_df[col])):
                     if pd.notna(orig_val) and pd.isna(converted_val):
                         record_id = records_df.iloc[idx].get('OBJECTID', idx)
-                        self.log_error(col, f"Invalid {dtype.__name__} value: '{orig_val}'", record_id, 1001)
+                        self.log_error(col, f"Invalid {dtype.__name__} value: '{orig_val}'", record_id, 1001, ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # 3. HANDLE MISSING VALUES
         # A. Essential identifier and reference columns - no imputation
@@ -78,7 +78,7 @@ class ParkingMetersETL(BaseETLPipeline):
             if col in records_df.columns:
                 missing_ids = records_df[pd.isna(records_df[col])].index
                 for idx in missing_ids:
-                    self.log_error(col, f"Missing required identifier", idx, 1002)
+                    self.log_error(col, f"Missing required identifier", idx, 1002, ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # B. Categorical fields - fill with 'Unknown' or most common value
         categorical_cols = [
@@ -132,7 +132,7 @@ class ParkingMetersETL(BaseETLPipeline):
                 lon = records_df.loc[idx, 'LONGITUDE']
                 lat = records_df.loc[idx, 'LATITUDE']
                 record_id = records_df.loc[idx, 'OBJECTID'] if 'OBJECTID' in records_df.columns else idx
-                self.log_error('COORDINATES', f"Invalid coordinates: ({lon}, {lat})", record_id, 1003)
+                self.log_error('COORDINATES', f"Invalid coordinates: ({lon}, {lat})", record_id, 1003, ", ".join(str(val) for val in records_df.iloc[idx].values))
 
             # For analysis, we'll set invalid coordinates to NaN
             records_df.loc[invalid_coords, ['LONGITUDE', 'LATITUDE']] = np.nan
@@ -209,7 +209,7 @@ class ParkingMetersETL(BaseETLPipeline):
 
             for idx in inconsistent_records.index:
                 record_id = inconsistent_records.loc[idx, 'OBJECTID'] if 'OBJECTID' in records_df.columns else idx
-                self.log_error('DATA_CONSISTENCY', "Has coordinates but missing street information", record_id, 2001)
+                self.log_error('DATA_CONSISTENCY', "Has coordinates but missing street information", record_id, 2001, ", ".join(str(val) for val in records_df.iloc[idx].values))
 
         # Log completion of transform stage
         logger.info(f"Transform completed: {len(records_df)} records processed with {len(records_df.columns)} columns")
