@@ -5,6 +5,7 @@ services:
       - "1433:1433"
     volumes:
       - sqlserver_data:/var/opt/mssql
+      - E:\Univ\DAMG7374_Gov\DataQualityFramework\src\resources\normalized\:/data/
 
 volumes:
   sqlserver_data:

@@ -1,0 +1,369 @@
+road_id,road_surface,road_cond_1,road_cond_2,lighting,control_device
+1,Dry,No Unusual Condition,Not Stated,Daylight,Functioning
+2,Dry,No Unusual Condition,Not Stated,Daylight,Unknown
+3,Dry,No Unusual Condition,Not Stated,Dark - Street Lights,Functioning
+4,Wet,No Unusual Condition,Not Stated,Daylight,Unknown
+5,Dry,Loose Material on Roadway,Not Stated,Daylight,Unknown
+6,Not Stated,Not Stated,Not Stated,Not Stated,Not Stated
+7,Wet,No Unusual Condition,Not Stated,Dark - Street Lights,Unknown
+8,Dry,No Unusual Condition,Not Stated,Daylight,Not Stated
+9,Dry,Other,Not Stated,Daylight,Unknown
+10,Dry,Other,Not Stated,Dark - Street Lights,Functioning
+11,Dry,"Holes, Deep Rut",Not Stated,Daylight,Unknown
+12,Dry,No Unusual Condition,Not Stated,Dark - Street Lights,Unknown
+13,Wet,No Unusual Condition,Not Stated,Dark - Street Lights,Functioning
+14,Not Stated,Not Stated,Not Stated,Not Stated,Unknown
+15,Dry,No Unusual Condition,Not Stated,Dusk - Dawn,Unknown
+16,Wet,No Unusual Condition,Not Stated,Daylight,Functioning
+17,Wet,Other,Not Stated,Dark - Street Lights,Unknown
+18,Dry,Reduced Roadway Width,Not Stated,Dark - Street Lights,Functioning
+19,Dry,"Holes, Deep Ruts",Not Stated,Daylight,Functioning
+20,Not Stated,No Unusual Condition,Not Stated,Daylight,Unknown
+21,Dry,Not Stated,Not Stated,Dark - Street Lights,Functioning
+22,Not Stated,Other,Not Stated,Daylight,Unknown
+23,Dry,Not Stated,Not Stated,Daylight,Functioning
+24,Dry,Other,Not Stated,Daylight,Functioning
+25,Dry,"Holes, Deep Ruts",Not Stated,Daylight,Unknown
+26,Wet,Other,Not Stated,Daylight,Unknown
+27,Dry,No Unusual Condition,Not Stated,Not Stated,Unknown
+28,Dry,"Holes, Deep Ruts",Loose Material on Roadway,Daylight,Unknown
+29,Dry,No Unusual Condition,Not Stated,Dark - No Street Lights,Unknown
+30,Dry,No Unusual Condition,Not Stated,Daylight,Not Functioning
+31,Wet,Other,Not Stated,Dusk - Dawn,Functioning
+32,Dry,Other,Not Stated,Dark - Street Lights,Unknown
+33,Dry,No Unusual Condition,Not Stated,Dusk - Dawn,Functioning
+34,Dry,No Unusual Condition,Not Stated,Dark - Street Lights Not Functioning,Functioning
+35,Wet,"Holes, Deep Ruts",Other,Daylight,Unknown
+36,Not Stated,Other,Not Stated,Daylight,Not Stated
+37,Wet,Not Stated,Not Stated,Daylight,Functioning
+38,Not Stated,Not Stated,Not Stated,Daylight,Unknown
+39,Dry,Not Stated,Not Stated,Dark - Street Lights,Unknown
+40,Dry,Not Stated,Not Stated,Daylight,Unknown
+41,Wet,No Unusual Condition,Not Stated,Dark - Street Lights Not Functioning,Not Functioning
+42,Dry,No Unusual Condition,Not Stated,Dark - Street Lights,Not Stated
+43,Dry,Obstruction on Roadway,Not Stated,Daylight,Unknown
+44,Dry,Construction or Repair Zone,Not Stated,Daylight,Functioning
+45,Dry,Construction or Repair Zone,Not Stated,Daylight,Unknown
+46,Wet,No Unusual Condition,Not Stated,Dusk - Dawn,Functioning
+47,Not Stated,No Unusual Condition,Not Stated,Daylight,Functioning
+48,Dry,"Holes, Deep Rut",Not Stated,Dark - Street Lights,Functioning
+49,Not Stated,No Unusual Condition,Not Stated,Not Stated,Functioning
+50,Dry,Construction or Repair Zone,No Unusual Condition,Daylight,Unknown
+51,Not Stated,No Unusual Condition,Not Stated,Dark - Street Lights,Unknown
+52,Dry,"Holes, Deep Ruts",Not Stated,Dark - Street Lights,Unknown
+53,Dry,No Unusual Condition,Not Stated,Dark - No Street Lights,Functioning
+54,Dry,Other,Not Stated,Dusk - Dawn,Functioning
+55,Dry,Obstruction on Roadway,Not Stated,Daylight,Functioning
+56,Wet,No Unusual Condition,Not Stated,Daylight,Not Stated
+57,Dry,Construction or Repair Zone,Not Stated,Dark - Street Lights,Unknown
+58,Not Stated,Other,Not Stated,Not Stated,Not Stated
+59,Wet,No Unusual Condition,Not Stated,Dusk - Dawn,Unknown
+60,Slippery,No Unusual Condition,Not Stated,Daylight,Functioning
+61,Wet,No Unusual Condition,Not Stated,Dark - No Street Lights,Unknown
+62,Dry,No Unusual Condition,Not Stated,Dark - Street Lights Not Functioning,Unknown
+63,Slippery,Other,Not Stated,Dusk - Dawn,Functioning
+64,Snowy or Icy,No Unusual Condition,Not Stated,Dusk - Dawn,Functioning
+65,Not Stated,No Unusual Condition,Not Stated,Dark - Street Lights,Functioning
+66,Dry,Not Stated,Not Stated,Dusk - Dawn,Functioning
+67,Dry,No Unusual Condition,Not Stated,Not Stated,Not Stated
+68,Dry,"Holes, Deep Ruts",Not Stated,Dusk - Dawn,Not Stated
+69,Dry,Not Stated,Not Stated,Daylight,Not Stated
+70,Slippery,Loose Material on Roadway,Not Stated,Dark - Street Lights,Unknown
+71,Dry,"Holes, Deep Rut",Not Stated,Dark - Street Lights,Unknown
+72,Wet,No Unusual Condition,Not Stated,Daylight,Not Functioning
+73,Dry,Reduced Roadway Width,Not Stated,Daylight,Functioning
+74,Wet,Other,Not Stated,Daylight,Functioning
+75,Dry,Construction or Repair Zone,Not Stated,Dark - Street Lights,Functioning
+76,Not Stated,Not Stated,Not Stated,Daylight,Functioning
+77,Not Stated,"Holes, Deep Rut",No Unusual Condition,Dark - No Street Lights,Unknown
+78,Dry,Construction or Repair Zone,Reduced Roadway Width,Daylight,Not Stated
+79,Dry,No Unusual Condition,Not Stated,Dark - Street Lights,Not Functioning
+80,Dry,"Holes, Deep Rut",Not Stated,Daylight,Functioning
+81,Dry,No Unusual Condition,Not Stated,Not Stated,Functioning
+82,Dry,"Holes, Deep Ruts",Not Stated,Dark - Street Lights,Functioning
+83,Wet,Not Stated,Not Stated,Dark - Street Lights,Not Functioning
+84,Not Stated,No Unusual Condition,Not Stated,Dark - Street Lights,Not Stated
+85,Dry,No Unusual Condition,Not Stated,Dusk - Dawn,Not Functioning
+86,Dry,Other,No Unusual Condition,Daylight,Unknown
+87,Wet,"Holes, Deep Rut",Not Stated,Daylight,Unknown
+88,Dry,Construction or Repair Zone,No Unusual Condition,Dusk - Dawn,Functioning
+89,Slippery,"Holes, Deep Ruts",Loose Material on Roadway,Daylight,Unknown
+90,Not Stated,"Holes, Deep Ruts",No Unusual Condition,Daylight,Functioning
+91,Wet,Not Stated,Not Stated,Dark - Street Lights,Functioning
+92,Dry,Other,Not Stated,Dark - Street Lights,Not Stated
+93,Wet,No Unusual Condition,Not Stated,Dark - Street Lights Not Functioning,Functioning
+94,Wet,No Unusual Condition,Not Stated,Dark - No Street Lights,Functioning
+95,Dry,Construction or Repair Zone,Not Stated,Daylight,Not Stated
+96,Wet,Not Stated,Not Stated,Daylight,Unknown
+97,Wet,Obstruction on Roadway,Not Stated,Dark - Street Lights,Unknown
+98,Dry,Not Stated,Not Stated,Dusk - Dawn,Not Stated
+99,Wet,"Holes, Deep Ruts",Not Stated,Dusk - Dawn,Unknown
+100,Dry,Construction or Repair Zone,Not Stated,Dusk - Dawn,Unknown
+101,Dry,No Unusual Condition,Not Stated,Daylight,Obscured
+102,Dry,Obstruction on Roadway,Construction or Repair Zone,Daylight,Unknown
+103,Not Stated,Not Stated,Not Stated,Not Stated,Functioning
+104,Wet,Other,Not Stated,Dark - Street Lights,Functioning
+105,Dry,No Unusual Condition,Not Stated,Dusk - Dawn,Not Stated
+106,Dry,Loose Material on Roadway,Construction or Repair Zone,Daylight,Unknown
+107,Not Stated,Other,Not Stated,Dark - Street Lights,Functioning
+108,Dry,Not Stated,Not Stated,Dusk - Dawn,Unknown
+109,Dry,Loose Material on Roadway,Not Stated,Daylight,Functioning
+110,Wet,No Unusual Condition,Not Stated,Dark - Street Lights,Not Stated
+111,Not Stated,Not Stated,Not Stated,Dark - Street Lights,Unknown
+112,Slippery,No Unusual Condition,Not Stated,Dark - Street Lights,Unknown
+113,Dry,"Holes, Deep Rut",Not Stated,Dusk - Dawn,Functioning
+114,Not Stated,Not Stated,Not Stated,Dark - No Street Lights,Unknown
+115,Dry,Loose Material on Roadway,Not Stated,Dark - Street Lights,Unknown
+116,Not Stated,Other,Not Stated,Not Stated,Unknown
+117,Dry,Other,Not Stated,Daylight,Not Stated
+118,Dry,Other,No Unusual Condition,Dark - Street Lights,Functioning
+119,Wet,Construction or Repair Zone,Not Stated,Daylight,Functioning
+120,Dry,Loose Material on Roadway,Construction or Repair Zone,Daylight,Functioning
+121,Dry,"Holes, Deep Ruts",Construction or Repair Zone,Dark - Street Lights,Unknown
+122,Dry,Construction or Repair Zone,Not Stated,Daylight,Not Functioning
+123,Dry,Obstruction on Roadway,Not Stated,Dusk - Dawn,Not Stated
+124,Not Stated,"Holes, Deep Ruts",Not Stated,Dark - Street Lights,Unknown
+125,Not Stated,Other,Not Stated,Daylight,Functioning
+126,Not Stated,Not Stated,Not Stated,Daylight,Not Stated
+127,Dry,Construction or Repair Zone,No Unusual Condition,Dark - Street Lights,Unknown
+128,Not Stated,Not Stated,Not Stated,Dark - Street Lights,Functioning
+129,Slippery,No Unusual Condition,Not Stated,Dark - Street Lights,Functioning
+130,Wet,No Unusual Condition,Not Stated,Not Stated,Functioning
+131,Not Stated,"Holes, Deep Ruts",No Unusual Condition,Daylight,Unknown
+132,Wet,Not Stated,Not Stated,Dark - Street Lights,Unknown
+133,Snowy or Icy,No Unusual Condition,Not Stated,Dark - Street Lights,Functioning
+134,Not Stated,No Unusual Condition,Not Stated,Dark - Street Lights,Not Functioning
+135,Wet,No Unusual Condition,Not Stated,Dark - Street Lights Not Functioning,Unknown
+136,Dry,"Holes, Deep Rut",Not Stated,Dusk - Dawn,Unknown
+137,Not Stated,No Unusual Condition,Not Stated,Daylight,Not Stated
+138,Dry,Obstruction on Roadway,Other,Dark - Street Lights,Unknown
+139,Wet,Not Stated,Not Stated,Dark - Street Lights,Not Stated
+140,Not Stated,No Unusual Condition,Not Stated,Dusk - Dawn,Functioning
+141,Wet,"Holes, Deep Ruts",Not Stated,Daylight,Unknown
+142,Slippery,Loose Material on Roadway,Not Stated,Daylight,Unknown
+143,Wet,Construction or Repair Zone,Not Stated,Daylight,Unknown
+144,Not Stated,Other,Not Stated,Dark - Street Lights,Not Stated
+145,Dry,No Unusual Condition,Not Stated,Dark - Street Lights,Obscured
+146,Dry,Construction or Repair Zone,Reduced Roadway Width,Daylight,Functioning
+147,Wet,Not Stated,Not Stated,Dark - No Street Lights,Unknown
+148,Dry,Obstruction on Roadway,No Unusual Condition,Dark - Street Lights,Functioning
+149,Wet,Not Stated,Not Stated,Daylight,Not Stated
+150,Dry,Obstruction on Roadway,Not Stated,Dark - No Street Lights,Unknown
+151,Wet,No Unusual Condition,Not Stated,Not Stated,Not Stated
+152,Dry,Loose Material on Roadway,Construction or Repair Zone,Dark - Street Lights,Unknown
+153,Slippery,No Unusual Condition,Not Stated,Daylight,Unknown
+154,Wet,Obstruction on Roadway,Not Stated,Daylight,Functioning
+155,Dry,No Unusual Condition,Not Stated,Dark - No Street Lights,Not Stated
+156,Wet,Not Stated,Not Stated,Dark - Street Lights Not Functioning,Functioning
+157,Wet,Reduced Roadway Width,Not Stated,Dark - Street Lights,Functioning
+158,Dry,"Holes, Deep Ruts",Not Stated,Not Stated,Unknown
+159,Dry,"Holes, Deep Ruts",Not Stated,Dusk - Dawn,Functioning
+160,Not Stated,No Unusual Condition,Not Stated,Dark - No Street Lights,Functioning
+161,Dry,Reduced Roadway Width,Not Stated,Daylight,Unknown
+162,Wet,Flooded,Not Stated,Dark - Street Lights,Unknown
+163,Dry,Not Stated,Not Stated,Not Stated,Functioning
+164,Dry,Other,Not Stated,Dark - No Street Lights,Unknown
+165,Dry,Obstruction on Roadway,Not Stated,Dark - Street Lights,Functioning
+166,Wet,No Unusual Condition,Not Stated,Dusk - Dawn,Not Stated
+167,Not Stated,Construction or Repair Zone,Not Stated,Daylight,Functioning
+168,Wet,Flooded,Not Stated,Daylight,Unknown
+169,Dry,Flooded,Not Stated,Dark - Street Lights,Unknown
+170,Not Stated,No Unusual Condition,Not Stated,Dusk - Dawn,Unknown
+171,Wet,Obstruction on Roadway,Not Stated,Dark - Street Lights,Functioning
+172,Wet,Loose Material on Roadway,Not Stated,Daylight,Unknown
+173,Wet,"Holes, Deep Ruts",Not Stated,Daylight,Functioning
+174,Wet,Reduced Roadway Width,Not Stated,Daylight,Unknown
+175,Dry,Other,Not Stated,Not Stated,Functioning
+176,Not Stated,No Unusual Condition,Not Stated,Not Stated,Unknown
+177,Wet,Loose Material on Roadway,Other,Dark - Street Lights,Unknown
+178,Wet,"Holes, Deep Ruts",Loose Material on Roadway,Dark - Street Lights,Unknown
+179,Wet,"Holes, Deep Ruts",Not Stated,Dusk - Dawn,Functioning
+180,Not Stated,No Unusual Condition,Not Stated,Dark - No Street Lights,Unknown
+181,Wet,Not Stated,Not Stated,Dark - No Street Lights,Functioning
+182,Wet,Flooded,Not Stated,Dusk - Dawn,Unknown
+183,Not Stated,Construction or Repair Zone,Not Stated,Dark - Street Lights,Functioning
+184,Dry,Construction or Repair Zone,Not Stated,Daylight,Obscured
+185,Snowy or Icy,No Unusual Condition,Not Stated,Daylight,Functioning
+186,Wet,Loose Material on Roadway,Flooded,Daylight,Functioning
+187,Not Stated,No Unusual Condition,Not Stated,Not Stated,Not Stated
+188,Wet,Loose Material on Roadway,Not Stated,Dark - Street Lights,Unknown
+189,Dry,Loose Material on Roadway,Not Stated,Dark - Street Lights,Functioning
+190,Wet,Not Stated,Not Stated,Dark - Street Lights Not Functioning,Unknown
+191,Wet,Other,Not Stated,Daylight,Not Functioning
+192,Not Stated,"Holes, Deep Ruts",Not Stated,Dark - Street Lights,Not Stated
+193,Snowy or Icy,No Unusual Condition,Not Stated,Dark - Street Lights,Unknown
+194,Slippery,Flooded,Not Stated,Daylight,Unknown
+195,Not Stated,"Holes, Deep Ruts",Not Stated,Daylight,Not Stated
+196,Dry,Other,Not Stated,Dusk - Dawn,Unknown
+197,Not Stated,Other,Not Stated,Dusk - Dawn,Unknown
+198,Dry,Reduced Roadway Width,Not Stated,Dark - Street Lights,Unknown
+199,Dry,Other,Not Stated,Daylight,Not Functioning
+200,Dry,Loose Material on Roadway,No Unusual Condition,Dark - Street Lights,Functioning
+201,Snowy or Icy,No Unusual Condition,Not Stated,Daylight,Unknown
+202,Wet,Obstruction on Roadway,Not Stated,Daylight,Unknown
+203,Dry,No Unusual Condition,Not Stated,Dark - Street Lights Not Functioning,Not Functioning
+204,Slippery,Construction or Repair Zone,Not Stated,Daylight,Unknown
+205,Wet,No Unusual Condition,Not Stated,Daylight,Obscured
+206,Dry,Flooded,Not Stated,Daylight,Functioning
+207,Wet,"Holes, Deep Ruts",Not Stated,Dark - Street Lights,Unknown
+208,Dry,Construction or Repair Zone,Not Stated,Dusk - Dawn,Functioning
+209,Dry,Not Stated,Not Stated,Dark - Street Lights,Not Stated
+210,Wet,No Unusual Condition,Not Stated,Dark - Street Lights,Obscured
+211,Dry,"Holes, Deep Ruts",No Unusual Condition,Daylight,Functioning
+212,Dry,Construction or Repair Zone,Other,Dark - Street Lights Not Functioning,Functioning
+213,Wet,Flooded,Not Stated,Dark - Street Lights,Functioning
+214,Dry,Construction or Repair Zone,Not Stated,Not Stated,Functioning
+215,Dry,Obstruction on Roadway,Not Stated,Dark - Street Lights,Unknown
+216,Wet,Other,Not Stated,Dark - Street Lights Not Functioning,Unknown
+217,Dry,Construction or Repair Zone,No Unusual Condition,Dark - Street Lights,Functioning
+218,Not Stated,Other,Not Stated,Not Stated,Functioning
+219,Dry,"Holes, Deep Ruts",Other,Daylight,Unknown
+220,Dry,Not Stated,Not Stated,Dark - Street Lights Not Functioning,Functioning
+221,Wet,Loose Material on Roadway,Construction or Repair Zone,Dark - Street Lights,Functioning
+222,Dry,"Holes, Deep Ruts",Construction or Repair Zone,Dark - Street Lights,Functioning
+223,Wet,Construction or Repair Zone,Not Stated,Dark - Street Lights,Not Stated
+224,Dry,Not Stated,Not Stated,Dark - No Street Lights,Functioning
+225,Not Stated,"Holes, Deep Ruts",No Unusual Condition,Dark - Street Lights,Functioning
+226,Dry,Obstruction on Roadway,No Unusual Condition,Daylight,Unknown
+227,Dry,Construction or Repair Zone,Not Stated,Dark - Street Lights Not Functioning,Unknown
+228,Not Stated,Not Stated,Not Stated,Dusk - Dawn,Functioning
+229,Snowy or Icy,"Holes, Deep Ruts",Not Stated,Daylight,Functioning
+230,Wet,No Unusual Condition,Not Stated,Dark - No Street Lights,Not Functioning
+231,Not Stated,"Holes, Deep Ruts",No Unusual Condition,Daylight,Not Stated
+232,Dry,"Holes, Deep Ruts",No Unusual Condition,Daylight,Unknown
+233,Dry,Obstruction on Roadway,Reduced Roadway Width,Daylight,Unknown
+234,Slippery,Not Stated,Not Stated,Daylight,Unknown
+235,Slippery,Other,Not Stated,Daylight,Functioning
+236,Slippery,Other,Not Stated,Daylight,Unknown
+237,Dry,Not Stated,Not Stated,Not Stated,Unknown
+238,Dry,Loose Material on Roadway,Not Stated,Dark - No Street Lights,Unknown
+239,Wet,Loose Material on Roadway,Not Stated,Daylight,Functioning
+240,Slippery,Loose Material on Roadway,Not Stated,Dark - Street Lights,Functioning
+241,Not Stated,Not Stated,Not Stated,Dusk - Dawn,Unknown
+242,Dry,Not Stated,Not Stated,Dark - No Street Lights,Unknown
+243,Not Stated,Other,Not Stated,Dark - Street Lights,Unknown
+244,Slippery,"Holes, Deep Ruts",Not Stated,Dark - No Street Lights,Unknown
+245,Not Stated,Loose Material on Roadway,Not Stated,Daylight,Unknown
+246,Slippery,Construction or Repair Zone,Not Stated,Daylight,Functioning
+247,Wet,Construction or Repair Zone,Not Stated,Dark - Street Lights,Unknown
+248,Dry,"Holes, Deep Ruts",Not Stated,Dusk - Dawn,Unknown
+249,Wet,Construction or Repair Zone,No Unusual Condition,Daylight,Functioning
+250,Not Stated,"Holes, Deep Ruts",No Unusual Condition,Dark - Street Lights,Unknown
+251,Not Stated,Other,Not Stated,Dark - No Street Lights,Unknown
+252,Not Stated,"Holes, Deep Ruts",Not Stated,Dark - Street Lights,Functioning
+253,Dry,Reduced Roadway Width,No Unusual Condition,Dark - Street Lights,Unknown
+254,Dry,Obstruction on Roadway,Not Stated,Dusk - Dawn,Unknown
+255,Wet,"Holes, Deep Ruts",Not Stated,Dark - Street Lights,Functioning
+256,Wet,Other,Not Stated,Dusk - Dawn,Unknown
+257,Wet,"Holes, Deep Ruts",Loose Material on Roadway,Daylight,Functioning
+258,Dry,"Holes, Deep Ruts",Construction or Repair Zone,Daylight,Unknown
+259,Wet,No Unusual Condition,Not Stated,Not Stated,Unknown
+260,Dry,No Unusual Condition,Not Stated,Dark - No Street Lights,Not Functioning
+261,Dry,Loose Material on Roadway,Not Stated,Dusk - Dawn,Unknown
+262,Dry,"Holes, Deep Ruts",Not Stated,Daylight,Not Stated
+263,Wet,Construction or Repair Zone,Not Stated,Daylight,Not Stated
+264,Dry,"Holes, Deep Ruts",Not Stated,Not Stated,Functioning
+265,Slippery,Loose Material on Roadway,Construction or Repair Zone,Daylight,Unknown
+266,Dry,Loose Material on Roadway,Not Stated,Daylight,Not Stated
+267,Wet,No Unusual Condition,Not Stated,Dark - Street Lights,Not Functioning
+268,Dry,"Holes, Deep Rut",Construction or Repair Zone,Dark - Street Lights,Not Stated
+269,Dry,Other,Not Stated,Not Stated,Unknown
+270,Dry,"Holes, Deep Rut",No Unusual Condition,Daylight,Functioning
+271,Dry,Loose Material on Roadway,Not Stated,Dusk - Dawn,Functioning
+272,Not Stated,"Holes, Deep Ruts",Not Stated,Daylight,Functioning
+273,Slippery,No Unusual Condition,Not Stated,Daylight,Not Stated
+274,Slippery,"Holes, Deep Rut",Construction or Repair Zone,Daylight,Functioning
+275,Dry,Construction or Repair Zone,Not Stated,Dark - Street Lights,Obscured
+276,Not Stated,Loose Material on Roadway,Not Stated,Dark - Street Lights,Functioning
+277,Wet,Construction or Repair Zone,No Unusual Condition,Dark - Street Lights,Functioning
+278,Dry,Obstruction on Roadway,Reduced Roadway Width,Daylight,Functioning
+279,Wet,Other,Not Stated,Dark - Street Lights Not Functioning,Functioning
+280,Dry,Other,No Unusual Condition,Daylight,Functioning
+281,Wet,Construction or Repair Zone,Other,Daylight,Functioning
+282,Dry,Reduced Roadway Width,No Unusual Condition,Daylight,Functioning
+283,Dry,Other,Not Stated,Dark - Street Lights Not Functioning,Unknown
+284,Wet,Construction or Repair Zone,Not Stated,Dark - Street Lights,Functioning
+285,Dry,Other,No Unusual Condition,Dark - Street Lights,Unknown
+286,Wet,Other,No Unusual Condition,Dark - Street Lights,Functioning
+287,Not Stated,"Holes, Deep Rut",Not Stated,Daylight,Functioning
+288,Dry,Other,Not Stated,Daylight,Obscured
+289,Dry,Construction or Repair Zone,No Unusual Condition,Daylight,Functioning
+290,Wet,"Holes, Deep Rut",Construction or Repair Zone,Dark - Street Lights,Functioning
+291,Not Stated,Loose Material on Roadway,Other,Dark - Street Lights,Unknown
+292,Wet,No Unusual Condition,Not Stated,Dark - No Street Lights,Not Stated
+293,Slippery,Not Stated,Not Stated,Dark - Street Lights,Functioning
+294,Wet,Other,No Unusual Condition,Dusk - Dawn,Unknown
+295,Wet,Other,Not Stated,Dark - No Street Lights,Unknown
+296,Not Stated,Loose Material on Roadway,No Unusual Condition,Daylight,Functioning
+297,Dry,Other,Not Stated,Dusk - Dawn,Not Stated
+298,Wet,Loose Material on Roadway,No Unusual Condition,Dark - Street Lights,Unknown
+299,Dry,Flooded,Not Stated,Daylight,Unknown
+300,Dry,Other,No Unusual Condition,Dusk - Dawn,Functioning
+301,Not Stated,Not Stated,Not Stated,Dark - Street Lights,Not Stated
+302,Wet,Not Stated,Not Stated,Dusk - Dawn,Functioning
+303,Dry,Loose Material on Roadway,Other,Daylight,Unknown
+304,Wet,Loose Material on Roadway,No Unusual Condition,Dark - Street Lights,Functioning
+305,Dry,Construction or Repair Zone,Reduced Roadway Width,Dark - Street Lights,Functioning
+306,Dry,"Holes, Deep Rut",Obstruction on Roadway,Daylight,Functioning
+307,Dry,"Holes, Deep Rut",Not Stated,Daylight,Not Stated
+308,Dry,Obstruction on Roadway,Construction or Repair Zone,Dark - Street Lights,Functioning
+309,Dry,Loose Material on Roadway,Construction or Repair Zone,Dark - Street Lights,Functioning
+310,Slippery,Construction or Repair Zone,Not Stated,Dark - Street Lights,Unknown
+311,Dry,"Holes, Deep Rut",Not Stated,Not Stated,Unknown
+312,Wet,Construction or Repair Zone,No Unusual Condition,Dark - Street Lights,Unknown
+313,Wet,Flooded,Not Stated,Daylight,Functioning
+314,Dry,"Holes, Deep Rut",Construction or Repair Zone,Daylight,Unknown
+315,Wet,Not Stated,Not Stated,Not Stated,Functioning
+316,Wet,Other,No Unusual Condition,Daylight,Not Functioning
+317,Dry,Loose Material on Roadway,Obstruction on Roadway,Dark - Street Lights,Unknown
+318,Dry,Not Stated,Not Stated,Not Stated,Not Stated
+319,Dry,Obstruction on Roadway,Not Stated,Not Stated,Unknown
+320,Dry,Reduced Roadway Width,Not Stated,Dusk - Dawn,Unknown
+321,Slippery,No Unusual Condition,Not Stated,Dusk - Dawn,Unknown
+322,Snowy or Icy,Loose Material on Roadway,Not Stated,Dark - Street Lights,Functioning
+323,Wet,Reduced Roadway Width,Not Stated,Dark - Street Lights,Unknown
+324,Dry,Loose Material on Roadway,Not Stated,Dark - No Street Lights,Functioning
+325,Snowy or Icy,No Unusual Condition,Not Stated,Not Stated,Functioning
+326,Not Stated,"Holes, Deep Ruts",Construction or Repair Zone,Daylight,Unknown
+327,Dry,"Holes, Deep Ruts",Other,Dark - Street Lights,Unknown
+328,Dry,"Holes, Deep Ruts",Not Stated,Dark - No Street Lights,Unknown
+329,Dry,Loose Material on Roadway,Other,Dark - Street Lights,Functioning
+330,Wet,Other,Not Stated,Daylight,Not Stated
+331,Slippery,Other,Not Stated,Dark - Street Lights,Functioning
+332,Dry,Construction or Repair Zone,Not Stated,Dark - Street Lights,Not Stated
+333,Wet,Loose Material on Roadway,Not Stated,Dark - Street Lights,Functioning
+334,Slippery,Reduced Roadway Width,Not Stated,Daylight,Unknown
+335,Dry,No Unusual Condition,Not Stated,Dusk - Dawn,Obscured
+336,Wet,"Holes, Deep Rut",Obstruction on Roadway,Dark - Street Lights,Unknown
+337,Dry,Not Stated,Not Stated,Dark - Street Lights,Not Functioning
+338,Dry,Obstruction on Roadway,No Unusual Condition,Daylight,Functioning
+339,Wet,Reduced Roadway Width,Other,Dark - Street Lights Not Functioning,Functioning
+340,Wet,Not Stated,Not Stated,Dusk - Dawn,Not Stated
+341,Dry,Construction or Repair Zone,Reduced Roadway Width,Daylight,Unknown
+342,Dry,"Holes, Deep Ruts",Construction or Repair Zone,Daylight,Functioning
+343,Wet,Not Stated,Not Stated,Dusk - Dawn,Unknown
+344,Not Stated,"Holes, Deep Rut",Not Stated,Dark - Street Lights,Unknown
+345,Slippery,Loose Material on Roadway,Other,Daylight,Unknown
+346,Not Stated,Other,Not Stated,Daylight,Not Functioning
+347,Slippery,No Unusual Condition,Not Stated,Dusk - Dawn,Functioning
+348,Wet,"Holes, Deep Rut",Loose Material on Roadway,Dark - Street Lights,Not Stated
+349,Wet,"Holes, Deep Rut",Not Stated,Daylight,Functioning
+350,Dry,Obstruction on Roadway,Not Stated,Daylight,Not Functioning
+351,Dry,Obstruction on Roadway,Other,Daylight,Functioning
+352,Not Stated,No Unusual Condition,Not Stated,Dark - No Street Lights,Not Stated
+353,Wet,Not Stated,Not Stated,Dark - No Street Lights,Obscured
+354,Dry,Obstruction on Roadway,Construction or Repair Zone,Dark - Street Lights,Unknown
+355,Dry,Obstruction on Roadway,Construction or Repair Zone,Daylight,Obscured
+356,Dry,Construction or Repair Zone,Reduced Roadway Width,Dark - Street Lights,Unknown
+357,Dry,Loose Material on Roadway,Other,Dark - Street Lights,Unknown
+358,Not Stated,No Unusual Condition,Not Stated,Daylight,Not Functioning
+359,Dry,Not Stated,Not Stated,Dark - Street Lights Not Functioning,Unknown
+360,Dry,Obstruction on Roadway,Not Stated,Dark - Street Lights,Not Stated
+361,Not Stated,Construction or Repair Zone,Not Stated,Daylight,Not Stated
+362,Slippery,Not Stated,Not Stated,Dusk - Dawn,Unknown
+363,Dry,Construction or Repair Zone,Not Stated,Dark - No Street Lights,Functioning
+364,Dry,"Holes, Deep Rut",Other,Dusk - Dawn,Unknown
+365,Slippery,Not Stated,Not Stated,Daylight,Functioning
+366,Not Stated,Other,Not Stated,Dusk - Dawn,Functioning
+367,Dry,Loose Material on Roadway,Obstruction on Roadway,Dark - Street Lights,Functioning
+368,Wet,"Holes, Deep Rut",Not Stated,Dark - Street Lights,Unknown

@@ -1,0 +1,283 @@
+district_id,pm_district_id,analysis_neighborhood,supervisor_district,analysis_neighborhoods_id,neighborhoods_id,sf_find_neighborhoods_id,current_police_districts_id,current_supervisor_districts_id
+1,2.0,South of Market,6,34,32,32,1,10
+2,15.0,Tenderloin,5,36,20,20,5,10
+3,14.0,South of Market,6,34,32,32,1,10
+4,14.0,South of Market,6,34,32,32,5,10
+5,16.0,Mission,9,20,53,53,3,2
+6,13.0,Tenderloin,5,36,20,20,5,10
+7,4.0,Mission,9,20,53,53,3,2
+8,10.0,West of Twin Peaks,7,41,46,46,10,8
+9,5.0,Japantown,5,15,103,103,4,11
+10,20.0,Presidio Heights,2,31,11,11,8,6
+11,16.0,Hayes Valley,6,9,26,26,4,11
+12,12.0,North Beach,3,23,106,106,6,3
+13,5.0,Japantown,5,15,101,101,4,11
+14,14.0,Mission,9,20,53,53,3,2
+15,5.0,Pacific Heights,2,30,102,102,4,6
+16,15.0,Tenderloin,5,36,20,20,4,10
+17,13.0,Tenderloin,5,36,21,21,5,10
+18,1.0,Tenderloin,3,36,19,19,6,3
+19,24.0,Sunset/Parkside,4,35,39,39,10,7
+20,1.0,Financial District/South Beach,6,8,108,108,1,10
+21,1.0,Financial District/South Beach,6,8,32,32,1,10
+22,35.0,Outer Mission,11,28,80,80,9,1
+23,2.0,Financial District/South Beach,6,8,31,31,1,10
+24,3.0,Tenderloin,6,36,21,21,4,10
+25,14.0,Mission,6,20,32,32,5,10
+26,29.0,Mission,8,20,53,53,3,5
+27,30.0,Bernal Heights,9,2,83,83,9,2
+28,31.0,West of Twin Peaks,7,41,62,62,10,8
+29,12.0,Chinatown,3,6,104,104,6,3
+30,14.0,Mission,6,20,32,32,1,10
+31,3.0,Tenderloin,5,36,21,21,4,10
+32,2.0,Mission Bay,6,4,34,34,1,10
+33,24.0,Inner Sunset,7,14,109,109,10,7
+34,15.0,Russian Hill,3,32,105,105,4,3
+35,18.0,Japantown,2,15,103,103,8,11
+36,7.0,Marina,2,13,14,14,4,6
+37,1.0,Financial District/South Beach,6,8,108,108,6,10
+38,4.0,Mission,9,20,52,52,3,5
+39,4.0,Mission,9,20,37,37,3,5
+40,17.0,Hayes Valley,5,9,23,23,4,11
+41,21.0,Outer Richmond,1,29,5,5,8,4
+42,6.0,North Beach,3,23,99,99,6,3
+43,1.0,Financial District/South Beach,3,8,108,108,6,3
+44,1.0,Chinatown,3,6,108,108,6,3
+45,20.0,Lone Mountain/USF,2,18,12,12,8,4
+46,14.0,Hayes Valley,6,9,26,26,4,11
+47,42.0,South of Market,6,34,33,33,1,10
+48,15.0,Japantown,2,15,100,100,4,11
+49,2.0,Financial District/South Beach,6,8,32,32,1,10
+50,1.0,South of Market,6,34,32,32,1,10
+51,13.0,Tenderloin,3,36,50,50,6,3
+52,15.0,Nob Hill,3,21,50,50,6,3
+53,21.0,Outer Richmond,1,29,8,8,8,4
+54,12.0,Chinatown,3,6,106,106,6,3
+55,18.0,Japantown,5,15,103,103,4,11
+56,2.0,Financial District/South Beach,6,8,30,30,1,10
+57,1.0,Chinatown,3,6,106,106,6,3
+58,44.0,Mission Bay,6,4,34,34,1,10
+59,39.0,Hayes Valley,5,9,26,26,4,11
+60,15.0,Pacific Heights,2,30,102,102,4,6
+61,3.0,Hayes Valley,5,9,22,22,4,11
+62,3.0,Western Addition,2,39,100,100,4,11
+63,36.0,West of Twin Peaks,7,41,67,67,10,8
+64,3.0,Tenderloin,6,36,21,21,5,10
+65,8.0,Marina,2,13,15,15,4,6
+66,19.0,Presidio Heights,2,31,10,10,8,6
+67,26.0,Sunset/Parkside,4,35,40,40,10,7
+68,15.0,Tenderloin,3,36,50,50,4,3
+69,15.0,Western Addition,2,39,100,100,4,11
+70,12.0,Financial District/South Beach,3,8,77,77,6,3
+71,33.0,Portola,9,25,91,91,2,2
+72,25.0,Sunset/Parkside,4,35,39,39,10,7
+73,9.0,Inner Richmond,1,11,5,5,8,4
+74,15.0,Nob Hill,3,21,105,105,4,3
+75,2.0,Mission Bay,6,4,31,31,1,10
+76,3.0,Hayes Valley,6,9,21,21,4,11
+77,3.0,Hayes Valley,5,9,21,21,4,11
+78,29.0,Bernal Heights,9,2,83,83,9,2
+79,12.0,Chinatown,3,6,107,107,6,3
+80,29.0,Mission,9,20,53,53,3,2
+81,35.0,Excelsior,11,7,58,58,9,1
+82,17.0,Hayes Valley,5,9,24,24,7,11
+83,3.0,Western Addition,5,39,100,100,4,11
+84,1.0,Financial District/South Beach,3,8,104,104,6,3
+85,5.0,Western Addition,5,39,97,97,4,11
+86,1.0,Financial District/South Beach,3,8,19,19,6,3
+87,28.0,Noe Valley,8,22,84,84,3,5
+88,7.0,Marina,2,13,15,15,4,6
+89,16.0,Mission,6,20,32,32,1,10
+90,16.0,Castro/Upper Market,8,5,38,38,3,5
+91,1.0,Financial District/South Beach,3,8,77,77,6,3
+92,12.0,North Beach,3,23,18,18,6,3
+93,1.0,Chinatown,3,6,104,104,6,3
+94,26.0,West of Twin Peaks,7,41,46,46,10,8
+95,11.0,Financial District/South Beach,3,8,77,77,6,3
+96,26.0,West of Twin Peaks,7,41,44,44,10,8
+97,24.0,Inner Sunset,7,14,109,109,10,11
+98,3.0,Western Addition,5,39,21,21,4,11
+99,16.0,Castro/Upper Market,8,5,37,37,3,5
+100,33.0,Bayview Hunters Point,10,1,86,86,2,9
+101,5.0,Pacific Heights,5,30,101,101,4,11
+102,12.0,Financial District/South Beach,3,8,106,106,6,3
+103,44.0,Potrero Hill,10,26,56,56,2,9
+104,15.0,Western Addition,2,39,100,100,4,6
+105,18.0,Pacific Heights,2,30,103,103,4,6
+106,13.0,Nob Hill,3,21,50,50,6,3
+107,23.0,Haight Ashbury,5,3,25,25,7,11
+108,16.0,Mission,8,20,27,27,1,5
+109,35.0,Excelsior,11,7,90,90,9,1
+110,3.0,Tenderloin,5,36,21,21,5,10
+111,29.0,Mission,10,20,54,54,3,9
+112,13.0,Tenderloin,3,36,19,19,5,3
+113,40.0,Inner Richmond,1,11,5,5,8,4
+114,18.0,Western Addition,2,39,13,13,7,6
+115,6.0,Russian Hill,2,32,98,98,6,6
+116,24.0,Inner Sunset,7,14,110,110,7,11
+117,15.0,Nob Hill,3,21,16,16,6,3
+118,18.0,Japantown,5,15,103,103,8,11
+119,6.0,North Beach,3,23,106,106,6,3
+120,19.0,Presidio Heights,2,31,11,11,8,6
+121,15.0,Tenderloin,5,36,20,20,6,10
+122,22.0,Outer Richmond,1,29,8,8,8,4
+123,42.0,Mission,6,20,33,33,3,9
+124,13.0,Tenderloin,5,36,19,19,5,10
+125,12.0,Chinatown,3,6,16,16,6,3
+126,15.0,Tenderloin,3,36,50,50,6,10
+127,27.0,West of Twin Peaks,7,41,72,72,9,8
+128,16.0,Castro/Upper Market,8,5,28,28,3,5
+129,34.0,Bayview Hunters Point,10,1,87,87,2,9
+130,16.0,Castro/Upper Market,8,5,28,28,7,5
+131,15.0,Nob Hill,3,21,50,50,4,3
+132,41.0,Mission,9,20,53,53,3,2
+133,13.0,Tenderloin,3,36,19,19,5,10
+134,18.0,Pacific Heights,2,30,103,103,8,6
+135,3.0,Tenderloin,5,36,20,20,5,10
+136,12.0,Financial District/South Beach,3,8,104,104,6,3
+137,16.0,Mission,9,20,37,37,3,5
+138,35.0,Outer Mission,11,28,94,94,9,1
+139,17.0,Haight Ashbury,5,3,112,112,4,11
+140,29.0,Bernal Heights,9,2,83,83,9,5
+141,1.0,Nob Hill,3,21,16,16,6,3
+142,18.0,Pacific Heights,2,30,102,102,8,6
+143,36.0,Oceanview/Merced/Ingleside,11,24,64,64,10,8
+144,38.0,Visitacion Valley,10,40,75,75,9,9
+145,7.0,Marina,2,13,17,17,4,6
+146,2.0,Mission Bay,6,4,32,32,1,10
+147,29.0,Bernal Heights,9,2,61,61,9,2
+148,24.0,Inner Sunset,7,14,109,109,7,11
+149,31.0,West of Twin Peaks,7,41,67,67,10,8
+150,1.0,Financial District/South Beach,6,8,32,32,5,10
+151,34.0,Bayview Hunters Point,10,1,86,86,2,9
+152,13.0,Nob Hill,3,21,19,19,6,3
+153,24.0,Inner Sunset,7,14,110,110,7,8
+154,6.0,Russian Hill,3,32,99,99,6,6
+155,37.0,Lakeshore,7,16,42,42,10,8
+156,6.0,Russian Hill,2,32,99,99,6,6
+157,16.0,Castro/Upper Market,8,5,115,115,3,5
+158,17.0,Western Addition,5,39,23,23,4,11
+159,1.0,South of Market,6,34,32,32,5,10
+160,11.0,North Beach,3,23,99,99,6,3
+161,23.0,Haight Ashbury,8,3,29,29,7,11
+162,3.0,Tenderloin,5,36,20,20,4,10
+163,15.0,Western Addition,2,39,102,102,4,6
+164,42.0,Potrero Hill,10,26,54,54,1,9
+165,13.0,Tenderloin,3,36,50,50,6,10
+166,11.0,North Beach,3,23,77,77,6,3
+167,18.0,Lone Mountain/USF,2,18,13,13,8,6
+168,5.0,Potrero Hill,10,26,54,54,1,9
+169,42.0,Mission Bay,6,4,33,33,1,9
+170,16.0,Hayes Valley,8,9,27,27,7,5
+171,17.0,Haight Ashbury,5,3,26,26,4,11
+172,15.0,Tenderloin,3,36,50,50,4,10
+173,11.0,North Beach,3,23,18,18,6,3
+174,24.0,Inner Sunset,8,14,110,110,7,11
+175,5.0,Pacific Heights,2,30,103,103,4,6
+176,13.0,Tenderloin,3,36,19,19,6,3
+177,13.0,Tenderloin,5,36,20,20,6,10
+178,14.0,South of Market,6,34,33,33,1,10
+179,15.0,Russian Hill,3,32,107,107,4,6
+180,28.0,Noe Valley,8,22,52,52,3,5
+181,36.0,West of Twin Peaks,7,41,71,71,10,8
+182,5.0,Pacific Heights,5,30,103,103,4,11
+183,32.0,Glen Park,8,10,96,96,9,5
+184,14.0,Mission,9,20,53,53,3,9
+185,44.0,Potrero Hill,10,26,54,54,2,9
+186,4.0,Mission,9,20,53,53,3,5
+187,24.0,Inner Sunset,7,14,109,109,7,8
+188,36.0,West of Twin Peaks,7,41,71,71,9,8
+189,16.0,Mission,9,20,32,32,1,2
+190,36.0,West of Twin Peaks,7,41,68,68,10,8
+191,2.0,Financial District/South Beach,6,8,108,108,1,10
+192,17.0,Western Addition,5,39,97,97,4,11
+193,20.0,Lone Mountain/USF,2,18,12,12,7,4
+194,16.0,Hayes Valley,8,9,27,27,1,5
+195,14.0,Mission Bay,6,4,34,34,1,10
+196,16.0,Mission,8,20,37,37,3,5
+197,13.0,Tenderloin,3,36,20,20,6,3
+198,3.0,Hayes Valley,5,9,26,26,4,11
+199,5.0,Western Addition,5,39,101,101,4,11
+200,44.0,Potrero Hill,10,26,55,55,2,9
+201,17.0,Haight Ashbury,5,3,112,112,7,11
+202,13.0,Tenderloin,3,36,20,20,5,3
+203,17.0,Hayes Valley,5,9,26,26,4,11
+204,17.0,Western Addition,5,39,97,97,7,11
+205,18.0,Lone Mountain/USF,2,18,13,13,7,6
+206,9.0,Lone Mountain/USF,2,18,12,12,8,4
+207,1.0,Financial District/South Beach,6,8,32,32,6,10
+208,31.0,West of Twin Peaks,7,41,63,63,10,8
+209,18.0,Western Addition,2,39,13,13,8,11
+210,2.0,Mission Bay,6,4,33,33,1,9
+211,12.0,Russian Hill,3,32,107,107,6,3
+212,3.0,Hayes Valley,6,9,21,21,1,11
+213,29.0,Bernal Heights,8,2,61,61,9,5
+214,30.0,Bernal Heights,9,2,61,61,9,2
+215,18.0,Japantown,2,15,103,103,4,11
+216,2.0,Potrero Hill,10,26,34,34,1,9
+217,16.0,Hayes Valley,8,9,27,27,4,5
+218,14.0,Mission Bay,6,4,32,32,1,10
+219,16.0,Mission,8,20,32,32,1,10
+220,13.0,Nob Hill,3,21,16,16,6,3
+221,1.0,Nob Hill,3,21,19,19,6,3
+222,6.0,Russian Hill,3,32,107,107,6,3
+223,29.0,Noe Valley,8,22,84,84,9,5
+224,18.0,Western Addition,2,39,13,13,8,6
+225,3.0,Hayes Valley,6,9,26,26,4,11
+226,12.0,Nob Hill,3,21,16,16,6,3
+227,-1.0,Lone Mountain/USF,2,18,12,12,7,4
+228,23.0,Haight Ashbury,8,3,114,114,7,11
+229,16.0,Hayes Valley,8,9,27,27,4,11
+230,5.0,Hayes Valley,5,9,22,22,4,11
+231,-1.0,Potrero Hill,10,26,55,55,2,9
+232,19.0,Presidio Heights,2,31,103,103,8,6
+233,-1.0,Mission Bay,6,4,34,34,1,10
+234,16.0,Mission,8,20,32,32,1,5
+235,6.0,Russian Hill,3,32,107,107,6,6
+236,9.0,Presidio Heights,2,31,11,11,8,6
+237,5.0,Japantown,2,15,101,101,4,11
+238,15.0,Marina,2,13,102,102,4,6
+239,2.0,Potrero Hill,6,26,34,34,1,10
+240,42.0,South of Market,6,34,32,32,1,10
+241,42.0,Mission Bay,6,4,34,34,1,10
+242,42.0,Mission Bay,10,4,54,54,1,9
+243,46.0,Nob Hill,3,21,16,16,6,3
+244,44.0,Bayview Hunters Point,10,1,56,56,2,9
+245,44.0,Bayview Hunters Point,10,1,54,54,2,9
+246,42.0,Potrero Hill,10,26,54,54,2,9
+247,18.0,Western Addition,5,39,97,97,4,11
+248,16.0,Mission,8,20,27,27,3,5
+249,45.0,North Beach,3,23,18,18,6,3
+250,42.0,Mission,6,20,33,33,1,9
+251,2.0,Potrero Hill,10,26,55,55,2,9
+252,16.0,Hayes Valley,8,9,27,27,7,11
+253,42.0,South of Market,6,34,33,33,3,10
+254,46.0,Mission,6,20,33,33,3,9
+255,53.0,Outer Mission,11,28,80,80,9,1
+256,11.0,Mission Bay,6,4,34,34,1,10
+257,3.0,Hayes Valley,8,9,27,27,4,11
+258,23.0,Golden Gate Park,5,12,9,9,7,11
+259,18.0,Pacific Heights,2,30,102,102,4,6
+260,34.0,Portola,9,25,91,91,2,2
+261,29.0,Bernal Heights,8,2,93,93,9,5
+262,41.0,Mission,9,20,53,53,3,9
+263,9.0,Golden Gate Park,7,12,9,9,8,4
+264,6.0,North Beach,3,23,99,99,6,6
+265,2.0,Potrero Hill,10,26,34,34,2,9
+266,18.0,Presidio Heights,2,31,11,11,8,6
+267,2.0,Potrero Hill,10,26,56,56,2,9
+268,16.0,Hayes Valley,5,9,26,26,4,11
+269,-1.0,Financial District/South Beach,6,8,30,30,1,10
+270,-1.0,Financial District/South Beach,6,8,31,31,1,10
+271,-1.0,Financial District/South Beach,6,8,108,108,1,10
+272,-1.0,North Beach,3,23,99,99,6,3
+273,16.0,Mission,6,20,32,32,1,2
+274,-1.0,South of Market,6,34,32,32,1,10
+275,46.0,Mission,6,20,33,33,1,9
+276,5.0,Hayes Valley,5,9,21,21,4,11
+277,-1.0,Mission,9,20,53,53,3,2
+278,15.0,Mission,6,20,32,32,1,10
+279,9.0,Outer Richmond,1,29,8,8,8,4
+280,1.0,Tenderloin,5,36,19,19,5,10
+281,1.0,Tenderloin,3,36,19,19,5,3
+282,-1.0,Russian Hill,3,32,107,107,6,3

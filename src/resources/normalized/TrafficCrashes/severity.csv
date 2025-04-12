@@ -1,0 +1,61 @@
+severity_id,collision_severity,number_killed,number_injured,total_casualties,has_fatality,has_injury,severity_score
+1,Injury (Complaint of Pain),0.0,1,1.0,0,1,1.0
+2,Injury (Other Visible),0.0,1,1.0,0,1,1.0
+3,Injury (Other Visible),0.0,2,2.0,0,1,2.0
+4,Injury (Severe),0.0,1,1.0,0,1,1.0
+5,Injury (Complaint of Pain),0.0,5,5.0,0,1,5.0
+6,Fatal,1.0,0,1.0,1,0,5.0
+7,Fatal,0.0,1,1.0,0,1,1.0
+8,Injury (Complaint of Pain),0.0,2,2.0,0,1,2.0
+9,Fatal,1.0,1,2.0,1,1,6.0
+10,Injury (Complaint of Pain),0.0,0,0.0,0,0,0.0
+11,Injury (Complaint of Pain),0.0,4,4.0,0,1,4.0
+12,Injury (Other Visible),0.0,4,4.0,0,1,4.0
+13,Injury (Other Visible),0.0,3,3.0,0,1,3.0
+14,Injury (Complaint of Pain),0.0,3,3.0,0,1,3.0
+15,Injury (Severe),0.0,5,5.0,0,1,5.0
+16,Injury (Severe),0.0,3,3.0,0,1,3.0
+17,Injury (Severe),0.0,2,2.0,0,1,2.0
+18,Injury (Other Visible),0.0,5,5.0,0,1,5.0
+19,Medical,1.0,0,1.0,1,0,5.0
+20,Injury (Other Visible),0.0,6,6.0,0,1,6.0
+21,Injury (Other Visible),0.0,0,0.0,0,0,0.0
+22,Injury (Complaint of Pain),0.0,6,6.0,0,1,6.0
+23,Injury (Severe),0.0,4,4.0,0,1,4.0
+24,Injury (Other Visible),0.0,7,7.0,0,1,7.0
+25,Injury (Severe),0.0,6,6.0,0,1,6.0
+26,Fatal,1.0,4,5.0,1,1,9.0
+27,Fatal,1.0,7,8.0,1,1,12.0
+28,Fatal,2.0,2,4.0,1,1,12.0
+29,Fatal,1.0,3,4.0,1,1,8.0
+30,Injury (Complaint of Pain),0.0,10,10.0,0,1,10.0
+31,Injury (Complaint of Pain),0.0,7,7.0,0,1,7.0
+32,Injury (Complaint of Pain),0.0,8,8.0,0,1,8.0
+33,Fatal,1.0,2,3.0,1,1,7.0
+34,Injury (Severe),0.0,0,0.0,0,0,0.0
+35,Fatal,2.0,1,3.0,1,1,11.0
+36,Injury (Complaint of Pain),0.0,19,19.0,0,1,19.0
+37,Injury (Complaint of Pain),0.0,17,17.0,0,1,17.0
+38,Injury (Severe),0.0,7,7.0,0,1,7.0
+39,Injury (Other Visible),0.0,14,14.0,0,1,14.0
+40,Fatal,2.0,3,5.0,1,1,13.0
+41,Injury (Complaint of Pain),1.0,1,2.0,1,1,6.0
+42,Injury (Other Visible),1.0,0,1.0,1,0,5.0
+43,Fatal,3.0,0,3.0,1,0,15.0
+44,Injury (Severe),0.0,10,10.0,0,1,10.0
+45,Injury (Complaint of Pain),0.0,9,9.0,0,1,9.0
+46,Injury (Complaint of Pain),0.0,18,18.0,0,1,18.0
+47,Fatal,1.0,5,6.0,1,1,10.0
+48,Fatal,1.0,8,9.0,1,1,13.0
+49,Fatal,1.0,6,7.0,1,1,11.0
+50,Injury (Complaint of Pain),0.0,13,13.0,0,1,13.0
+51,Injury (Complaint of Pain),0.0,12,12.0,0,1,12.0
+52,Injury (Severe),0.0,9,9.0,0,1,9.0
+53,Injury (Other Visible),0.0,8,8.0,0,1,8.0
+54,Injury (Other Visible),0.0,13,13.0,0,1,13.0
+55,Injury (Severe),1.0,2,3.0,1,1,7.0
+56,Injury (Severe),0.0,8,8.0,0,1,8.0
+57,Injury (Severe),3.0,2,5.0,1,1,17.0
+58,Injury (Other Visible),2.0,4,6.0,1,1,14.0
+59,Injury (Complaint of Pain),1.0,0,1.0,1,0,5.0
+60,Injury (Severe),1.0,1,2.0,1,1,6.0

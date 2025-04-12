@@ -1,0 +1,917 @@
+route_id,collection_route_desc,collection_subroute,collection_subroute_desc,pmr_route
+1,,,,N-4
+2,Post - Geary - O Farrell,113-2,Post-Geary-Offarrell,E-1
+3,,DPT MOS,,N-3
+4,,,,N-2
+5,,,,R-2
+6,,,,J-1
+7,Mission St: 2500 - 2700,302-1,Mission 2500-2700,R-4
+8,,,,A-1
+9,,,,C-3
+10,,,,R-3
+11,,,,B-1
+12,,,,H-1
+13,,,,G-4
+14,,DPT MOS,,G-2
+15,,DPT MOS,,R-2
+16,,,,E-1
+17,,,,N-3
+18,,,,C-4
+19,,,,E-4
+20,,,,J-4
+21,,,,I-3
+22,,,,A-5
+23,,,,E-3
+24,,,,M-1
+25,,DPT MOS,,M-2
+26,,,,M-2
+27,,,,O-2
+28,,DPT MOS,,N-2
+29,,,,M-3
+30,,,,N-1
+31,,,,R-5
+32,,,,O-3
+33,,DPT MOS,,N-4
+34,,,,O-1
+35,,,,G-3
+36,,DPT MOS,,G-3
+37,,DPT MOS,,J-1
+38,,,,Port 3
+39,,,,D-2
+40,,DPT MOS,,C-1
+41,,DPT MOS,,F-2
+42,,DPT MOS,,M-1
+43,,DPT MOS,,B-3
+44,,DPT MOS,,R-3
+45,Fishermans Wharf,M201-53,JONES ST 2600,F-1
+46,,DPT MOS,,N-1
+47,,,,I-1
+48,Geary St: 2400 - 4800,126-3,Geary2600-3100,B-1
+49,,,,J-5
+50,,,,S-1
+51,Elm St: 100,425-1,Elm,E-3
+52,,,,J-2
+53,,,,D-1
+54,,DPT MOS,,J-3
+55,,,,C-1
+56,Pacific St: Broadway St,135-1,Pacific 1500-1700,D-2
+57,,,,Port 2
+58,,,,F-1
+59,Fishermans Wharf,201-52,Fishermans Wharf,F-1
+60,,,,Port 1
+61,Van Ness Ave: 200 - 2100,410-3,Van Ness 600,D-2
+62,,DPT MOS,,H-1
+63,EDDY ST,M402,,E-4
+64,16th St: 3000,M335-2,15TH ST,R-2
+65,,M418,,N-2
+66,Ocean Ave: 1000 - 1900,318-1,Ocean 1000-1700,O-1
+67,Larkin St: 100 - 300,M-414,"Larkin St. 100, 300",J-4
+68,Union St:1500-2200 Fillmore St,215-1,Union,F-2
+69,Divisadero St: Sacramento St,103-3,Divisadero - Sacramento,C-2
+70,Howard St: Unit - 600 Bryan St,404-1,Howard Unit-600,M-2
+71,Ellis St: Unit - 900,415-2,Ellis Unit-300,E-4
+72,Taraval St: 400 - 1800,321-2,Taraval,A-2
+73,Mission St: 2100 - 2400,334-2,Mission 2100-2400,R-3
+74,West Portal Ave: Unit - 300,320-2,West Portal,A-1
+75,Geary St: 5000 - 5200,118-1,Geary,B-3
+76,Broadway St: Unit - 800,203-4,Battery: 800 - 1200,G-1
+77,Clay St: 100 - 900,213-1,Clay: 100 - 900,I-4
+78,Fishermans Wharf,201-53,Fishermans Wharf,F-1
+79,24 St (Lower): 2700 - 3300,303-1,24th St Lower,R-4
+80,Fishermans Wharf,201-51,Fishermans Wharf,F-1
+81,Inner Irving St: 1800 - 2500,120-1,Outer Irving,A-5
+82,Turk St: 100 - 900,416-2,Turk Unit-700,J-3
+83,California: Unit - 900 Pine St,210-3,Pine: Unit - 600,I-2
+84,San Bruno Ave: 2400 - 2700,310-1,San Bruno,O-4
+85,Noriega St: 2300 - 2500,332-1,Noriega 30th Ave - 34th Ave,A-2
+86,Clement St at 9th Ave: Lot,910,9th Ave Clement Lot,B-2
+87,Union St:1500-2200 Fillmore St,215-2,Filbert/Fillmore/Greenwich/Pix,F-2
+88,Townsend St: Unit-300 King St,419-51,SBC Park: Townsend Unit-200,M-3
+89,Franklin St: 500,M409-2,FRANKLIN ST,J-5
+90,Powell St: 1000 - 1700,206-2,Powell: 1000 - 1700,I-4
+91,Elm St: 100,425-1,Elm,J-3
+92,Gough St: Unit - 500,411-1,Gough Unit-400,J-5
+93,24 St (Lower): 2700 - 3300,303-2,24th St Lower,R-4
+94,Mission St: 1700 - 2000,335-2,Mission 1700-2000,R-2
+95,Van Ness Ave: 200 - 2100,410-3,Van Ness 600,J-4
+96,Clement St: Unit - 1100,125-2,Clement,B-2
+97,Geary St: 2400 - 4800,126-3,Geary2600-3100,B-2
+98,Grove St: Fulton St: McAlliste,M401-2,"Grove St: Unit, 100, 300",J-4
+99,Broadway St: Unit - 800,203-2,Broadway,G-1
+100,Mission St: 3100 - 3500,307-2,29th / Duncan / Mission / Valenc,R-5
+101,Columbus Ave: Unit - 1100,202-1,Columbus,G-4
+102,Mission St: Mint St,M403-1,Mission St: 200,M-1
+103,Mission St: 2800 - 3000,306-1,25th / 26h / Cesar Chavez / Miss,R-5
+104,Mission St: 4300 - 5300,316-1,Mission - Geneva,O-2
+105,Geary St: 5000 - 5200,118-2,Geary,B-4
+106,,,,J-3
+107,Brannan St: 200 - 500,427-52,5th & Brannan,M-3
+108,Polk St: 100 - 2400,412-1,Polk 1800-2400,D-2
+109,Hyde St: Unit - 1000,413-2,Hyde Unit-600,E-1
+110,HERROSON 1100,M418,HERRISON 1100,N-2
+111,Folsom St: Main St: Spear St:,M405-1,"Main St: Unit, 200",M-1
+112,Grant Ave: Unit -1500,204-3,Grant: 400 - 1100,I-4
+113,Fillmore Flats: 1000 - 1500,102-51,Fillmore Flats,C-3
+114,Gough St: Unit - 500,411-2,Hayes / Fell / Oak,J-5
+115,Montgomery St: Unit - 600,221-1,Montgomery: Unit - 600,I-2
+116,Howard St: 800 - 1600,431-2,Howard 1400-900,N-3
+117,,DPT MOS,,C-3
+118,24th St (Inner):  3700 - 4100,304-62,24th St/Castro/Church/Noe,O-3
+119,Geary St: 5000 - 5200,118-1,Geary,B-4
+120,Harrison St: 600,M430-2,Harrison St: 600 Stillman St: 10,M-3
+121,4th St: Unit 400 5th St:,407-3,Harrison - 1000,N-4
+122,Valencia 24th St 400 - 1200,301-1,Valencia: McCoppin - 24th St,R-3
+123,,100,,R-2
+124,18th and Collingwood lot,M918-1,18th and Collingwood lot,R-1
+125,Washington St: 200 - 400,M222-1,Washington St. 400,G-2
+126,Clay St: 100 - 900,213-2,Clay: 100 - 900,I-4
+127,Sansome St: Unit-800 Battery S,205-1,Sansome: Unit - 800 Halleck,G-1
+128,South Embarcadero,614-2,South Embarcadero 400-700,Port 2
+129,Drumm St: 200,M225-1,Drumm St: 200,G-2
+130,Taraval St: 400 - 1800,321-1,Taraval,A-2
+131,South Sea Wall Port,617-1,Spear Street | 400,Port 2
+132,Broadway St: Unit - 800,203-3,Battery: 800 - 1200 Sansome,G-1
+133,San Bruno Ave: 2400 - 2700,310-2,San Bruno,O-4
+134,Market St: 1600-2300 Castro St,305-2,19th St / Castro / Market,R-1
+135,Pacific St: Broadway St,135-2,Pacific 1500-1700,D-2
+136,Grant Street Port,615-1,Davis/Front/Union Streets | 700/1000/Unit,Port 1
+137,Fillmore Hills: 2400 -1700,101-52,Fillmore: 2400-1700 Sutt: 2400,C-4
+138,Haight St: 400 - 500,136-1,Haight (Inner),C-3
+139,Eddy St: 100 - 900,402-1,Eddy: 100-800,E-4
+140,Brannan St: 700 - 900 9th St,418-2,9th-11th Brannan Bryant Harrison,S-1
+141,Hickory St: Unit - 100,423-51,Hickory: 100,J-5
+142,Ocean ave: 2300-2600 Holloway,319-2,Ocean 2400-2600,O-1
+143,Howard St: Unit - 600 Bryan St,404-1,Howard Unit-600,M-1
+144,Outer Irving St: 600 - 1000,121-3,Irving,A-5
+145,Clement St: Unit - 1100,125-1,Clement,B-2
+146,,DPT MOS,,A-5
+147,Grove St: Fulton St: McAlliste,M401-2,"Grove St: Unit, 100, 300",J-5
+148,Outer Irving St: 600 - 1000,121-2,Irving,A-4
+149,Sansome St: Unit-800 Battery S,205-1,Sansome: Unit - 800 Halleck,G-2
+150,"Ofarrell St: Unit, 400",M211-1,Post Geary Ofarrel,J-2
+151,Dolores St: Unit Church: 200,333-1,14th / Dolores / Church,R-1
+152,San Bruno Ave: 2400 - 2700,310-3,Bayshore BLVD 1400-1500,O-4
+153,Inner Irving St: 1800 - 2500,120-2,Outer Irving,A-5
+154,Jones St: Unit - 800,212-3,Taylor: Unit - 700,J-1
+155,California - Steiner Sts: Lot,M907-1,Cal _Steiner Lot,C-4
+156,,,,G-1
+157,,,,O-4
+158,Dogpatch,M434-1,Dogpatch,W-1
+159,,DPT MOS,,J-4
+160,,DPT MOS,,E-3
+161,Mission St: 2800 - 3000,306-1,25th / 26h / Cesar Chavez / Miss,R-4
+162,Divisadero St: Sacramento St,103-2,Divisadero - Sacramento,C-1
+163,Willow St: Unit - 200,421-1,Larch: Willow,E-4
+164,,DPT MOS,,O-2
+165,Jones St: Unit - 800,212-3,Taylor: Unit - 700,J-2
+166,Polk St: 100 - 2400,412-3,Polk Unit-900,D-2
+167,Sacramento St: 100 - 800,208-1,Sacramento: 100 - 800,I-4
+168,Haight St: Stanyan St: Masonic,122-1,Haight: Stanyan - Masonic,A-3
+169,Valencia 24th St 400 - 1200,301-2,Valencia: McCoppin - 24th St,R-3
+170,Washington St: 200 - 400,M222-2,"Washington St: 200, 300, 500",G-2
+171,,,,R-1
+172,Mission St: 2800 - 3000,306-2,24th / 25th / Cesar Chavez / Mis,R-4
+173,,DPT MOS,,R-1
+174,Bush St: 100 - 900 Sutter St,209-2,Bush: 400 - 900,I-4
+175,Noriega St: 2300 - 2500,332-2,Noriega 30th Ave - 34th Ave,A-2
+176,Clement St: 1800 - 2400,127-2,Clement (Outer),B-4
+177,Columbus Ave: Unit - 1100,202-3,Columbus,G-3
+178,Grant Ave: Unit -1500,204-6,Kearny: 600 - 1000,I-4
+179,Mission St: 4300 - 5300,316-3,Mission 4800-5100,O-2
+180,Mission St: 3100 - 3500,307-1,Kingston / Mission / Precita,R-5
+181,24th St (Inner):  3700 - 4100,304-61,24th St/Castro/Noe,O-3
+182,California: 1400 - 1700,115-2,California: 1400-1700,D-2
+183,Hyde St: Unit - 1000,413-5,Hyde UNIT-1000,D-1
+184,Brannan St: 200 - 500,427-51,5th & Brannan,M-3
+185,Bush: 1100 - 1500,114-2,Bush: 1100- 1500,D-1
+186,Outer Irving St: 600 - 1000,121-4,Irving,A-5
+187,Sacramento St: 100 - 800,208-2,Sacramento: 700 - 800,I-4
+188,4th St: 500,M406-1,"2nd St:  Unit, 100, 200",M-2
+189,Hyde St: Unit - 1000,413-4,Leavenworth Unit-300,J-3
+190,Beale st and Delancy St,607-4,Delancy St 600,Port 3
+191,SF General Hospital: Lot,928-1,General Hospital,O-3
+192,Divisadero St: Sacramento St,103-2,Divisadero - Sacramento,C-2
+193,Kearny St: Grant Ave,M204-1,Kearny St: Unit - 500,I-3
+194,Terry Francois,600-2,Pier 52 Boat Launch,Port 3
+195,Post St: Unit-600 Geary St,211-2,Post: Unit - 600,I-3
+196,Outer Irving St: 600 - 1000,121-1,Irving (Outer),A-4
+197,Ellis St: Unit - 900,415-2,Ellis Unit-300,J-1
+198,Post St: Unit-600 Geary St,211-2,Post: Unit - 600,J-2
+199,Balboa St: 200 - 500,117-1,Balboa 200- 500,B-3
+200,Washington - Lombard Port,616-1,Battery Street | 1300,Port 1
+201,Clement St: Unit - 1100,125-2,Clement,B-1
+202,Geary St: 2400 - 4800,126-1,"Geary2300,2200,OFL2200,STJ",C-1
+203,,,,A-2
+204,Howard St: 800 - 1600,431-2,Howard 1400-900,N-2
+205,,DPT MOS,,M-3
+206,Parnassas St: 300 - 700,123-1,Parnassas,A-3
+207,Mission St: 4300 - 5300,316-2,Mission 4800-5100,O-2
+208,California: 1400 - 1700,115-1,California: 1400- 1700,D-2
+209,Divisadero St: Sacramento St,103-3,Divisadero - Sacramento,C-1
+210,Fishermans Wharf,201-54,Fishermans Wharf,F-1
+211,Hyde St: Unit - 1000,413-1,Hyde Unit-2100,E-1
+212,Brannan St: 700 - 900 9th St,418-1,9th-11th Brannan Bryant Harrison,S-1
+213,Post - Geary - O Farrell,113-1,Post-Geary-Ofarrell,E-3
+214,Mission St: 2500 - 2700,302-2,Mission 2500-2700,R-4
+215,Beale st and Delancy St,607-3,Beale St 500,Port 2
+216,Union St:1500-2200 Fillmore St,215-3,Filbert/Fillmore/Greenwich/Pix,F-2
+217,Columbus Ave: Unit - 1100,202-2,Columbus,F-1
+218,Broadway St: Unit - 800,203-1,Broadway,G-1
+219,Davis St: Unit - 600,224-1,Davis: Unit - 200,I-1
+220,Sacramento 1600-1700,116-2,Sacramento 1600- 1700,D-2
+221,Front St: Unit - 300,214-1,Front: Unit - 300,I-1
+222,Divisadero St: Sacramento St,103-1,California - Spruce - Laural,C-2
+223,Green St; Vallejo St; Front St,606-5,Green,Port 1
+224,Post - Geary - O Farrell,113-1,Post-Geary-Ofarrell,E-2
+225,Larkin St: Unit - 1100,414-2,Larkin Unit-1100,D-1
+226,Howard St: 800 - 1600,431-3,Howard 1600-1500,N-1
+227,Stockton St: Green St:Vallejo,M206-4,Filbert St: 700,G-4
+228,Ocean ave: 2300-2600 Holloway,319-1,Ocean 2400-2600,O-1
+229,California: Unit - 900 Pine St,210-4,Pine: Unit - 600,I-1
+230,Balboa St: 3200 - 3600,119-1,Balboa (Outer),B-4
+231,Kaplan Ln: Unit,M-931,Kaplan Ln. Unit,M-2
+232,,,,B-2
+233,California: Unit - 900 Pine St,210-2,California: Unit - 700,I-2
+234,Geary St: 5000 - 5200,118-2,Geary,B-3
+235,Bryant St: 800,428-1,Bryant 800,S-1
+236,Sansome Street,618-1,Sansome Street | 1500,Port 1
+237,Grant Ave: Unit -1500,204-1,Grant: Unit - 300,I-3
+238,,DPT MOS,,F-1
+239,,DPT MOS,,I-1
+240,Folsom St: Main St: Spear St:,M405-5,Spear St: Unit,M-1
+241,Sacramento 1600-1700,116-1,Sacramento 1600- 1700,D-2
+242,Harrison St: 400 - 800,429-2,Harrison 400-700,M-2
+243,Fillmore Hills: 2400 -1700,101-51,Fillimore: 2400 -1700 Califronia,C-4
+244,,100,,R-3
+245,Hyde St: Unit - 1000,413-3,Leavenworth Unit-300,J-4
+246,,DPT MOS,,B-1
+247,Brannan St: 700 - 900 9th St,418-3,Townsend/Alameda,S-1
+248,Geary St: 2400 - 4800,126-2,Geary2600-3100,B-1
+249,Clement St: Unit - 1100,125-1,Clement,B-1
+250,,DPT MOS,,Port 1
+251,Sansome St: Unit-800 Battery S,205-2,Sansome: Unit - 800,I-2
+252,Bush St: 100 - 900 Sutter St,209-1,Bush: 200 - 900,I-4
+253,,118-2,,B-3
+254,,,,R-4
+255,Jones St: Unit - 800,212-8,Cyril Magnin: Unit - 100,J-1
+256,Larkin St: Unit - 1100,414-1,Larkin Unit-1100,E-2
+257,Irving St at 20th Ave: Lot,903,Irving at 20th Ave. Lot,A-5
+258,Hyde St: Unit - 1000,413-1,Hyde Unit-2100,E-2
+259,Fillmore Flats: 1000 - 1500,102-52,Fillmore Flats,C-3
+260,Sansome St: Unit-800 Battery S,205-1,Sansome: Unit - 800 Halleck,I-1
+261,Claremont St at Ulloa St: Lot,M922-1,Claremont St at Ulloa St: Lot,A-1
+262,"""Portola St: 600 - 700 """,324-2,Portola,A-1
+263,California: Unit - 900 Pine St,210-4,Pine: Unit - 600,I-2
+264,3rd St: 4600 - 5100,308-2,3rd St,O-4
+265,9th St: Unit - 300 10th St,408-1,9th St Unit-300,N-2
+266,Gough St: Unit - 500,411-3,Hayes / Fell / Oak,J-5
+267,Post St: Unit-600 Geary St,211-1,Post: Unit - 600,I-3
+268,Polk St: 100 - 2400,412-3,Polk Unit-900,D-1
+269,Post - Geary - O Farrell,113-3,Ofarrell 100-800 Post 900-700,E-4
+270,Bush: 1100 - 1500,114-1,Bush: 1100-1500,D-1
+271,Howard St: Unit - 600 Bryan St,404-5,Bryant 1600,R-3
+272,Franklin St: Unit - 900,409-4,Franklin 1200-1500,D-1
+273,Powell St: 1000 - 1700,206-1,"Green, Filbert, Powell, Union",G-4
+274,Post St: Unit-600 Geary St,211-3,Ofarrell: Unit - 400,J-2
+275,Jones St: Unit - 800,212-6,Mason: Unit - 600,J-1
+276,Eddy St: 100 - 900,402-2,Eddy: 100-800,E-4
+277,Jackson St: 300 - 400,M207-3,Pacific St: 300 - 500,G-3
+278,Battery St: Sansome St: Hallec,M205-1,Battery St: 500 - 1100,G-2
+279,California: 1400 - 1700,115-1,California: 1400- 1700,D-1
+280,Howard St: Unit - 600 Bryan St,404-5,Bryant 1600,S-1
+281,Grant Ave: Unit -1500,204-4,Grant: 1200 - 1500,G-4
+282,Natoma St:,M422-2,Jessie St,M-2
+283,Larkin St: Unit - 1100,414-1,Larkin Unit-1100,J-3
+284,Eddy St: 100 - 900,402-1,Eddy: 100-800,J-1
+285,California: Unit - 900 Pine St,210-1,California: Unit - 700,I-4
+286,Haight St: Stanyan St: Masonic,122-2,Haight: Stanyan - Masonic,A-3
+287,Terry Francois,600-5,20th St 500,Port 3
+288,Kearny St: Grant Ave,M204-2,"Grant St: Unit, 200, 300",I-3
+289,Geary St: 2400 - 4800,126-4,Geary 4600-5000,B-2
+290,Gough St: Oak St: Fell St,M411-3,Fell St. Unit - 300,J-5
+291,24th St at Capp St: Lot,M916-1,24th St at Capp St: Lot,R-4
+292,Mission St: 2100 - 2400,334-1,Mission 2100-2400,R-3
+293,Cortland Ave: 300 - 900,331-1,Cortland,O-3
+294,Embarcadero North Port,613-1,Embarcadero North | Unit-600,Port 2
+295,,DPT MOS,,G-1
+296,Golden Gate Ave: Unit - 700,417-2,Golden Gate Unit-700,J-1
+297,Post St: Unit-600 Geary St,211-3,Ofarrell: Unit - 400,I-3
+298,Hyde St: Unit - 1000,413-3,Leavenworth Unit-300,J-3
+299,Larkin St: Unit - 1100,414-2,Larkin Unit-1100,E-2
+300,Bush St: 100 - 900 Sutter St,209-4,Sutter: Unit - 800,I-3
+301,Divisadero St: 800 - 200,130-1,Divisadero,C-1
+302,,DPT MOS,,G-4
+303,Grove St: Fulton St: McAlliste,M401-1,"Grove St. Unit - 100, Fulton St.",J-4
+304,Leland Ave: Unit - 100,309-1,Leland,O-4
+305,,,,F-2
+306,Mission St: 2500 - 2700,302-1,Mission 2500-2700,R-3
+307,West Portal Ave: Unit - 300,320-1,West Portal,A-1
+308,Ocean at 19th Ave Lot,M925-1,Ocean at 19th Ave Lot,O-1
+309,Sacramento St: 100 - 800,208-2,Sacramento: 700 - 800,I-2
+310,Jones St: Unit - 800,212-2,Jones: Unit - 800,J-2
+311,Embarcadero North Port,613-1,Embarcadero North | Unit-600,Port 1
+312,Willow St: Unit - 200,421-1,Larch: Willow,J-3
+313,Lombard St: 2000 - 2400,216-51,Divisadero Pierce Scott Steiner,F-2
+314,9th St: Unit - 300 10th St,408-3,S Van Ness Unit,N-1
+315,Valencia 24th St 400 - 1200,301-2,Valencia: McCoppin - 24th St,R-5
+316,Sansome St: Unit-800 Battery S,205-1,Sansome: Unit - 800 Halleck,I-2
+317,Howard St: 100 - 1500,M404-3,Howard St: 800,N-3
+318,Diamond St: Mission St,315-2,Mission,O-3
+319,Clement St: 1800 - 2400,127-1,Clement (Outer),B-4
+320,Bush St: 100 - 900 Sutter St,209-2,Bush: 400 - 900,I-2
+321,Bryant St: 300-600 Stillman St,430-52,Bryant: 600,M-3
+322,"Hyde St: Unit, 300, 900",M413-1,"Hyde St: Unit, 300, 900",J-4
+323,Parnassas St: 300 - 700,123-3,Kirkham,A-3
+324,9th St: Unit - 300 10th St,408-1,9th St Unit-300,N-1
+325,,DPT MOS,,D-1
+326,Bush St: 100 - 900 Sutter St,209-4,Sutter: Unit - 800,J-2
+327,Chestnut St; Mongomery St,605-2,Chestnut,Port 1
+328,3rd St: 4600 - 5100,308-1,3rd St,O-4
+329,Divisadero St: Sacramento St,103-4,California - Presidio,C-2
+330,Jones St: Unit - 800,212-6,Mason: Unit - 600,J-2
+331,Broadway St: Unit - 800,203-2,Broadway,G-4
+332,Lombard St: 2000 - 2400,216-53,Lombard 2000-2400 | Chestnut 2000-2400,F-2
+333,Geary St at 21st: Lot,911,Geary at 21st Lot,B-3
+334,Post - Geary - O Farrell,113-1,Post-Geary-Ofarrell,E-1
+335,Clay St: 100 - 900,213-2,Clay: 100 - 900,I-1
+336,Market St: 1600-2300 Castro St,305-1,19th St / Castro / Market,R-1
+337,Ocean ave: 2300-2600 Holloway,319-4,Holloway,O-1
+338,4th St: Unit 400 5th St:,407-2,4th St,N-4
+339,Mission St: 2800 - 3000,306-2,24th / 25th / Cesar Chavez / Mis,R-5
+340,9th St: Unit - 300 10th St,408-2,9th St Unit-300,N-1
+341,Fishermans Wharf Port,611-1,Jefferson Street | Unit - 500,Port 1
+342,Stevenson St: Jessie St:,422-2,Minna-Natoma,M-2
+343,,,,C-2
+344,Hyde St: Unit - 1000,413-1,Hyde Unit-2100,J-4
+345,Fillmore Flats: 1000 - 1500,102-53,Fillmore Flats:Post-Geary,C-3
+346,Bryant St: 300-600 Stillman St,430-51,Bryant: 600,M-3
+347,Larkin St: Unit - 1100,414-1,Larkin Unit-1100,E-1
+348,Divisadero St: 800 - 200,130-2,Divisadero,C-1
+349,Irving St at 8th Ave: Lot,M904-1,Irving at 8th Ave. Lot,A-4
+350,Market St: 1600-2300 Castro St,305-3,18th St / Diamond,R-1
+351,5th St: 600,M407-3,"Jessie St: 100, 300",N-3
+352,4th St: Unit 400 5th St:,407-2,4th St,N-3
+353,Montgomery St: 700,M-220,Montgomery St: 700,G-2
+354,Fillmore Hills: 2400 -1700,101-53,Sacramento: Webster-Clay,C-4
+355,California: Unit - 900 Pine St,210-2,California: Unit - 700,I-4
+356,Columbus Ave: Unit - 1100,202-2,Columbus,G-4
+357,5th St: 600,M407-1,"5th St St: 100, 600",N-2
+358,Bush St: 100 - 900 Sutter St,209-3,Sutter: Unit - 800,I-3
+359,Clement St at 8th Ave: Lot,909,8th Ave Clement Lot,B-2
+360,Van Ness Ave: 200 - 2100,410-2,Van Ness Unit-2300,J-3
+361,4th St: Unit 400 5th St:,407-1,4th St,N-3
+362,Balboa St: 3200 - 3600,119-2,Balboa (Outer),B-4
+363,Stockton St: Green St:Vallejo,M206-3,Vallejo St: 600,G-3
+364,4th St: Unit 400 5th St:,407-1,4th St,N-2
+365,Hyde St: Unit - 1000,413-2,Hyde Unit-600,E-2
+366,Haight St: Stanyan St: Masonic,122-3,Haight: Cole,A-3
+367,"Hyde St: Unit, 300, 900",M413-1,"Hyde St: Unit, 300, 900",E-1
+368,Powell St: 1000 - 1700,206-3,Powell: 1000-17000,G-4
+369,Van Ness Ave: Unit - 700,M410-2,Van Ness Ave. Unit - 700,J-3
+370,Valencia 24th St 400 - 1200,301-2,Valencia: McCoppin - 24th St,R-2
+371,California: 1400 - 1700,115-2,California: 1400-1700,D-1
+372,,418-3,,S-1
+373,,,,A-4
+374,Gough St: Oak St: Fell St,M411-1,Gough St. 800 - 1400,J-3
+375,Howard St: 800 - 1600,431-1,Howard 1400-900,N-3
+376,Post - Geary - O Farrell,113-2,Post-Geary-Offarrell,E-2
+377,Jones St: Unit - 800,212-2,Jones: Unit - 800,J-1
+378,Kearny St: Grant Ave,M204-1,Kearny St: Unit - 500,I-4
+379,Franklin St: Unit - 900,409-4,Franklin 1200-1500,E-3
+380,Jackson St: 300 - 400,M207-2,Jackson St: 1600,D-2
+381,Polk St: 100 - 2400,412-4,Polk Unit-900,D-1
+382,,,,B-4
+383,Lombard St: 2000 - 2400,216-52,Lombard 2100-2400  | Chestnut 2000-2400,F-2
+384,Post - Geary - O Farrell,113-2,Post-Geary-Offarrell,E-3
+385,Stockton St: Green St:Vallejo,M206-2,"Green St: 100, 500",G-4
+386,South Embarcadero,614-2,South Embarcadero 400-700,Port 3
+387,OFARRELL ST 800,M113,OFARRELL ST 800,E-3
+388,Ferry Group Port,612-1,Embarcadero N/Grant/North Point | 1000-1200/2200/Unit,Port 1
+389,,DPT MOS,,S-1
+390,Mission St: 2100 - 2400,334-53,Bartlett: 22nd-24th,R-3
+391,Eddy St: 100 - 900,402-1,Eddy: 100-800,E-1
+392,,,,G-2
+393,Ocean ave: 2300-2600 Holloway,319-3,Halloway,O-1
+394,Utah St: 200,M418-2,BRANNAN ST 600,S-1
+395,,DPT MOS,,O-4
+396,Townsend St: 100 - 500,M-419,Townsend St. 300 - 500,M-3
+397,,,,B-3
+398,,DPT MOS,,R-5
+399,Ellis St: Unit - 900,415-1,Ellis Unit-300,J-1
+400,Mission St: 2500 - 2700,302-2,Mission 2500-2700,R-3
+401,Franklin St: Unit - 900,409-2,Franklin Unit-800,J-3
+402,Van Ness Ave: 200 - 2100,410-3,Van Ness 600,E-4
+403,Jones St: Unit - 800,212-1,Jones: Unit - 800,J-1
+404,Gough St: Oak St: Fell St,M411,GOUGH ST,E-3
+405,,DPT MOS,,B-4
+406,Powell St: 1000 - 1700,206-2,Powell: 1000 - 1700,G-4
+407,California: Unit - 900 Pine St,210-4,Pine: Unit - 600,I-4
+408,,,,A-3
+409,TERRY A FRANCOIS 400-500,610-1,TERRY A FRANCOIS 400-500,Port 3
+410,Battery St: Sansome St: Hallec,M205-1,Battery St: 500 - 1100,G-1
+411,Polk St: 100 - 2400,412-3,Polk Unit-900,J-3
+412,Parnassas St: 300 - 700,123-2,Parnassas,A-3
+413,Franklin St: 500,M409,"Franklin St.  500, 600",J-5
+414,Van Ness Ave: 200 - 2100,410-2,Van Ness Unit-2300,E-3
+415,Gough St: Oak St: Fell St,M411-3,Fell St. Unit - 300,J-4
+416,Cedar St: Unit - 100 Myrtle St,131-1,Cedar: Unit - 100,E-3
+417,Post - Geary - O Farrell,113-3,Ofarrell 100-800 Post 900-700,E-2
+418,,,,I-2
+419,3rd St: Unit -600 2nd St:,406-2,Bryant 300-600 / Harrison 600,M-3
+420,13th St: 100,420-1,13th St,N-1
+421,Polk St: 100 - 2400,412-4,Polk Unit-900,D-2
+422,Grant Ave: Unit -1500,204-3,Grant: 400 - 1100,G-3
+423,Van Ness Ave: 200 - 2100,410-2,Van Ness Unit-2300,D-2
+424,Castro and 18th Lot,M917-1,Castro and 18th Lot,R-1
+425,Sacramento 1600-1700,116-3,Jackson 1500- 1700,D-2
+426,Franklin St: Unit - 900,409-2,Franklin Unit-800,J-5
+427,Jones St: Unit - 800,212-5,Mason: Unit - 600,J-1
+428,Turk St: 100 - 900,416-1,Turk Unit-700,J-3
+429,Broadway St: Unit - 800,203-5,Greenwich: 100 Sansome,G-1
+430,Van Ness Ave: 200 - 2100,410-3,Van Ness 600,E-3
+431,Grant Ave: Unit -1500,204-5,Grant: 1200 - 1500,G-4
+432,Howard St: 100 - 1500,M404-1,Howard St: 100,M-1
+433,Ellis St: Unit - 900,415-2,Ellis Unit-300,E-1
+434,Noriega St: 1200 - 1400,322-1,Noriega,A-2
+435,Van Ness Ave: Unit - 700,M410-2,Van Ness Ave. Unit - 700,J-4
+436,"Golden Gate Ave: 200, 400",M417-2,Golden Gate 200 - 700,J-3
+437,Ocean Ave: 1000 - 1900,318-2,Ocean 1200-1900,O-1
+438,Market St: 1600-2300 Castro St,305-52,Stevenson-Brady,N-1
+439,Mission St: 1700 - 2000,335-3,Potrero 200,S-1
+440,Van Ness Ave: Unit - 700,M410-1,Van Ness Ave. 1800,J-4
+441,Hyde St: Unit - 1000,413-1,Hyde Unit-2100,J-3
+442,Stockton St: Green St:Vallejo,M206-1,Stockton St: 1100 - 1400,G-4
+443,Ellis St: Unit - 900,415-1,Ellis Unit-300,E-4
+444,Van Ness Ave: 200 - 2100,410-1,Van Ness 200-2100,D-2
+445,Eddy St: 100 - 900,402-2,Eddy: 100-800,E-1
+446,4th St: 500,M406-2,New Montgomery St: 100,M-2
+447,,302-1,,R-4
+448,,,,W-1
+449,FrankNorris: Unit Austin St,134-1,FrankNorris:Unit-100; Austin,D-1
+450,9th St: Unit - 300 10th St,408-2,9th St Unit-300,N-2
+451,McAllister St: Unit - 600,401-3,McAllister Unit-500,J-5
+452,Clay St: 500,M213-1,Clay St: 500,I-2
+453,Bryant St: 300-600 Stillman St,430-51,Bryant: 600,N-4
+454,Hyde St: Unit - 1000,413-4,Leavenworth Unit-300,J-4
+455,McAllister St: Unit - 600,401-2,McAllister Unit-500,J-5
+456,"California St: Unit, 400",M210-1,"California St: Unit, 400",I-1
+457,California: Unit - 900 Pine St,210-1,California: Unit - 700,I-1
+458,4th St: Unit 400 5th St:,407-3,Harrison - 1000,N-3
+459,,DPT MOS,,D-2
+460,Diamond St: Mission St,315-1,Daimond,O-3
+461,"Valencia St: 100, 400, 600, 70",M301-2,Valencia St: Unit 200 300,R-3
+462,Sacramento St: 100 - 800,208-1,Sacramento: 100 - 800,I-2
+463,18th St: Castro St: Market St:,M305-4,"Noe St: 200, 1100",R-1
+464,Ellis St: Unit - 900,415-1,Ellis Unit-300,E-1
+465,Franklin St: Unit - 900,409-1,Franklin Unit-800,J-5
+466,Valencia 24th St 400 - 1200,301-1,Valencia: McCoppin - 24th St,R-5
+467,Harrison St: 400 - 800,429-1,Harrison 400-700,M-2
+468,Harrison St: 600,M430-2,Harrison St: 600 Stillman St: 10,M-1
+469,Larkin St: Unit - 1100,414-2,Larkin Unit-1100,J-3
+470,Bush St: 100 - 900 Sutter St,209-3,Sutter: Unit - 800,J-2
+471,Bush St: 100 - 900 Sutter St,209-1,Bush: 200 - 900,I-2
+472,Valencia 24th St 400 - 1200,301-2,Valencia: McCoppin - 24th St,R-4
+473,San Bruno Ave at Felton St:Lot,927,Felton Lot,O-4
+474,Fern St: Hemlock St: Unit-100,133-1,Fern - Hemlock,E-3
+475,Larkin St: Unit - 1100,414-2,Larkin Unit-1100,J-4
+476,Irving St at 7th Ave: Lot,M906-1,Irving St at 7th Ave: Lot,A-4
+477,"""Portola St: 600 - 700 """,324-1,Portola,A-1
+478,Otis St: Unit,M408-2,10th St: Unit - 100,N-2
+479,Natoma St:,M422-1,Jessie St,M-2
+480,Gough St: Unit - 500,411-3,Hayes / Fell / Oak,J-4
+481,Geary St at 18th St: Lot,912,Geary at 18th Lot,B-3
+482,Hyde St: Unit - 1000,413-3,Leavenworth Unit-300,E-1
+483,Golden Gate Ave: Unit - 700,417-1,Golden Gate Unit-700,J-3
+484,Ocean at Juniperro Serra Lot,M924-1,Ocean at Juniperro Serra Lot,O-1
+485,Clement St at 9th Ave: Lot,M910-1,Clement St at 9th Ave: Lot,B-2
+486,Mission St: Mint St,M403-2,Mint St: Unit,N-3
+487,South Embarcadero,614-1,Embarcadero South/Howard/Steuart | Unit-300/Unit/200,Port 2
+488,,DPT MOS,,R-4
+489,Mission - Excelsior Sts: Lot,921,Excelsior Lot,O-2
+490,Claremont St at Ulloa St: Lot,922,Claremont and Ulloa Lot,A-1
+491,Clay St: 100 - 900,213-2,Clay: 100 - 900,I-2
+492,Franklin St: Unit - 900,409-3,Franklin 1200-1500,D-1
+493,Valencia 24th St 400 - 1200,301-1,Valencia: McCoppin - 24th St,R-2
+494,Olive St: Unit - 200,424-1,Olive,E-4
+495,Folsom St: Main St: Spear St:,M405-4,Fremont St: Unit,N-2
+496,California: Unit - 900 Pine St,210-2,California: Unit - 700,I-1
+497,24th St and Noe Lot,M919-1,24th St and Noe Lot,O-3
+498,Powell St: 1000 - 1700,206-3,Powell: 1000-17000,I-4
+499,Franklin St: Unit - 900,409-3,Franklin 1200-1500,E-3
+500,Mission St: Unit - 1600,403-4,Mission 700-1100,N-1
+501,Howard St: 800 - 1600,431-1,Howard 1400-900,N-2
+502,Polk St: 300,M412-1,Polk St. 300,J-4
+503,Jones St: Unit - 800,212-1,Jones: Unit - 800,J-2
+504,Valencia 24th St 400 - 1200,301-1,Valencia: McCoppin - 24th St,R-4
+505,,215-1,,F-2
+506,Golden Gate Ave: Unit - 700,417-2,Golden Gate Unit-700,J-3
+507,Fern St: Hemlock St: Unit-100,133-1,Fern - Hemlock,D-1
+508,Jones St: Taylor St: Mason St,M212-2,"Taylor St: Unit, 700",J-1
+509,,404-51,,M-2
+510,South Park St: Unit - 100,M-933,South Park Unit - 100,M-3
+511,Jackson St: 300 - 400,M207-1,Jackson St: 300 - 400,G-2
+512,Broadway St: Unit - 800,203-1,Broadway,G-4
+513,Herrison St 500,M429-1,Harrison 400-800,M-2
+514,4th St: Unit 400 5th St:,407-1,4th St,N-4
+515,,,,E-2
+516,Hyde St: Unit - 1000,413-4,Leavenworth Unit-300,E-2
+517,Post St: Unit-600 Geary St,211-1,Post: Unit - 600,J-2
+518,Geary St: 2400 - 4800,126-2,Geary2600-3100,B-2
+519,Townsend St: 100 - 500,M-419,Townsend St. 300 - 500,S-1
+520,Battery St: Sansome St: Hallec,M205-2,"Sansome St: Unit, 500 Halleck St",I-2
+521,Drumm St: Unit - 300,225-1,Drumm: Unit - 300,I-1
+522,,429-2,,M-2
+523,,DPT MOS,,I-3
+524,Front St: 600 - 800,223-1,Front: 600 - 800,G-1
+525,Grove St: Fulton St: McAlliste,M401-3,McCallister St. 300,J-4
+526,California - Steiner Sts: Lot,907-51,CAL_STEINER LOT,C-4
+527,Hyde St: Unit - 1000,413-2,Hyde Unit-600,J-3
+528,Van Ness Ave: 200 - 2100,410-2,Van Ness Unit-2300,D-1
+529,Townsend St: Unit-300 King St,419-52,King St,M-3
+530,Van Ness Ave: 200 - 2100,410-2,Van Ness Unit-2300,J-4
+531,Turk St: 700,M416-1,Turk St: 700,J-3
+532,Mission St: Unit - 1600,403-5,S Van Ness,N-1
+533,Howard St: Unit - 600 Bryan St,404-2,Howard Unit-600,M-2
+534,Folsom St: Unit-800 1st:,405-2,Folsom-Steuart,M-1
+535,Pier 1/2,602-1,Pier 1/2,Port 2
+536,McAllister St: Unit - 600,401-2,McAllister Unit-500,J-4
+537,Sutter St: 800,M209-3,Sutter St: 2400,C-1
+538,MISSION 2600-2800,M302-2,MISSION 2600-2800,R-4
+539,Kearny St: Grant Ave,M204-6,Kearny: 600 - 1000,G-3
+540,,DPT MOS,,J-2
+541,Pacific St: 1600,M135-1,Pacific St: 1600,J-4
+542,Balboa St: 3200 - 3600,M-119,Balboa St: 3200 - 3700,B-4
+543,California: Unit - 900 Pine St,210-3,Pine: Unit - 600,I-4
+544,"Hyde St: Unit, 300, 900",M413-1,"Hyde St: Unit, 300, 900",D-1
+545,Folsom St: Unit-800 1st:,405-7,Spear Unit-300,M-1
+546,Van Ness Ave: 200 - 2100,410-2,Van Ness Unit-2300,E-4
+547,Stevenson St: Jessie St:,422-1,Jessie-Stevenson,M-2
+548,Mission St: Mint St,M403-5,South Vanness,N-1
+549,Peter Yorke Way: Unit,M932,PETER YORKE WAY 0,E-3
+550,,DPT MOS,,C-2
+551,SF General Hospital: Lot,928-2,General Hospital,O-3
+552,,DPT MOS,,O-3
+553,Harrison St: 600,M430-1,"Bryan St: 300, 900",S-1
+554,Jackson St: 300 - 400,M207-3,Pacific St: 300 - 500,G-2
+555,,DPT MOS,,A-3
+556,ShowPlace Square,433-1,Showplace square,P-1
+557,Columbus Ave: Unit - 1100,202-1,Columbus,F-1
+558,Otis St: Unit,M408-1,"9th St: Unit, 200",N-2
+559,,205-1,,I-2
+560,Folsom St: Unit-800 1st:,405-3,Essex 1st Fremont Beale,M-1
+561,Leland Ave: Unit - 100,309-2,Leland,O-4
+562,,411-1,,J-5
+563,Clay St: 100 - 900,213-1,Clay: 100 - 900,I-1
+564,,DPT MOS,,Port 3
+565,Folsom St: Unit-800 1st:,405-6,Spear Unit-200,M-1
+566,Sacramento St: 100 - 800,208-1,Sacramento: 100 - 800,I-1
+567,,,,I-4
+568,,DPT MOS,,B-2
+569,Polk St: 100 - 2400,412-3,Polk Unit-900,E-4
+570,Townsend St: 100 - 500,M-419,Townsend St. 300 - 500,N-4
+571,,DPT MOS,,A-4
+572,Van Ness Ave: 200 - 2100,410-3,Van Ness 600,J-3
+573,Jones St: Unit - 800,212-4,Taylor: Unit - 700,J-1
+574,Larkin St: Unit - 1100,414-1,Larkin Unit-1100,D-1
+575,18th St: Castro St: Market St:,M305-3,"Market St: 2200, 2300",R-1
+576,Jones St: Taylor St: Mason St,M212-3,"Mason St: 100, 300",J-1
+577,"Ofarrell St: Unit, 400",M211-1,Post Geary Ofarrel,I-3
+578,Bluxome St: Unit - 100,M-427,Bluxome St. Unit - 100,N-4
+579,Hayes Valley,M435-2,Hayes Valley,H-1
+580,Clay St: 100 - 900,213-1,Clay: 100 - 900,I-2
+581,"Valencia St: 100, 400, 600, 70",M301-1,"Valencia St: 100, 400, 600, 700",R-2
+582,Terry Francois,600-1,Terry Francois 700-800,Port 3
+583,Jones St: Unit - 800,212-4,Taylor: Unit - 700,J-2
+584,Larkin St: Unit - 1100,414-2,Larkin Unit-1100,E-1
+585,Stockton St: Green St:Vallejo,M206-3,Vallejo St: 600,G-4
+586,5th St: 600,M407-1,"5th St St: 100, 600",N-4
+587,Hayes Valley,M435-1,Hayes Valley,H-1
+588,Hyde St: Unit - 1000,413-3,Leavenworth Unit-300,E-2
+589,Utah St: 200,M418-1,Utah St: 200,S-1
+590,"Valencia St: 100, 400, 600, 70",M301-1,"Valencia St: 100, 400, 600, 700",R-3
+591,Franklin St: Unit - 900,409-1,Franklin Unit-800,J-3
+592,Grove St: Fulton St: McAlliste,M401-3,McCallister St. 300,J-5
+593,,DPT MOS,,C-4
+594,Hyde St: Unit - 1000,413-2,Hyde Unit-600,J-4
+595,West Portal and Vicente Lot,M923-1,West Portal and Vicente Lot,A-1
+596,Washington St: Unit - 800,222-2,Washington: 600 - 900,G-3
+597,Mission St: 1700 - 2000,335-1,Mission 1700-2000,R-2
+598,,100,,J-1
+599,,334-2,,R-3
+600,,DPT MOS,,Port 2
+601,Bryant St: 300-600 Stillman St,430-3,Stillman,M-3
+602,Brannan St: 700 - 900 9th St,418-1,9th-11th Brannan Bryant Harrison,N-2
+603,Sansome St: Unit-800 Battery S,205-2,Sansome: Unit - 800,G-1
+604,,DPT MOS,,I-2
+605,Sansome St: Unit-800 Battery S,205-2,Sansome: Unit - 800,I-1
+606,3rd St: Unit -600 2nd St:,406-1,Bryant 300-600 / Harrison 600,M-3
+607,Gough St: Oak St: Fell St,M411-2,Oak St. Unit,J-5
+608,Larkin St: Unit - 1100,414-1,Larkin Unit-1100,J-4
+609,,DPT MOS,,E-2
+610,,DPT MOS,,J-5
+611,Howard St: 100 - 1500,M404-2,"Howard St: 500, 600",M-2
+612,Church St: 1700 30th St: 300,330-1,29th / Church / Day,O-3
+613,Folsom St: Main St: Spear St:,M405-4,Fremont St: Unit,M-1
+614,,418-1,,N-2
+615,Brannan St: 200 - 500,427-52,5th & Brannan,N-4
+616,Van Ness Ave: 200 - 2100,410-3,Van Ness 600,D-1
+617,Jones St: Taylor St: Mason St,M212-2,"Taylor St: Unit, 700",J-2
+618,Mission St: Unit - 1600,403-2,Mission Unit 300-600,N-2
+619,California: Unit - 900 Pine St,210-3,Pine: Unit - 600,I-1
+620,Turk St: 100 - 900,416-2,Turk Unit-700,J-1
+621,"Golden Gate Ave: 200, 400",M417-1,"Golden Gate Ave: 200, 400",J-3
+622,Broadway St: Greenwith St:,M203-2,Greenwith St: 100,G-1
+623,,DPT MOS,,O-1
+624,Mission St: Unit - 1600,403-3,Mission 700-1100,N-1
+625,Davis ST Unit - 200,M224-1,Davis: Unit - 200,G-2
+626,Folsom St: Unit-800 1st:,405-4,Essex 1st Fremont Beale,M-1
+627,Sutter St: 800,M209-4,Sutter: Unit - 800,I-3
+628,"Valencia St: 100, 400, 600, 70",M301-2,Valencia St: Unit 200 300,R-2
+629,,417-2,,J-3
+630,Polk St: 100 - 2400,412-3,Polk Unit-900,E-3
+631,Brannan St: 700 - 900 9th St,418-2,9th-11th Brannan Bryant Harrison,N-2
+632,Eddy St: 100 - 900,402-2,Eddy: 100-800,J-1
+633,,100,,B-1
+634,,DPT MOS,,E-4
+635,Jones St: Unit - 800,212-5,Mason: Unit - 600,J-2
+636,Valencia 24th St 400 - 1200,301-3,Capp 100 - Hoff Unit,R-2
+637,Eddy St: Unit,M402-1,Eddy St: Unit,J-1
+638,Redwood St: 100,426-51,Redwood: 100,J-4
+639,Hyde St: Unit - 1000,413-4,Leavenworth Unit-300,E-1
+640,3rd St: Unit -600 2nd St:,406-1,Bryant 300-600 / Harrison 600,M-2
+641,Folsom St: Unit-800 1st:,405-1,Folsom 500-800,M-1
+642,Brannan St: 200 - 500,427-51,5th & Brannan,N-4
+643,Folsom St: Unit-800 1st:,405-8,Folsom 500-800,M-2
+644,,DPT MOS,,A-2
+645,Mission St: 1700,M-568,Mission St: 1600 - 1700,N-1
+646,Channel St: 300,M432-51,Mission Bay: 4th St; Long Bridge,P-1
+647,Market St: 1600-2300 Castro St,305-1,19th St / Castro / Market,N-1
+648,ELLIS ST,M415,ELLIS ST,E-4
+649,4th St: Unit 400 5th St:,407-2,4th St,N-2
+650,Mission St: Unit - 1600,403-52,Mission: 100.600,M-2
+651,Sutter St: 800,M209-1,Bush St: 700,I-4
+652,Natoma St:,M-422-1,Natoma St: 100 Stevenson St: 100,M-2
+653,Jones St: Taylor St: Mason St,M212-1,Jones St: 600,J-2
+654,,301-2,,R-3
+655,Mission St: Unit - 1600,403-3,Mission 700-1100,N-3
+656,Hickory St: Unit,M423-51,HICKORY ST 100,J-5
+657,Folsom St: Main St: Spear St:,M405-3,Beale St: Unit,M-1
+658,,335-1,,R-2
+659,Davis St: Unit - 600,224-1,Davis: Unit - 200,G-2
+660,25th 26th Ceaser Chavez,M306-1,25TH ST 3300 26TH ST 3300,R-5
+661,Irving St at 8th Ave: Lot,904,Irving at 8th Ave. Lot,A-4
+662,Bush St: 100 - 900 Sutter St,209-1,Bush: 200 - 900,G-3
+663,,100,,G-1
+664,Folsom St: Main St: Spear St:,M405-6,Spear 100-200,M-1
+665,Howard St: 800 - 1600,431-1,Howard 1400-900,N-1
+666,,305-2,,R-1
+667,Columbus,M202-2,COLUMBUS AVE 800,F-1
+668,Front St: 200,M214-1,Front St: 200,I-1
+669,Market St: 1600-2300 Castro St,305-2,19th St / Castro / Market,N-1
+670,Howard St: Unit - 600 Bryan St,404-2,Howard Unit-600,M-1
+671,Front St: 200,M214-1,Front St: 200,G-2
+672,18th St: Castro St: Market St:,M305-4,"Noe St: 200, 1100",O-3
+673,Jones St: Taylor St: Mason St,M212-3,"Mason St: 100, 300",J-2
+674,Haight St: 500,M136-1,Haight St: 500,C-3
+675,,100,,R-1
+676,18th St: Castro St: Market St:,M305-1,"18th St: 4000, 4100",R-1
+677,Fillmore St: 1400 Post St: 170,M102-1,Fillmore St: 1400 Post St: 1700,C-3
+678,Channel St: 300,M432-1,Channel St: 300,P-1
+679,Otis St: Unit,M408-3,11th St: Unit,N-1
+680,Terry Francois,600-4,Illinois St,Port 3
+681,,,,P-1
+682,Division St: 100,M433-1,Division St: 100,S-1
+683,,DPT MOS,,P-1
+684,Bryant St: 300-600 Stillman St,430-52,Bryant: 600,S-1
+685,4th St: 1200-1700 China Basin,432-52,MISSION BAY,P-1
+686,Bryant St: 300-600 Stillman St,430-51,Bryant: 600,S-1
+687,Steiner St: Geary St: Post St,104-62,Geary 1900: Steiner Scott,C-1
+688,ShowPlace Square,433-2,Showplace Square,S-1
+689,Clarence Place: Unit,M-930,Clarence Place,M-3
+690,4th St: 1200-1700 China Basin,432-51,MISSION BAY,P-1
+691,Sutter St: 800,M209-2,"Sutter St: 500, 800",J-2
+692,ShowPlace Square,433-1,Showplace square,S-1
+693,Harrison St: 400 - 800,429-2,Harrison 400-700,N-4
+694,Steiner St: Geary St: Post St,104-61,Geary 1900: Steiner Scott,C-1
+695,4th St: 1200-1700 China Basin,432-53,China Basin,P-1
+696,Powell St: 1000 - 1700,206-2,Powell: 1000 - 1700,G-3
+697,25th 26th Ceaser Chavez,M306-2,25TH 3400,R-5
+698,,100,,P-1
+699,ShowPlace Square,433-3,Showplace Square,S-1
+700,Excelsior Lot,M921-1,Excelsior Lot,O-2
+701,Richard Henry Dana,601-1,Richard Henry Dana,Port 1
+702,,DPT MOS,,W-1
+703,Fishermans Wharf,M201-52,BEACH ST 400,F-1
+704,Stockton St: Green St:Vallejo,M206-2,"Green St: 100, 500",G-1
+705,,DPT MOS,,E-1
+706,TERRY A FRANCOIS 400-500,610-2,ILLINOIS ST,Port 3
+707,Steiner St: Geary St: Post St,104-61,Geary 1900: Steiner Scott,C-3
+708,5th St: 600,M407-2,"8th St: 200, 500",S-1
+709,,100,,G-3
+710,4th St: Unit 400 5th St:,407-1,4th St,S-1
+711,Fishermans Wharf,M201-51,BEACH ST 600,F-1
+712,Brannan St: 200 - 500,427-53,Bluxome St Unit block,N-4
+713,Broadway St: Greenwith St:,M203-1,Broadway St: 100,G-1
+714,Van Ness Ave: 200 - 2100,410-1,Van Ness 200-2100,J-4
+715,Columbus Ave: Unit - 1100,202-1,Columbus,G-3
+716,San Bruno,M310-1,Thornton 800,O-4
+717,,100,,S-1
+718,Steiner St: Geary St: Post St,104-62,Geary 1900: Steiner Scott,C-3
+719,18th St: Castro St: Market St:,M305-2,Castro St: 400,R-1
+720,,411-52,,J-5
+721,Herrison St 500,M429-2,Harrison 400-800,M-2
+722,Howard St: 800 - 1600,431-2,Howard 1400-900,N-1
+723,4th St: Unit 400 5th St:,407-51,5th St,N-4
+724,Mission St: Unit - 1600,403-4,Mission 700-1100,N-3
+725,,211-2,,I-3
+726,,208-2,,I-4
+727,,100,,E-4
+728,Hayes Valley,M435-2,Hayes Valley,J-5
+729,Folsom St: Main St: Spear St:,M405-4,Fremont St: Unit,N-1
+730,Pacific St: 1600,M135-1,Pacific St: 1600,D-2
+731,,404-2,,M-1
+732,Howard St: 100 - 1500,M404-4,Howard St: 1400 - 1500,N-1
+733,,100,,M-1
+734,Serco test meters,Serco test,,N-4
+735,,M922-1,,A-1
+736,Harrison St: 600,M430-1,"Bryan St: 300, 900",M-3
+737,Folsom St: Unit-800 1st:,405-1,Folsom 500-800,N-3
+738,Jackson St: Unit - 800,207-4,Pacific: 200 - 500,G-3
+739,,,,
+740,California: Unit - 900 Pine St,210-1,California: Unit - 700,I-2
+741,,100,,C-1
+742,Howard Unit - 1600,M431-2,HOWARD ST 1400,N-3
+743,Mission 2900 - 3500,M307-2,29TH ST 0,R-5
+744,5th St: 600,M407-2,"8th St: 200, 500",N-3
+745,Townsend St: 100 - 500,M419-52,KING ST 300,M-3
+746,Bluxome St: Unit - 100,M427-52,BRANNAN ST 500,N-4
+747,Mission St: Mint St,M403-4,MISSION ST 1400,N-3
+748,Townsend St: 100 - 500,M419-53,BERRY ST 100,N-4
+749,Otis St: Unit,M408-2,10th St: Unit - 100,N-1
+750,Bluxome St: Unit - 100,M-427,Bluxome St. Unit - 100,M-3
+751,Fishermans Wharf,M201-54,NORTH POINT ST 100,F-1
+752,24TH STREET,M303-2,24TH STREET,R-4
+753,5th St: 600,M407-3,"Jessie St: 100, 300",N-4
+754,Utah St: 200,M418-1,Utah St: 200,N-4
+755,16th St: 3000,M335-1,15th St: 1500 16th St: 3000,R-2
+756,OLIVE ST 100,M424,OLIVE ST 100,E-4
+757,24TH STREET,M303-1,24TH STREET,R-4
+758,Howard Unit - 1600,M431-1,HOWARD ST 1400,N-2
+759,"Valencia St: 100, 400, 600, 70",M301-3,CAPP ST 100,R-2
+760,Channel St: 300,M432-53,Channel St: 200 - 300,P-1
+761,Howard Unit - 1600,M431-3,HOWARD ST 1500,N-1
+762,Howard Unit - 1600,M431-1,HOWARD ST 1400,N-3
+763,Folsom St: Main St: Spear St:,M405-2,Folsom St: 500 - 600,M-1
+764,Sacramento 100 - 400,M208-1,Sacramento 100 - 400,I-4
+765,Otis St: Unit,M408-1,"9th St: Unit, 200",N-1
+766,Mission 2900 - 3500,M307-1,29TH ST 0,R-5
+767,3rd St: Unit -600 2nd St:,406-3,New Montgomery / Hawthorne,M-2
+768,Folsom St: Unit-800 1st:,405-2,Folsom-Steuart,N-3
+769,Folsom St: Main St: Spear St:,M405-8,"Main St: Unit, 200",M-2
+770,Mission St: Mint St,M403-3,MISSION ST 1500,N-2
+771,5th St: 600,M407-2,"8th St: 200, 500",N-2
+772,4th St: 500,M406-2,New Montgomery St: 100,M-3
+773,Mission St: Mint St,M403-1,Mission St: 200,M-2
+774,Channel St: 300,M432-52,Mission Bay: 4th St; China Basin,P-1
+775,Folsom St: Main St: Spear St:,M405-1,"Main St: Unit, 200",M-2
+776,5th St: 600,M407-1,"5th St St: 100, 600",N-3
+777,Howard St: 100 - 1500,M404-2,"Howard St: 500, 600",M-1
+778,Bluxome St: Unit - 100,M427-51,BRANNAN ST 500,N-4
+779,Stockton St: Green St:Vallejo,M206-3,Vallejo St: 600,G-1
+780,4th St: 500,M406-3,New Montgomery St Hawthorne,M-2
+781,Mission St: Mint St,M403-4,MISSION ST 1400,N-1
+782,Gough St: Oak St: Fell St,M411-1,Gough St. 800 - 1400,J-5
+783,MISSION 2600-2800,M302-1,MISSION 2600-2800,R-4
+784,VAN NESS AVE 800,M410,VAN NESS AVE,E-4
+785,Montgomery St Unit - 600,M221-1,Montgomery St Unit - 600,I-2
+786,Harrison St: 600,M430-2,Harrison St: 600 Stillman St: 10,N-4
+787,Hayes Valley,M435-1,Hayes Valley,R-1
+788,Gough St: Oak St: Fell St,M411-2,Oak St. Unit,N-1
+789,"Valencia St: 100, 400, 600, 70",M301-2,Valencia St: Unit 200 300,R-5
+790,"California St: Unit, 400",M210-4,Pine St Unit - 200,I-4
+791,Herrison St 500,M429-2,Harrison 400-800,N-4
+792,Herrison St 500,M429-1,Harrison 400-800,N-4
+793,Redwood: 100,M426-51,REDWOOD ST 100,J-4
+794,4th St: 500,M406-1,"2nd St:  Unit, 100, 200",M-3
+795,Mission St: 2100 - 2400,M334-2,Mission St: 2100 - 2400,R-3
+796,Harrison St: 600,M430-1,"Bryan St: 300, 900",N-4
+797,WILLOW ST 100,M421,WILLOW ST 100,E-4
+798,18th St: Castro St: Market St:,M305-52,BRADY ST UNIT,N-1
+799,Kearny St: Grant Ave,M204-6,Kearny: 600 - 1000,I-4
+800,"California St: Unit, 400",M210-2,"California St: Unit, 400",I-1
+801,Battery St: Sansome St: Hallec,M205-2,"Sansome St: Unit, 500 Halleck St",G-1
+802,OFARRELL ST 800,M113,OFARRELL ST 800,E-4
+803,Columbus,M202-3,Columbus 000 - 200,G-4
+804,Battery St: Sansome St: Hallec,M205-1,Battery St: 500 - 1100,I-1
+805,Jackson St: 300 - 400,M207-1,Jackson St: 300 - 400,G-3
+806,"Valencia St: 100, 400, 600, 70",M301-1,"Valencia St: 100, 400, 600, 700",R-4
+807,Bluxome St: Unit - 100,M427-53,BLUXOME ST UNIT,N-4
+808,5th St: 600,M407-2,"8th St: 200, 500",N-4
+809,Stockton St: Green St:Vallejo,M206-3,Vallejo St: 600,I-4
+810,"California St: Unit, 400",M210-4,Pine St Unit - 200,I-1
+811,Kearny St: Grant Ave,M204-3,Kearny St: 900,I-4
+812,Herrison St 500,M429-2,Harrison 400-800,M-1
+813,Folsom St: Main St: Spear St:,M405-8,"Main St: Unit, 200",N-3
+814,Sacramento 100 - 400,M208-1,Sacramento 100 - 400,I-2
+815,Chestnut St; Mongomery St,605-4,Francisco,Port 1
+816,Marina Garage: Pierce: Unit,M-902,Marina Garage,F-2
+817,Mission St: Mint St,M403-4,MISSION ST 1400,N-2
+818,Columbus,M202-3,Columbus 000 - 200,G-3
+819,Townsend St: 100 - 500,M419-52,KING ST 300,N-4
+820,"California St: Unit, 400",M210-3,Pine St Unit - 200,I-4
+821,Broadway St: Greenwith St:,M203-4,UNION ST (UNIT-100),G-1
+822,Mission St: 2100 - 2400,M334-1,Mission St: 2100 - 2400,R-3
+823,Washington St: 200 - 400,M222-1,Washington St. 400,G-3
+824,Howard Unit - 1600,M431-2,HOWARD ST 1400,N-2
+825,Mission St: Mint St,M403-3,MISSION ST 1500,N-3
+826,Gough St: Oak St: Fell St,M411-1,Gough St. 800 - 1400,N-1
+827,Broadway St: Greenwith St:,M203-1,Broadway St: 100,G-4
+828,Howard St: 100 - 1500,M404-1,Howard St: 100,M-2
+829,"Valencia St: 100, 400, 600, 70",M301-1,"Valencia St: 100, 400, 600, 700",R-5
+830,Battery St: Sansome St: Hallec,M205-2,"Sansome St: Unit, 500 Halleck St",I-1
+831,Mission St: Mint St,M403-3,MISSION ST 1500,N-1
+832,13TH ST 100,M420-1,13TH ST 100,N-1
+833,Stockton St: Green St:Vallejo,M206-2,"Green St: 100, 500",I-4
+834,Mission St: 2100 - 2400,M334-53,Bartlett: 22nd-24th,R-3
+835,"Valencia St: 100, 400, 600, 70",M301-2,Valencia St: Unit 200 300,R-4
+836,,114-2,,D-1
+837,Broadway St: Greenwith St:,M203-4,UNION ST (UNIT-100),G-4
+838,Bush St: 100 - 900 Sutter St,209-4,Sutter: Unit - 800,I-4
+839,Clay St: 500,M213-1,Clay St: 500,I-4
+840,Jackson St: Unit - 800,207-3,Pacific: 200 -500,G-3
+841,Folsom St: Main St: Spear St:,M405-1,"Main St: Unit, 200",N-3
+842,Columbus,M202-1,COLUMBUS AVE 800,F-1
+843,Utah St: 200,M418-1,Utah St: 200,N-1
+844,Utah St: 200,M418-2,BRANNAN ST 600,N-4
+845,,DPT MOS,,I-4
+846,Rose Street unit,435-1,Rose St unit,J-5
+847,Utah St: 200,M418-1,Utah St: 200,N-2
+848,Sutter St: 800,M209-1,Bush St: 700,I-2
+849,"California St: Unit, 400",M210-1,"California St: Unit, 400",I-4
+850,Sacramento 100 - 400,M208-2,Sacramento: 700 - 800,I-4
+851,Sacramento 100 - 400,M208-2,Sacramento: 700 - 800,I-2
+852,Kearny St: Grant Ave,M204-2,"Grant St: Unit, 200, 300",G-4
+853,Folsom St: Main St: Spear St:,M405-7,Harrison Unit,M-1
+854,POLK ST 100,M412,POLK ST 700,E-4
+855,Howard Unit - 1600,M431-1,HOWARD ST 1400,N-1
+856,Mission St: Mint St,M403-2,Mint St: Unit,M-1
+857,Townsend St: 100 - 500,M419-51,TOWNSEND ST 400,N-4
+858,Howard Unit - 1600,M431-2,HOWARD ST 1400,N-1
+859,Folsom St: Main St: Spear St:,M405-4,Fremont St: Unit,N-3
+860,Washington St: Unit - 800,222-2,Washington: 600 - 900,G-2
+861,Jackson St: Unit - 800,207-2,Jackson: Unit - 800,G-2
+862,Howard St: 100 - 1500,M404-5,Bryant 1600 1900,R-3
+863,18th St: Castro St: Market St:,M305-2,Castro St: 400,N-1
+864,Clay St: 500,M213-2,Clay St: 100 - 400,I-1
+865,"Ofarrell St: Unit, 400",M211-2,Post Geary Ofarrel,I-3
+866,,M333-1,14TH ST 600,R-1
+867,Clay St: 500,M213-2,Clay St: 100 - 400,I-4
+868,Sutter St: 800,M209-2,"Sutter St: 500, 800",I-2
+869,"California St: Unit, 400",M210-2,"California St: Unit, 400",I-4
+870,Sutter St: 800,M209-4,Sutter: Unit - 800,G-4
+871,Folsom St: Main St: Spear St:,M405-2,Folsom St: 500 - 600,N-2
+872,Franklin St: 500,M409,"Franklin St.  500, 600",E-3
+873,MISSION 2600-2800,M302-2,MISSION 2600-2800,R-3
+874,Polk St: 300,M412-2,Polk St: 1200,J-3
+875,Sacramento 100 - 400,M208-1,Sacramento 100 - 400,I-1
+876,Kearny St: Grant Ave,M204-3,Kearny St: 900,G-3
+877,Davis ST Unit - 200,M224-1,Davis: Unit - 200,I-1
+878,"Ofarrell St: Unit, 400",M211,POLK ST,E-3
+879,Sutter St: 800,M209-4,Sutter: Unit - 800,G-3
+880,"Hyde St: Unit, 300, 900",M413-3,Leavenworth,J-3
+881,MISSION 2600-2800,M302-1,MISSION 2600-2800,R-3
+882,16th St: 3000,M335-2,15TH ST,R-3
+883,Rose Street unit,435-1,Rose St unit,H-1
+884,Hemlock,M133,HEMLOCK ST,E-3
+885,Battery St: Sansome St: Hallec,M205-2,"Sansome St: Unit, 500 Halleck St",G-2
+886,"Hyde St: Unit, 300, 900",M413-2,Hyde,J-3
+887,Folsom St: Main St: Spear St:,M405-2,Folsom St: 500 - 600,N-3
+888,"California St: Unit, 400",M210-1,"California St: Unit, 400",I-2
+889,"California St: Unit, 400",M210-3,Pine St Unit - 200,I-2
+890,POLK ST 100,M412,POLK ST 700,E-3
+891,Franklin St: 500,M409-1,Franklin 600-800,J-3
+892,VAN NESS AVE 800,M410,VAN NESS AVE,E-3
+893,Drumm St: 200,M225-1,Drumm St: 200,I-1
+894,Chestnut St; Mongomery St,605-3,Montgomery,Port 1
+895,Larkin St: 100 - 300,M-414,"Larkin St. 100, 300",J-3
+896,Franklin St: 500,M409-2,FRANKLIN ST,J-3
+897,Folsom St: Unit-800 1st:,405-1,Folsom 500-800,N-2
+898,Beale st and Delancy St,607-6,Bryant 100,Port 2
+899,Irving St at 7th Ave: Lot,906,Irving at 7th Ave. Lot,A-4
+900,Front St: 200,M214-1,Front St: 200,G-1
+901,Mirtle St: 100,M131,MYRTLE ST 0,E-3
+902,Green St; Vallejo St; Front St,606-4,Front,Port 1
+903,"California St: Unit, 400",M210-3,Pine St Unit - 200,I-1
+904,"California St: Unit, 400",M210-2,"California St: Unit, 400",I-2
+905,Green St; Vallejo St; Front St,606-6,Vallejo,Port 1
+906,"California St: Unit, 400",M210-4,Pine St Unit - 200,I-2
+907,Clay St: 500,M213-2,Clay St: 100 - 400,I-2
+908,Elm 100 - 300,M425-1,Elm 100 - 300,J-3
+909,Stockton St: Green St:Vallejo,M206-1,Stockton St: 1100 - 1400,G-3
+910,Mirtle St: 100,M131-1,Mirtle St: 100,E-3
+911,"Hyde St: Unit, 300, 900",M413-4,Leavenworth,J-3
+912,WILLOW ST 100,M421,WILLOW ST 100,J-3
+913,Folsom St: Main St: Spear St:,M405-2,Folsom St: 500 - 600,N-1
+914,,407-2,,N-3
+915,Folsom St: Unit-800 1st:,405-2,Folsom-Steuart,N-2
+916,,118-1,,B-3

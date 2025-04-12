@@ -1,0 +1,76 @@
+weather_id,weather_1,weather_2
+1,Cloudy,Not Stated
+2,Clear,Not Stated
+3,Not Stated,Not Stated
+4,Raining,Not Stated
+5,Clear,Wind
+6,Other,Not Stated
+7,Cloudy,Raining
+8,Clear,Unknown
+9,Fog,Not Stated
+10,Not Stated,Unknown
+11,Clear,Cloudy
+12,Cloudy,Wind
+13,Raining,Wind
+14,Cloudy,Unknown
+15,Raining,Other
+16,Wind,Not Stated
+17,Clear,Other: SUNSET
+18,Raining,Unknown
+19,Fog,Other
+20,Clear,Raining
+21,Clear,Other
+22,Other: NOT ON SCENE,Not Stated
+23,Other,Unknown
+24,Fog,Other: WET PAVEMENT
+25,Clear,Fog / Visibility: 10 ft
+26,Cloudy,Other
+27,Cloudy,Other: LIGHT MIST
+28,Fog / Visibility,Not Stated
+29,Cloudy,Other: SMOKEY SKIES
+30,Cloudy,Fog
+31,Cloudy,Other: MISTY
+32,Other: Unknown,Not Stated
+33,Fog,Unknown
+34,Raining,Fog
+35,Clear,Snowing
+36,Snowing,Not Stated
+37,Clear,Fog
+38,Cloudy,Snowing
+39,Clear,Other: smoke cloud
+40,Clear,Other: SUN IN WB VIEW
+41,Cloudy,Fog / Visibility
+42,Cloudy,Other: SLIGHT MIST
+43,Fog / Visibility: 10 ft,Not Stated
+44,Clear,Other: Sunset
+45,Other: NOT AT SCENE,Not Stated
+46,Cloudy,Other: HEAVY MIST
+47,Clear,Other: Sunny
+48,Cloudy,Other: Mist
+49,Cloudy,Other: Misty
+50,Cloudy,Other: Wet roads
+51,Clear,Other: Night
+52,Fog / Visibility: 800 ft,Not Stated
+53,Clear,Other: NOT ON SCENE
+54,Clear,Other: SUN GLARING
+55,Raining,Fog / Visibility
+56,Other: MISTING,Not Stated
+57,Cloudy,Other: Overcast
+58,Fog,Other: FALLING ASH
+59,Cloudy,Other: Light drizzle (rain)
+60,Clear,Fog / Visibility: 500 ft
+61,Cloudy,Other: MIST
+62,Fog,Wind
+63,Clear,Other: SUNRISE
+64,Clear,Fog / Visibility
+65,Fog,Other: drizzle
+66,Raining,Fog / Visibility: 30 ft
+67,Cloudy,Fog / Visibility: 15 ft
+68,Cloudy,Other: SMOKEY
+69,Cloudy,Other: light drizzle
+70,Cloudy,Fog / Visibility: 100 ft
+71,Cloudy,Other: MISTING
+72,Cloudy,Fog / Visibility: 30 ft
+73,Cloudy,Other: Drizzling
+74,Clear,Other: SUNNY
+75,Cloudy,Other: LIGHT SPRINKLE
