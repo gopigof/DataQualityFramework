@@ -16,7 +16,7 @@ USE SFParkingMeters;
 GO
 
 -- Geographic Locations
-CREATE TABLE Locations (
+CREATE TABLE PM_Locations (
     location_id INT IDENTITY(1,1) PRIMARY KEY,
     longitude FLOAT NOT NULL,
     latitude FLOAT NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE Locations (
 );
 
 -- Administrative Districts
-CREATE TABLE Districts (
+CREATE TABLE PM_Districts (
     district_id INT IDENTITY(1,1) PRIMARY KEY,
     pm_district_id FLOAT NULL,
     analysis_neighborhood NVARCHAR(255) NULL,
@@ -38,7 +38,7 @@ CREATE TABLE Districts (
 );
 
 -- Streets
-CREATE TABLE Streets (
+CREATE TABLE PM_Streets (
     street_id FLOAT PRIMARY KEY,
     street_name NVARCHAR(255) NOT NULL,
     street_num FLOAT NULL,
@@ -47,19 +47,19 @@ CREATE TABLE Streets (
 );
 
 -- Meter Types Reference
-CREATE TABLE MeterTypes (
+CREATE TABLE PM_MeterTypes (
     meter_type_id NVARCHAR(50) PRIMARY KEY,
     meter_type_desc NVARCHAR(255) NOT NULL
 );
 
 -- On/Off Street Types Reference
-CREATE TABLE StreetTypes (
+CREATE TABLE PM_StreetTypes (
     street_type_id NVARCHAR(50) PRIMARY KEY,
     street_type_desc NVARCHAR(255) NOT NULL
 );
 
 -- Collection Routes
-CREATE TABLE CollectionRoutes (
+CREATE TABLE PM_CollectionRoutes (
     route_id NVARCHAR(50) PRIMARY KEY,
     collection_route_desc NVARCHAR(255) NULL,
     collection_subroute NVARCHAR(50) NULL,
@@ -68,20 +68,20 @@ CREATE TABLE CollectionRoutes (
 );
 
 -- Vendors
-CREATE TABLE Vendors (
+CREATE TABLE PM_Vendors (
     vendor_id INT IDENTITY(1,1) PRIMARY KEY,
     meter_vendor NVARCHAR(100) NOT NULL,
     meter_model NVARCHAR(100) NULL
 );
 
 -- Parking Zones
-CREATE TABLE ParkingZones (
+CREATE TABLE PM_ParkingZones (
     zone_id NVARCHAR(50) PRIMARY KEY,
     jurisdiction NVARCHAR(100) NOT NULL
 );
 
 -- Main Parking Meters Table
-CREATE TABLE ParkingMeters (
+CREATE TABLE PM_ParkingMeters (
     object_id INT PRIMARY KEY,
     post_id NVARCHAR(50) NOT NULL,
     ms_space_num INT NULL,
@@ -105,30 +105,29 @@ CREATE TABLE ParkingMeters (
     zone_id NVARCHAR(50) NULL,
     
     CONSTRAINT FK_ParkingMeters_MeterTypes FOREIGN KEY (meter_type_id) 
-        REFERENCES MeterTypes(meter_type_id),
+        REFERENCES PM_MeterTypes(meter_type_id),
     CONSTRAINT FK_ParkingMeters_StreetTypes FOREIGN KEY (street_type_id) 
-        REFERENCES StreetTypes(street_type_id),
+        REFERENCES PM_StreetTypes(street_type_id),
     CONSTRAINT FK_ParkingMeters_Locations FOREIGN KEY (location_id) 
-        REFERENCES Locations(location_id),
+        REFERENCES PM_Locations(location_id),
     CONSTRAINT FK_ParkingMeters_Districts FOREIGN KEY (district_id) 
-        REFERENCES Districts(district_id),
+        REFERENCES PM_Districts(district_id),
     CONSTRAINT FK_ParkingMeters_Streets FOREIGN KEY (street_id) 
-        REFERENCES Streets(street_id),
+        REFERENCES PM_Streets(street_id),
     CONSTRAINT FK_ParkingMeters_CollectionRoutes FOREIGN KEY (route_id) 
-        REFERENCES CollectionRoutes(route_id),
+        REFERENCES PM_CollectionRoutes(route_id),
     CONSTRAINT FK_ParkingMeters_Vendors FOREIGN KEY (vendor_id) 
-        REFERENCES Vendors(vendor_id),
+        REFERENCES PM_Vendors(vendor_id),
     CONSTRAINT FK_ParkingMeters_ParkingZones FOREIGN KEY (zone_id) 
-        REFERENCES ParkingZones(zone_id)
+        REFERENCES PM_ParkingZones(zone_id)
 );
 
-CREATE INDEX IX_ParkingMeters_LocationId ON ParkingMeters(location_id);
-CREATE INDEX IX_ParkingMeters_DistrictId ON ParkingMeters(district_id);
-CREATE INDEX IX_ParkingMeters_StreetId ON ParkingMeters(street_id);
-CREATE INDEX IX_ParkingMeters_MeterTypeId ON ParkingMeters(meter_type_id);
-CREATE INDEX IX_ParkingMeters_StreetTypeId ON ParkingMeters(street_type_id);
-CREATE INDEX IX_ParkingMeters_RouteId ON ParkingMeters(route_id);
-CREATE INDEX IX_ParkingMeters_VendorId ON ParkingMeters(vendor_id);
-CREATE INDEX IX_ParkingMeters_ZoneId ON ParkingMeters(zone_id);
-
-CREATE INDEX IX_ParkingMeters_IsActive ON ParkingMeters(is_active);
+CREATE INDEX IX_ParkingMeters_LocationId ON PM_ParkingMeters(location_id);
+CREATE INDEX IX_ParkingMeters_DistrictId ON PM_ParkingMeters(district_id);
+CREATE INDEX IX_ParkingMeters_StreetId ON PM_ParkingMeters(street_id);
+CREATE INDEX IX_ParkingMeters_MeterTypeId ON PM_ParkingMeters(meter_type_id);
+CREATE INDEX IX_ParkingMeters_StreetTypeId ON PM_ParkingMeters(street_type_id);
+CREATE INDEX IX_ParkingMeters_RouteId ON PM_ParkingMeters(route_id);
+CREATE INDEX IX_ParkingMeters_VendorId ON PM_ParkingMeters(vendor_id);
+CREATE INDEX IX_ParkingMeters_ZoneId ON PM_ParkingMeters(zone_id);
+CREATE INDEX IX_ParkingMeters_IsActive ON PM_ParkingMeters(is_active);

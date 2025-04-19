@@ -47,49 +47,49 @@ GO
 -- Load reference tables first (no dependencies)
 EXEC LoadCSVFile
     @FilePath = '/data/ParkingMeters/Meter_Types.csv',
-    @TableName = 'MeterTypes',
+    @TableName = 'PM_MeterTypes',
     @HasIdentity = 0;
 
 EXEC LoadCSVFile
     @FilePath = '/data/ParkingMeters/Street_Types.csv',
-    @TableName = 'StreetTypes',
+    @TableName = 'PM_StreetTypes',
     @HasIdentity = 0;
 
 EXEC LoadCSVFile
     @FilePath = '/data/ParkingMeters/Collection_Routes.csv',
-    @TableName = 'CollectionRoutes',
+    @TableName = 'PM_CollectionRoutes',
     @HasIdentity = 0;
 
 EXEC LoadCSVFile
     @FilePath = '/data/ParkingMeters/Parking_Zones.csv',
-    @TableName = 'ParkingZones',
+    @TableName = 'PM_ParkingZones',
     @HasIdentity = 0;
 
 EXEC LoadCSVFile
     @FilePath = '/data/ParkingMeters/Streets.csv',
-    @TableName = 'Streets',
+    @TableName = 'PM_Streets',
     @HasIdentity = 0;
 
 -- Then load tables with identity columns
 EXEC LoadCSVFile
     @FilePath = '/data/ParkingMeters/Locations.csv',
-    @TableName = 'Locations',
+    @TableName = 'PM_Locations',
     @HasIdentity = 1;
 
 EXEC LoadCSVFile
     @FilePath = '/data/ParkingMeters/Districts.csv',
-    @TableName = 'Districts',
+    @TableName = 'PM_Districts',
     @HasIdentity = 1;
 
 EXEC LoadCSVFile
     @FilePath = '/data/ParkingMeters/Vendors.csv',
-    @TableName = 'Vendors',
+    @TableName = 'PM_Vendors',
     @HasIdentity = 1;
 
 -- Finally load the main table with foreign keys
 EXEC LoadCSVFile
     @FilePath = '/data/ParkingMeters/Parking_Meters.csv',
-    @TableName = 'ParkingMeters',
+    @TableName = 'PM_ParkingMeters',
     @HasIdentity = 0;
 
 DROP PROCEDURE IF EXISTS LoadCSVFile;

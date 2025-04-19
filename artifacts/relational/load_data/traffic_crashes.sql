@@ -24,7 +24,7 @@ BEGIN
         ROWTERMINATOR = ''0x0a'',
         KEEPNULLS,
         TABLOCK,
-        MAXERRORS = 0,
+        MAXERRORS = 300,
         FIRSTROW = 2
     );';
 
@@ -47,33 +47,33 @@ GO
 -- Load reference tables first (no dependencies)
 EXEC LoadCSVFile
     @FilePath = '/data/TrafficCrashes/Weather.csv',
-    @TableName = 'Weather',
+    @TableName = 'TC_Weather',
     @HasIdentity = 1;
 
 EXEC LoadCSVFile
     @FilePath = '/data/TrafficCrashes/Road.csv',
-    @TableName = 'Road',
+    @TableName = 'TC_Road',
     @HasIdentity = 1;
 
 EXEC LoadCSVFile
     @FilePath = '/data/TrafficCrashes/location.csv',
-    @TableName = 'Location',
+    @TableName = 'TC_Location',
     @HasIdentity = 1;
 
 EXEC LoadCSVFile
     @FilePath = '/data/TrafficCrashes/Severity.csv',
-    @TableName = 'Severity',
+    @TableName = 'TC_Severity',
     @HasIdentity = 1;
 
 EXEC LoadCSVFile
     @FilePath = '/data/TrafficCrashes/Party.csv',
-    @TableName = 'Party',
+    @TableName = 'TC_Party',
     @HasIdentity = 1;
 
 -- Finally load the main Collision table with foreign keys
 EXEC LoadCSVFile
     @FilePath = '/data/TrafficCrashes/Collision.csv',
-    @TableName = 'Collision',
+    @TableName = 'TC_Collision',
     @HasIdentity = 1;
 
 DROP PROCEDURE IF EXISTS LoadCSVFile;

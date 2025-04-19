@@ -32,11 +32,8 @@ class TrafficCrashesNormalization(BaseNormalization):
         road = road[['road_id', 'road_surface', 'road_cond_1', 'road_cond_2', 'lighting', 'control_device']]
 
         # Location table
-        location: pd.DataFrame = df[['tb_latitude', 'tb_longitude', 'geocode_source', 'geocode_location',
-                                     'primary_rd', 'secondary_rd', 'distance', 'direction',
-                                     'analysis_neighborhood', 'supervisor_district', 'police_district',
-                                     'location_grid', 'geo_point', 'intersection']].drop_duplicates().reset_index(
-            drop=True)
+        location: pd.DataFrame = df[['tb_latitude', 'tb_longitude', 'police_district',
+                                     'intersection']].drop_duplicates().reset_index(drop=True)
         location['location_id'] = location.index + 1
         # Create mapping for foreign keys
         location_map = dict(zip(
@@ -44,15 +41,15 @@ class TrafficCrashesNormalization(BaseNormalization):
             location['location_id']
         ))
         # Convert intersection to boolean
-        location['is_intersection'] = location['intersection'].apply(
-            lambda x: 1 if x and 'Intersection' in str(x) else 0
-        )
+        # location['is_intersection'] = location['intersection'].apply(
+        #     lambda x: 1 if x and 'Intersection' in str(x) else 0
+        # )
         # Remove original intersection column and reorder columns
-        location = location.drop('intersection', axis=1)
+        location = location.drop(['intersection'], axis=1)
+
         location.dropna(subset=["tb_latitude", "tb_longitude"], inplace=True)
-        location = location[['location_id', 'tb_latitude', 'tb_longitude', 'geocode_source', 'geocode_location',
-                             'primary_rd', 'secondary_rd', 'distance', 'direction', 'analysis_neighborhood',
-                             'supervisor_district', 'police_district', 'location_grid', 'geo_point', 'is_intersection']]
+        location = location[['location_id', 'tb_latitude', 'tb_longitude',
+                             'police_district']]
 
         # Severity table
         severity: pd.DataFrame = df[
@@ -121,18 +118,13 @@ class TrafficCrashesNormalization(BaseNormalization):
 
         # Main Collision table
         collision: pd.DataFrame = df[[
-            'unique_id', 'case_id_pkey', 'collision_datetime', 'collision_date', 'collision_time',
-            'accident_year', 'month', 'day_of_week', 'time_cat', 'hour_of_day', 'juris',
-            'officer_id', 'reporting_district', 'beat_number', 'vz_pcf_code', 'vz_pcf_group',
-            'vz_pcf_description', 'dph_col_grp', 'dph_col_grp_description'
+            'unique_id', 'case_id_pkey', 'collision_date', 'collision_time',
+            'accident_year', 'month', 'day_of_week', 'time_cat', 'hour_of_day',
         ]].copy()
 
         # Calculate additional time-related fields
         collision['hour_of_day'] = pd.to_datetime(collision['collision_time'], format='%H:%M:%S',
                                                   errors='coerce').dt.hour
-        collision['is_weekend'] = collision['day_of_week'].apply(
-            lambda x: 1 if x in ['Saturday', 'Sunday'] else 0
-        )
         collision['time_of_day'] = collision['hour_of_day'].apply(
             lambda x: 'Morning' if 5 <= x < 12 else
             'Afternoon' if 12 <= x < 17 else
@@ -168,19 +160,20 @@ class TrafficCrashesNormalization(BaseNormalization):
             lambda x: severity_map.get(f"{x['collision_severity']}-{x['number_killed']}-{x['number_injured']}", None),
             axis=1
         )
+        collision['hour_of_day'] = collision['hour_of_day'].astype('Int64')
 
         # Reorder columns to match the schema
         collision = collision[[
-            'unique_id', 'case_id_pkey', 'collision_datetime', 'collision_date', 'collision_time',
-            'accident_year', 'month', 'day_of_week', 'time_cat', 'hour_of_day', 'is_weekend', 'time_of_day',
-            'season', 'juris', 'officer_id', 'reporting_district', 'beat_number',
-            'vz_pcf_code', 'vz_pcf_group', 'vz_pcf_description', 'dph_col_grp', 'dph_col_grp_description',
+            'unique_id', 'case_id_pkey', 'collision_date', 'collision_time',
+            'accident_year', 'month', 'day_of_week', 'time_cat', 'hour_of_day', 'time_of_day',
+            'season',
             'location_id', 'weather_id', 'road_id', 'party_id', 'severity_id'
         ]]
 
         # Add collision_id as primary key
         collision['collision_id'] = collision.index + 1
         collision = collision[['collision_id'] + [col for col in collision.columns if col != 'collision_id']]
+        # location.drop('location_id', axis=1, inplace=True)
 
         return {
             'collision': collision,
